@@ -7,4 +7,7 @@ target 'DhawaAlkhreej' do
 
   # Pods for DhawaAlkhreej
 
+  # Formating and styling the code
+  pod 'SwiftLint' , '~> 0.27.0'
+
 end
