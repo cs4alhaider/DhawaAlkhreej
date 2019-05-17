@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplashVC.swift
 //  DhawaAlkhreej
 //
 //  Created by Abdullah Alhaider on 17/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
