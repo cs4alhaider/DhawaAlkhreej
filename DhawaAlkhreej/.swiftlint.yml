@@ -1,0 +1,157 @@
+
+##
+#
+#  Swiftlint configuration file.
+#
+#  Checkout all the rules in => https://github.com/realm/SwiftLint/blob/master/Rules.md
+#  Run => './Pods/SwiftLint/swiftlint autocorrect' in Terminal to auto correct some of the warnings
+#
+#  Created by Abdullah Alhaider May of 2019.
+#
+##
+
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - identifier_name
+  - multiple_closures_with_trailing_closure
+
+
+opt_in_rules: # opt_in_rules rules are disabled by default so add them below to enable them
+  - overridden_super_call
+  - operator_usage_whitespace
+  - yoda_condition
+  - fatal_error_message
+  - empty_count
+  - force_unwrapping
+
+
+# Line length rule: if the line above 250 character you will get warning
+line_length:
+  - 180 # warning
+  - 180 # error
+
+
+function_body_length:
+  - 50
+  - 70
+
+
+function_parameter_count:
+  - 15
+  - 20
+
+cyclomatic_complexity:
+  - 10
+  - 10
+
+
+## overriding
+vertical_whitespace:
+  severity: error
+
+operator_usage_whitespace:
+  severity: error
+
+mark:
+  severity: error
+
+opening_brace:
+  severity: error
+
+return_arrow_whitespace:
+  severity: error
+
+statement_position:
+  severity: error
+
+trailing_newline:
+  severity: error
+
+colon:
+  excluded: ".*Colors.swift"
+
+
+#--------------------------------------------------------------------------#
+#------------------------------ Custom rules ------------------------------#
+#--------------------------------------------------------------------------#
+
+custom_rules:
+
+  # # Print rule
+  # # Author: Abdullah Alhaider
+  # native_print: # rule identifier
+  #   name: "print" # rule name. optional.
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   excluded: ".*PrintHelper.swift" # regex that defines paths to exclude during linting. optional
+  #   regex: '(print|NSLog)\(' # matching pattern
+  #   match_kinds:
+  #     - identifier
+  #   message: "Please use the new print statment `MLog` instead of `print` or `NSLog`." # violation message. optional.
+  #   severity: error
+
+
+  # Alert rule
+  # Author: Abdullah Alhaider
+  # native_Alert: # rule identifier
+  #   name: "alert" # rule name. optional.
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   excluded: "(.*AlertHelper.swift|.*PaymentCardDetailsViewController.swift)" # regex that defines paths to exclude during linting. optional
+  #   regex: '(UIAlertController|UIAlertAction)' # matching pattern
+  #   message: "Please call AlertHelper methods instead of creating a new alert." # violation message. optional.
+  #   severity: error
+
+
+  # Comment space rule
+  # Author: Abdullah Alhaider
+  space_after_comment: # rule identifier
+    name: "Comment spacing" # rule name. optional.
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    #excluded: ".*fileName.swift" # regex that defines paths to exclude during linting. optional
+    regex: '(\/\/\/?[^\s\/:])|(\/\/:[^\s\/])' # matching pattern
+    match_kinds:
+      - comment
+    message: "There must be a space after /// or // comments and before the text like: (// comment) not like: (//comment)." # violation message. optional.
+    severity: error
+
+
+  # Networing rule
+  # Author: Abdullah Alhaider
+  # Networing: # rule identifier
+  #   name: "Networing" # rule name. optional.
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   excluded: '(./Network|.*PaymentWebViewViewController.swift)' # regex that defines paths to exclude during linting. optional
+  #   regex: '(Alamofire|URLSession|URLRequest|httpMethod|httpBody)' # matching pattern
+  #   message: "Please do not do any networking outside of the network folder." # violation message. optional.
+  #   severity: error
+
+
+  # Localization rule
+  # Author: Abdullah Alhaider
+  # Localization: # rule identifier
+  #   name: "Localization" # rule name. optional.
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   excluded: '.*String\+Extension.swift' # regex that defines paths to exclude during linting. optional
+  #   regex: 'NSLocalizedString\(' # matching pattern
+  #   match_kinds:
+  #     - identifier
+  #   message: "Please use `key.localized` instead of `NSLocalizedString(key, comment: nil)` ==> Checkout: String+Extension.swift" # violation message. optional.
+  #   severity: error
+
+
+  # fatalError rule
+  # Author: Abdullah Alhaider
+  fatal_error: # rule identifier
+    name: "fatalError" # rule name. optional.
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    # excluded: ".*fileName.swift" # regex that defines paths to exclude during linting. optional
+    regex: 'fatalError\(' # matching pattern
+    match_kinds:
+      - identifier
+    message: "Please do not use `fatalError` for production release as it will generate a crach for the user, instead handle it in a good way." # violation message. optional.
+    severity: error
