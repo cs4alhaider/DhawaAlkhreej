@@ -8,13 +8,22 @@
 
 import Foundation
 
+protocol ResourcesProtocol {
+    var email: String { get }
+    var twitter: String { get }
+}
+
 struct Resources {
     
-    struct Email {
-        static let abdullah = "cs.alhaider@gmail.com"
+    struct Abdullah: ResourcesProtocol {
+        var email: String {
+            return "cs.alhaider@gmail.com"
+        }
+        
+        var twitter: String {
+            return "cs_alhaider"
+        }
     }
     
-    struct Twitter {
-        static let abdullah = "cs_alhaider"
-    }
+    // Same 
 }

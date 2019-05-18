@@ -11,11 +11,20 @@ import UIKit
 enum ColorType {
     
     case primary
+    case whiteBackground
+    case whiteTextColor
+    case brownTextColor
     
     var color: UIColor {
         switch self {
         case .primary:
             return .primary
+        case .whiteBackground:
+            return .whiteBackground
+        case .whiteTextColor:
+            return .whiteTextColor
+        case .brownTextColor:
+            return .brownTextColor
         }
     }
 }

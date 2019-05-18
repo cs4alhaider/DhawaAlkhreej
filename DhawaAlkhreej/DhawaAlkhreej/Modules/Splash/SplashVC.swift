@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Helper4Swift
 
 class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let tabBar = TabBarVC()
+        present(tabBar, animated: true)
     }
 
 }
