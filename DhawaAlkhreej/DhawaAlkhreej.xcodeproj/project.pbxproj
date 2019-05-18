@@ -269,11 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD3B1A3B228F50AC00E89B88 /* Build configuration list for PBXNativeTarget "DhawaAlkhreej" */;
 			buildPhases = (
-				DD3B1A40228F53B400E89B88 /* Run Script - swiftlint */,
 				65CBCA65B7982F1CB879CF33 /* [CP] Check Pods Manifest.lock */,
+				DD3B1A40228F53B400E89B88 /* Run Script - swiftlint */,
 				DD3B1A25228F50AC00E89B88 /* Sources */,
 				DD3B1A26228F50AC00E89B88 /* Frameworks */,
 				DD3B1A27228F50AC00E89B88 /* Resources */,
+				318732BB1E54F62D78085DD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +332,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		318732BB1E54F62D78085DD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Helper4Swift/Helper4Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Helper4Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65CBCA65B7982F1CB879CF33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
