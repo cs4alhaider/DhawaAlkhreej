@@ -10,11 +10,6 @@ import Helper4Swift
 
 extension UIStoryboard {
     
-    /// "Notifications"
-    var notifications: UIStoryboard {
-        return "Notifications".asStoryboard
-    }
-    
     /// "AboutUs"
     var AboutUs: UIStoryboard {
         return "AboutUs".asStoryboard

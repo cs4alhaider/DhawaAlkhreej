@@ -18,7 +18,7 @@ extension Keys {
     
     struct NotificationCenter {
         
-        /// Notify about the user when he logged in
-        // static let userLoggedIn = "notification.userLoggedIn".asNotificationName
+        /// Notify the user add a new item to the saved items
+        static let updateSavedList = "DhawaAlkhreej.Notification.updateSavedList".asNotificationName
     }
 }
