@@ -14,7 +14,7 @@
 		DD3B1A34228F50AC00E89B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3B1A33228F50AC00E89B88 /* Assets.xcassets */; };
 		DD3B1A37228F50AC00E89B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3B1A35228F50AC00E89B88 /* LaunchScreen.storyboard */; };
 		DD3B1A42228F59D400E89B88 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A41228F59D400E89B88 /* Resources.swift */; };
-		DD3B1A44228F5A4600E89B88 /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A43228F5A4600E89B88 /* DataLayer.swift */; };
+		DD3B1A44228F5A4600E89B88 /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A43228F5A4600E89B88 /* DataRequester.swift */; };
 		DD3B1A4A228F5B0D00E89B88 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A49228F5B0D00E89B88 /* Identity.swift */; };
 		DD3B1A4E228F5B3300E89B88 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A4D228F5B3300E89B88 /* Keys.swift */; };
 		DD3B1A51228F5B4D00E89B88 /* Keys+NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A50228F5B4D00E89B88 /* Keys+NotificationCenter.swift */; };
@@ -38,6 +38,10 @@
 		DD9EA5B022909BD40050F199 /* Sections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5AF22909BD40050F199 /* Sections.storyboard */; };
 		DD9EA5B422909C650050F199 /* SavedItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5B322909C650050F199 /* SavedItems.storyboard */; };
 		DD9EA5B722909E6D0050F199 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5B622909E6D0050F199 /* OnBoarding.storyboard */; };
+		DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670802291EBDE008A5128 /* Endpoint.swift */; };
+		DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670822291EC00008A5128 /* HTTPMethod.swift */; };
+		DDF670852291ED51008A5128 /* DataLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670842291ED51008A5128 /* DataLocation.swift */; };
+		DDF670872291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670862291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +55,7 @@
 		DD3B1A36228F50AC00E89B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD3B1A38228F50AC00E89B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD3B1A41228F59D400E89B88 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		DD3B1A43228F5A4600E89B88 /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		DD3B1A43228F5A4600E89B88 /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 		DD3B1A49228F5B0D00E89B88 /* Identity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		DD3B1A4D228F5B3300E89B88 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		DD3B1A50228F5B4D00E89B88 /* Keys+NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keys+NotificationCenter.swift"; sourceTree = "<group>"; };
@@ -75,6 +79,10 @@
 		DD9EA5AF22909BD40050F199 /* Sections.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sections.storyboard; sourceTree = "<group>"; };
 		DD9EA5B322909C650050F199 /* SavedItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedItems.storyboard; sourceTree = "<group>"; };
 		DD9EA5B622909E6D0050F199 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		DDF670802291EBDE008A5128 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DDF670822291EC00008A5128 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DDF670842291ED51008A5128 /* DataLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLocation.swift; sourceTree = "<group>"; };
+		DDF670862291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DhawaAlkhreej+Endpoint.swift"; sourceTree = "<group>"; };
 		E5EE41979FEB2594C30A6830 /* Pods-DhawaAlkhreej.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.debug.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +150,11 @@
 		DD3B1A46228F5A5200E89B88 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DD3B1A43228F5A4600E89B88 /* DataLayer.swift */,
+				DD3B1A43228F5A4600E89B88 /* DataRequester.swift */,
+				DDF670802291EBDE008A5128 /* Endpoint.swift */,
+				DDF670822291EC00008A5128 /* HTTPMethod.swift */,
+				DDF670842291ED51008A5128 /* DataLocation.swift */,
+				DDF670862291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -491,10 +503,12 @@
 				DD3B1A4E228F5B3300E89B88 /* Keys.swift in Sources */,
 				DD3B1A65228F5EE900E89B88 /* AlertHelper.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,
+				DDF670872291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift in Sources */,
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
+				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
 				DD3B1A5A228F5CFF00E89B88 /* ColorType.swift in Sources */,
 				DD3B1A58228F5CC800E89B88 /* AppColors.swift in Sources */,
-				DD3B1A44228F5A4600E89B88 /* DataLayer.swift in Sources */,
+				DD3B1A44228F5A4600E89B88 /* DataRequester.swift in Sources */,
 				DD3B1A5E228F5DB200E89B88 /* FontType.swift in Sources */,
 				DD3B1A56228F5C2E00E89B88 /* Environment.swift in Sources */,
 				DD3B1A51228F5B4D00E89B88 /* Keys+NotificationCenter.swift in Sources */,
@@ -504,6 +518,8 @@
 				DD3B1A2F228F50AC00E89B88 /* SplashVC.swift in Sources */,
 				DD3B1A2D228F50AC00E89B88 /* AppDelegate.swift in Sources */,
 				DD3B1A72228F602E00E89B88 /* UIStoryboard+Extension.swift in Sources */,
+				DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */,
+				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				DD3B1A68228F5F8700E89B88 /* BaseViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

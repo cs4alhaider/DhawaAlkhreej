@@ -10,6 +10,9 @@ import Helper4Swift
 
 protocol BaseViewProtocol { }
 
+/// Making all the UIViewControllers conform to BaseViewProtocol
+extension UIViewController: BaseViewProtocol { }
+
 extension BaseViewProtocol where Self: UIViewController {
     
     /// Show an alert
