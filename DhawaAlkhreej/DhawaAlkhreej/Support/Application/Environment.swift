@@ -24,4 +24,17 @@ enum Environment {
     static var isDevelopment: Bool {
         return current == .development
     }
+    
+    static var baseURL: String {
+        return Environment.current == production ? production.url : development.url
+    }
+    
+    private var url: String {
+        switch self {
+        case .production:
+            return ""
+        case .development:
+            return ""
+        }
+    }
 }
