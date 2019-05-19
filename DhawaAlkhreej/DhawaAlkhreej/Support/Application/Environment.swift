@@ -30,11 +30,6 @@ enum Environment {
     }
     
     private var url: String {
-        switch self {
-        case .production:
-            return ""
-        case .development:
-            return ""
-        }
+        return self == .production ? "" : ""
     }
 }

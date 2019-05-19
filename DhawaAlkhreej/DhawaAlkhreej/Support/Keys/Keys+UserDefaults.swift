@@ -19,7 +19,13 @@ extension Keys {
     /// Namespacing the constants we use in the defaults system.
     struct UserDefaults {
         
-        /// ... for ... "UserDefaults.someKey"
-        static let someKey = "UserDefaults.someKey"
+        /// Save the number of times the user launch the app for rating purpose - "DhawaAlkhreej.UserDefaults.numberOfOpeningTheApp"
+        static let numberOfOpeningTheApp = "DhawaAlkhreej.UserDefaults.numberOfOpeningTheApp"
+        
+        /// Determine if the it's the first time to present the onboarding process - "DhawaAlkhreej.UserDefaults.isFirstTime"
+        static let isFirstTime = "DhawaAlkhreej.UserDefaults.isFirstTime"
+        
+        /// set & get the saved|fav items - "DhawaAlkhreej.UserDefaults.savedItems"
+        static let savedItems = "DhawaAlkhreej.UserDefaults.savedItems"
     }
 }

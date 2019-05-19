@@ -1,4 +1,3 @@
-
 ##
 #
 #  Swiftlint configuration file.
@@ -83,28 +82,28 @@ colon:
 
 custom_rules:
 
-  # # Print rule
-  # # Author: Abdullah Alhaider
-  # native_print: # rule identifier
-  #   name: "print" # rule name. optional.
-  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
-  #   excluded: ".*PrintHelper.swift" # regex that defines paths to exclude during linting. optional
-  #   regex: '(print|NSLog)\(' # matching pattern
-  #   match_kinds:
-  #     - identifier
-  #   message: "Please use the new print statment `MLog` instead of `print` or `NSLog`." # violation message. optional.
-  #   severity: error
+  # Print rule
+  # Author: Abdullah Alhaider
+  native_print: # rule identifier
+    name: "print" # rule name. optional.
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    excluded: ".*PrintHelper.swift" # regex that defines paths to exclude during linting. optional
+    regex: '(print|NSLog)\(' # matching pattern
+    match_kinds:
+      - identifier
+    message: "Please use the new print statment `logger` instead of `print` or `NSLog`." # violation message. optional.
+    severity: error
 
 
   # Alert rule
   # Author: Abdullah Alhaider
-  # native_Alert: # rule identifier
-  #   name: "alert" # rule name. optional.
-  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
-  #   excluded: "(.*AlertHelper.swift|.*PaymentCardDetailsViewController.swift)" # regex that defines paths to exclude during linting. optional
-  #   regex: '(UIAlertController|UIAlertAction)' # matching pattern
-  #   message: "Please call AlertHelper methods instead of creating a new alert." # violation message. optional.
-  #   severity: error
+  native_Alert: # rule identifier
+    name: "alert" # rule name. optional.
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    excluded: "(.*AlertHelper.swift)" # regex that defines paths to exclude during linting. optional
+    regex: '(UIAlertController|UIAlertAction)' # matching pattern
+    message: "Please call AlertHelper methods instead of creating a new alert." # violation message. optional.
+    severity: error
 
 
   # Comment space rule
@@ -133,15 +132,15 @@ custom_rules:
 
   # Localization rule
   # Author: Abdullah Alhaider
-  # Localization: # rule identifier
-  #   name: "Localization" # rule name. optional.
-  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
-  #   excluded: '.*String\+Extension.swift' # regex that defines paths to exclude during linting. optional
-  #   regex: 'NSLocalizedString\(' # matching pattern
-  #   match_kinds:
-  #     - identifier
-  #   message: "Please use `key.localized` instead of `NSLocalizedString(key, comment: nil)` ==> Checkout: String+Extension.swift" # violation message. optional.
-  #   severity: error
+  Localization: # rule identifier
+    name: "Localization" # rule name. optional.
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    excluded: '.*String\+Extension.swift' # regex that defines paths to exclude during linting. optional
+    regex: 'NSLocalizedString\(' # matching pattern
+    match_kinds:
+      - identifier
+    message: "Please use `key.localized` instead of `NSLocalizedString(key, comment: nil)` ==> Checkout: String+Extension.swift" # violation message. optional.
+    severity: error
 
 
   # fatalError rule

@@ -10,12 +10,19 @@ import UIKit
 
 enum FontType {
     
+    /// bold withSize(20)
     case h1
+    /// bold withSize(18)
     case h2
+    /// bold withSize(17)
     case h3
+    /// regular withSize(17)
     case h4
+    /// regular withSize(16)
     case h5
+    /// regular withSize(15)
     case h6
+    /// Add (weight, size)
     case custom(weight: Font, size: CGFloat)
     
     var font: UIFont {
