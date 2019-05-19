@@ -9,7 +9,7 @@
 import UIKit
 import Helper4Swift
 
-class SplashVC: UIViewController {
+class SplashVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

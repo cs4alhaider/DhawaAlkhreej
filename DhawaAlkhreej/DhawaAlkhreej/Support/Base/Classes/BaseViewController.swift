@@ -8,6 +8,14 @@
 
 import UIKit
 
-class BaseViewController: BaseViewProtocol {
-    // TODO
+class BaseViewController: UIViewController, BaseViewProtocol {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    func setupUI() {}
+    
+    func setupTableView() {}
 }
