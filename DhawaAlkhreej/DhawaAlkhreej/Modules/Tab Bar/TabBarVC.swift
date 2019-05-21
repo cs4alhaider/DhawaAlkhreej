@@ -39,8 +39,10 @@ class TabBarVC: UITabBarController {
                                           title: "tabVC1")
         
         // Middle VC
+        let storyboard = UIStoryboard.init(name: "Calculator", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CalculatorVC")
         let tabVC2 = createViewController(nv: UINavigationController(),
-                                          vc: UIViewController(),
+                                          vc: vc,
                                           selectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           title: "tabVC2")
