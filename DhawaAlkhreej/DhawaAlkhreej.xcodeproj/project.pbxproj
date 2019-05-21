@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
 		79B147F90F891E4D84BBA2D3 /* Pods_DhawaAlkhreej.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */; };
+		DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34D8A22293648C00C2C423 /* SectionsVC.swift */; };
+		DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */; };
+		DD34D8A72293682200C2C423 /* SectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */; };
 		DD3B1A2D228F50AC00E89B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A2C228F50AC00E89B88 /* AppDelegate.swift */; };
 		DD3B1A2F228F50AC00E89B88 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A2E228F50AC00E89B88 /* SplashVC.swift */; };
 		DD3B1A32228F50AC00E89B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3B1A30228F50AC00E89B88 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.release.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.release.xcconfig"; sourceTree = "<group>"; };
 		746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhawaAlkhreej.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD34D8A22293648C00C2C423 /* SectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
+		DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD3B1A29228F50AC00E89B88 /* DhawaAlkhreej.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhawaAlkhreej.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3B1A2C228F50AC00E89B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD3B1A2E228F50AC00E89B88 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -107,6 +113,15 @@
 				2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD34D8A82293682A00C2C423 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */,
+				DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DD3B1A20228F50AB00E89B88 = {
@@ -313,7 +328,9 @@
 		DD9EA5AE22909BC50050F199 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				DD34D8A82293682A00C2C423 /* Cell */,
 				DD9EA5AF22909BD40050F199 /* Sections.storyboard */,
+				DD34D8A22293648C00C2C423 /* SectionsVC.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -425,6 +442,7 @@
 			files = (
 				DD9EA5AA229099570050F199 /* AboutUs.storyboard in Resources */,
 				DD9EA5B422909C650050F199 /* SavedItems.storyboard in Resources */,
+				DD34D8A72293682200C2C423 /* SectionsCollectionViewCell.xib in Resources */,
 				DD3B1A37228F50AC00E89B88 /* LaunchScreen.storyboard in Resources */,
 				DD3B1A34228F50AC00E89B88 /* Assets.xcassets in Resources */,
 				DD9EA5AD22909B8E0050F199 /* Calculator.storyboard in Resources */,
@@ -513,6 +531,8 @@
 				DD3B1A4E228F5B3300E89B88 /* Keys.swift in Sources */,
 				DD3B1A65228F5EE900E89B88 /* AlertHelper.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,
+				DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */,
+				DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */,
 				DDF670872291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift in Sources */,
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
 				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
