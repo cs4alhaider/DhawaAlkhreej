@@ -1,9 +1,9 @@
 PODS:
-  - Helper4Swift (0.1.7)
+  - Helper4Swift (0.1.8)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
-  - Helper4Swift (~> 0.1.7)
+  - Helper4Swift (~> 0.1.8)
   - SwiftLint (~> 0.27.0)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Helper4Swift: 531e1572bb1e6e88c57871138566e8c49eca8cde
+  Helper4Swift: 32c9972aa503b93b682f584dbddd9cf4d2b95e56
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: b3fccbf9e35e756480c7e8c77e6af6ae124444a3
+PODFILE CHECKSUM: 936f6bcea14ba19a9c228ef5b3faad0837beeb84
 
 COCOAPODS: 1.6.1

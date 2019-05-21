@@ -8,7 +8,7 @@ target 'DhawaAlkhreej' do
   # Pods for DhawaAlkhreej
   
   # Helpers and extensions
-  pod 'Helper4Swift' , '~> 0.1.7' # By Abdullah Alhaider https://cocoapods.org/pods/Helper4Swift
+  pod 'Helper4Swift' , '~> 0.1.8' # By Abdullah Alhaider https://cocoapods.org/pods/Helper4Swift
 
   # Formating and styling the code
   pod 'SwiftLint' , '~> 0.27.0'
