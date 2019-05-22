@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIStoryboard {
+public extension UIStoryboard {
     
     /// Instantiate a UIViewController using its class name
     ///

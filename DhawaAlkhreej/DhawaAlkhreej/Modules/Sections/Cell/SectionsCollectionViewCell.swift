@@ -21,8 +21,8 @@ class SectionsCollectionViewCell: UICollectionViewCell {
     
     private func setupUI() {
         backView.applyShadowWithRoundCorners(shadowColor: .black,
-                                             cornerRadius: 4,
-                                             shadowOpacity: 0.2,
+                                             cornerRadius: 12,
+                                             shadowOpacity: 0.3,
                                              shadowRadius: 4)
     }
 
