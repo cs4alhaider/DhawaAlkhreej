@@ -11,22 +11,22 @@ import Helper4Swift
 extension UIStoryboard {
     
     /// "AboutUs"
-    var AboutUs: UIStoryboard {
+    static var AboutUs: UIStoryboard {
         return "AboutUs".asStoryboard
     }
     
     /// "Calculator"
-    var calculator: UIStoryboard {
+    static var calculator: UIStoryboard {
         return "Calculator".asStoryboard
     }
     
     /// "Sections"
-    var sections: UIStoryboard {
+    static var sections: UIStoryboard {
         return "Sections".asStoryboard
     }
     
     /// "SavedItems"
-    var savedItems: UIStoryboard {
+    static var savedItems: UIStoryboard {
         return "SavedItems".asStoryboard
     }
 }

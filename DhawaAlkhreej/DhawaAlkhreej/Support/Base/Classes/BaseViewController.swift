@@ -12,7 +12,8 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+        setupTableView()
     }
     
     func setupUI() {}
