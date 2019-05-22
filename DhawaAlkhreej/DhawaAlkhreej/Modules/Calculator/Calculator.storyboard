@@ -29,7 +29,7 @@
                                                 <rect key="frame" x="16" y="8" width="382" height="342"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-MK-7Df">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="64.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="64.333333333333329"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درجة الثانوية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Op-6Z-hZo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -38,42 +38,54 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="L1J-vM-iO1">
-                                                                <rect key="frame" x="0.0" y="40.333333333333329" width="382" height="24.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="40.333333333333329" width="382" height="24"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bts-a7-1fW">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="boldArrow"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftColor">
+                                                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftWidth">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftHeight">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C85-0w-H7q" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.66666666666666" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="UxE-Rd-CYx"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-83-cSQ">
-                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24.333333333333332"/>
+                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwJ-ox-TQb">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwJ-ox-TQb" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-c9-ouS" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.33333333333334" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="WCH-OM-fXv"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
@@ -81,7 +93,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OIE-QX-HNC">
-                                                        <rect key="frame" x="0.0" y="89.666666666666657" width="382" height="64.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="89.333333333333314" width="382" height="64.666666666666686"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درجة القدرات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-3Y-zsV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -95,37 +107,49 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-zn-hxY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-U2-cfM">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-U2-cfM" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="boldArrow"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftColor">
+                                                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftWidth">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftHeight">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0no-el-D2G" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.66666666666666" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="BBR-0W-0dE"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4LE-U1-mDt">
                                                                         <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24.333333333333332"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-nM-0kw">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-nM-0kw" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24.333333333333332"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEc-g8-fZ0" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.33333333333334" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="MoY-PI-Oae"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
@@ -133,7 +157,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-38-BjC">
-                                                        <rect key="frame" x="0.0" y="179.33333333333334" width="382" height="64.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="179" width="382" height="64.333333333333314"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درجة التحصيلي" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-0s-GRm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -142,42 +166,54 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FSY-2b-6TF">
-                                                                <rect key="frame" x="0.0" y="40.333333333333314" width="382" height="24.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="40.333333333333343" width="382" height="24"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-qT-Wvf">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-GQ-8BO">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-GQ-8BO" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="boldArrow"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftColor">
+                                                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftWidth">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftHeight">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1I-Cg-i9U" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.66666666666666" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="LPd-QV-hC3"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-Fn-2nZ">
-                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24.333333333333332"/>
+                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-fJ-JwD">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="23.333333333333332"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-fJ-JwD" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7C-Jk-ntq" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="186.33333333333334" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="gN7-p2-5uI"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
@@ -185,7 +221,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ThV-VY-1Ak">
-                                                        <rect key="frame" x="0.0" y="269" width="382" height="73"/>
+                                                        <rect key="frame" x="0.0" y="268.33333333333331" width="382" height="73.666666666666686"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درجة اختبار STEP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKK-fb-FJr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -194,42 +230,54 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="d7M-Pl-whD">
-                                                                <rect key="frame" x="0.0" y="40.333333333333314" width="382" height="32.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="40.333333333333371" width="382" height="33.333333333333343"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IBO-uu-VO0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="32.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="33.333333333333336"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-Ga-poE">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="31.666666666666668"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-Ga-poE" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="33.333333333333336"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="boldArrow"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftColor">
+                                                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftWidth">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftHeight">
+                                                                                        <real key="value" value="15"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfG-XN-hqn" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="186.66666666666666" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="hXP-6a-DbD"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-EE-PeT">
-                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="32.666666666666664"/>
+                                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="33.333333333333336"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X87-eU-PXS">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="31.666666666666668"/>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X87-eU-PXS" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="33.333333333333336"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttomBorderColor">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKG-gZ-VpP" userLabel="Line">
-                                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="186.33333333333334" height="1"/>
-                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="1" id="5p0-if-6B5"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
@@ -319,6 +367,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="boldArrow" width="1024" height="1024"/>
         <namedColor name="primary">
             <color red="0.9882352941176471" green="0.80784313725490198" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
