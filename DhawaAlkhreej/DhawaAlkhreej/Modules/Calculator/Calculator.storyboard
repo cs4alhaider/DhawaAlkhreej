@@ -76,7 +76,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
                                                                                         <real key="value" value="1"/>
@@ -140,7 +140,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24.333333333333332"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
                                                                                         <real key="value" value="1"/>
@@ -204,7 +204,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
                                                                                         <real key="value" value="1"/>
@@ -268,7 +268,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="33.333333333333336"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="buttomBorder">
                                                                                         <real key="value" value="1"/>
