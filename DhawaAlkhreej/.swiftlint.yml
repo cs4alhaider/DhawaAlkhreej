@@ -145,12 +145,12 @@ custom_rules:
 
   # fatalError rule
   # Author: Abdullah Alhaider
-  fatal_error: # rule identifier
-    name: "fatalError" # rule name. optional.
-    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
-    # excluded: ".*fileName.swift" # regex that defines paths to exclude during linting. optional
-    regex: 'fatalError\(' # matching pattern
-    match_kinds:
-      - identifier
-    message: "Please do not use `fatalError` for production release as it will generate a crach for the user, instead handle it in a good way." # violation message. optional.
-    severity: error
+  # fatal_error: # rule identifier
+  #   name: "fatalError" # rule name. optional.
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   # excluded: ".*fileName.swift" # regex that defines paths to exclude during linting. optional
+  #   regex: 'fatalError\(' # matching pattern
+  #   match_kinds:
+  #     - identifier
+  #   message: "Please do not use `fatalError` for production release as it will generate a crach for the user, instead handle it in a good way." # violation message. optional.
+  #   severity: error

@@ -6,7 +6,7 @@
 //  Copyright © 2019 DhawaAlkhreej. All rights reserved.
 //
 
-import UIKit
+import Helper4Swift
 
 class BaseViewController: UIViewController {
     
@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupTableView()
+        addKeyboardHidingGesture()
     }
     
     func setupUI() {}
