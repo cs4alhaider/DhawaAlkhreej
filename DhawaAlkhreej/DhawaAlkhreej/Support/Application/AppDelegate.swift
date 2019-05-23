@@ -54,16 +54,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
-        guard let tabBar = UIApplication.topViewController() as? TabBarVC else { return }
+        guard let tabBar = UIApplication.topViewController() else { return }
         
         if shortcutItem.type == "net.alhaider.search" {
-           tabBar.selectedIndex = 0
+           tabBar.tabBarController?.selectedIndex = 0
         } else if shortcutItem.type == "net.alhaider.calculate" {
-            tabBar.selectedIndex = 1
+            tabBar.tabBarController?.selectedIndex = 1
         } else if shortcutItem.type == "net.alhaider.viewMajors" {
-            tabBar.selectedIndex = 2
+            tabBar.tabBarController?.selectedIndex = 2
         } else if shortcutItem.type == "net.alhaider.showFavorite" {
-            tabBar.selectedIndex = 3
+            tabBar.tabBarController?.selectedIndex = 3
         }
     }
 
