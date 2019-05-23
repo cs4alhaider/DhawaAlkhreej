@@ -12,5 +12,8 @@ target 'DhawaAlkhreej' do
 
   # Formating and styling the code
   pod 'SwiftLint' , '~> 0.27.0'
+  
+  # Keyboard manager, https://github.com/hackiftekhar/IQKeyboardManager
+  pod 'IQKeyboardManagerSwift' , '~> 6.2.1'
 
 end
