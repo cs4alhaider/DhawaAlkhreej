@@ -39,7 +39,6 @@ class TabBarVC: UITabBarController {
                                           unselectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           title: "")
         
-        // Middle VC
         let tabVC2 = createViewController(nv: UINavigationController(),
                                           vc: UIStoryboard.calculator.instantiateViewController(withClass: CalculatorVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar2"),
@@ -47,13 +46,13 @@ class TabBarVC: UITabBarController {
                                           title: "")
         
         let tabVC3 = createViewController(nv: UINavigationController(),
-                                          vc: UIStoryboard.sections.instantiateViewController(withClass: SectionsVC.self),
+                                          vc: UIStoryboard.majors.instantiateViewController(withClass: SectionsVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar3"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar3"),
                                           title: "")
         
         let tabVC4 = createViewController(nv: UINavigationController(),
-                                          vc: UIViewController(),
+                                          vc: UIStoryboard.majors.instantiateViewController(withClass: SavedMajorsVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar4"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar4"),
                                           title: "")
@@ -63,6 +62,6 @@ class TabBarVC: UITabBarController {
     
     func fixImageInsets() {
         guard let item = tabBar.items else { return }
-        item.forEach({ $0.imageInsets = UIEdgeInsets(top: 4, left: 1.5, bottom: -4, right: 1.5) })
+        item.forEach({ $0.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0) })
     }
 }

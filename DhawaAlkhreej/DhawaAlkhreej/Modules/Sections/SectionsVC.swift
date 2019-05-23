@@ -8,11 +8,22 @@
 
 import Helper4Swift
 
-class SectionsVC: BaseViewController {
+private struct SectionsData {
+    let title: String
+    let imageName: String
+}
 
+class SectionsVC: BaseViewController {
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let sectionsArray = ["إنساني", "علمي", "صحي", "هندسي", "إداري"]
+    fileprivate let sectionsArray = [
+        SectionsData(title: "علمي", imageName: "section-1"),
+        SectionsData(title: "إنساني", imageName: "section-2"),
+        SectionsData(title: "صحي", imageName: "section-3"),
+        SectionsData(title: "هندسي", imageName: "section-4"),
+        SectionsData(title: "إداري", imageName: "section-5")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +31,7 @@ class SectionsVC: BaseViewController {
     }
     
     override func setupUI() {
+        setTitles(navigationTitle: "الاقسام")
         setupCollectionView()
     }
     
@@ -43,6 +55,9 @@ class SectionsVC: BaseViewController {
 extension SectionsVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        let vc = viewControllerFromStoryboard(withClass: MajorDetailsVC.self, from: .majors)
+        vc.majorId = 2 // for example
+        pushVC(vc)
     }
 }
 
@@ -53,8 +68,8 @@ extension SectionsVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: SectionsCollectionViewCell.self, for: indexPath)
-        cell.imageView.image = #imageLiteral(resourceName: "tabBar2")
-        cell.sectionLabel.text = sectionsArray[indexPath.row]
+        cell.imageView.image = sectionsArray[indexPath.row].imageName.asImage
+        cell.sectionLabel.text = sectionsArray[indexPath.row].title
         return cell
     }
 }

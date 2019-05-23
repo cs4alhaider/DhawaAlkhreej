@@ -20,9 +20,9 @@ extension UIStoryboard {
         return "Calculator".asStoryboard
     }
     
-    /// "Sections"
-    static var sections: UIStoryboard {
-        return "Sections".asStoryboard
+    /// "Majors"
+    static var majors: UIStoryboard {
+        return "Majors".asStoryboard
     }
     
     /// "SavedItems"

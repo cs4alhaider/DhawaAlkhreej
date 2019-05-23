@@ -24,10 +24,10 @@
                         <rect key="frame" x="10" y="10" width="173" height="176"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-DP-cg5">
-                                <rect key="frame" x="10" y="10" width="153" height="132"/>
+                                <rect key="frame" x="15" y="15" width="143" height="114.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Eg-hU-GgE">
-                                <rect key="frame" x="5" y="149" width="163" height="20"/>
+                                <rect key="frame" x="5" y="136.5" width="163" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" name="brownTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,13 +36,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Eg-hU-GgE" firstAttribute="leading" secondItem="0a2-Dg-AZu" secondAttribute="leading" constant="5" id="D31-nd-GMT"/>
-                            <constraint firstItem="8c3-DP-cg5" firstAttribute="leading" secondItem="0a2-Dg-AZu" secondAttribute="leading" constant="10" id="bUX-e3-f2p"/>
+                            <constraint firstItem="8c3-DP-cg5" firstAttribute="leading" secondItem="0a2-Dg-AZu" secondAttribute="leading" constant="15" id="bUX-e3-f2p"/>
                             <constraint firstItem="3Eg-hU-GgE" firstAttribute="top" secondItem="8c3-DP-cg5" secondAttribute="bottom" constant="7" id="bbo-ZB-0OR"/>
                             <constraint firstAttribute="trailing" secondItem="3Eg-hU-GgE" secondAttribute="trailing" constant="5" id="bh6-Nr-XI2"/>
                             <constraint firstAttribute="bottom" secondItem="3Eg-hU-GgE" secondAttribute="bottom" constant="7" id="hn6-wb-y65"/>
-                            <constraint firstAttribute="trailing" secondItem="8c3-DP-cg5" secondAttribute="trailing" constant="10" id="ui1-7S-oIj"/>
-                            <constraint firstItem="8c3-DP-cg5" firstAttribute="height" secondItem="0a2-Dg-AZu" secondAttribute="height" multiplier="0.75" id="vLe-WL-dXQ"/>
-                            <constraint firstItem="8c3-DP-cg5" firstAttribute="top" secondItem="0a2-Dg-AZu" secondAttribute="top" constant="10" id="x8z-It-tM6"/>
+                            <constraint firstAttribute="trailing" secondItem="8c3-DP-cg5" secondAttribute="trailing" constant="15" id="ui1-7S-oIj"/>
+                            <constraint firstItem="8c3-DP-cg5" firstAttribute="height" secondItem="0a2-Dg-AZu" secondAttribute="height" multiplier="0.65" id="vLe-WL-dXQ"/>
+                            <constraint firstItem="8c3-DP-cg5" firstAttribute="top" secondItem="0a2-Dg-AZu" secondAttribute="top" constant="15" id="x8z-It-tM6"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -11,6 +11,14 @@
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
 		79B147F90F891E4D84BBA2D3 /* Pods_DhawaAlkhreej.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */; };
+		DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */; };
+		DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2505FC229712FB0032A30B /* SavedMajorsTableViewCell.xib */; };
+		DD250601229713770032A30B /* SavedMajorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD250600229713770032A30B /* SavedMajorsVC.swift */; };
+		DD25060322971AA10032A30B /* MajorsSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD25060222971AA10032A30B /* MajorsSectionView.xib */; };
+		DD25060622971ABF0032A30B /* MajorsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25060522971ABF0032A30B /* MajorsSectionView.swift */; };
+		DD25060822971CD40032A30B /* MajorDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25060722971CD40032A30B /* MajorDetailsVC.swift */; };
+		DD25060B22971F9B0032A30B /* MajorDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25060922971F9B0032A30B /* MajorDetailsTableViewCell.swift */; };
+		DD25060C22971F9B0032A30B /* MajorDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD25060A22971F9B0032A30B /* MajorDetailsTableViewCell.xib */; };
 		DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34D8A22293648C00C2C423 /* SectionsVC.swift */; };
 		DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */; };
 		DD34D8A72293682200C2C423 /* SectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */; };
@@ -40,7 +48,7 @@
 		DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EA5A322908A270050F199 /* TabBarVC.swift */; };
 		DD9EA5AA229099570050F199 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5A9229099570050F199 /* AboutUs.storyboard */; };
 		DD9EA5AD22909B8E0050F199 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */; };
-		DD9EA5B022909BD40050F199 /* Sections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5AF22909BD40050F199 /* Sections.storyboard */; };
+		DD9EA5B022909BD40050F199 /* Majors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5AF22909BD40050F199 /* Majors.storyboard */; };
 		DD9EA5B422909C650050F199 /* SavedItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5B322909C650050F199 /* SavedItems.storyboard */; };
 		DD9EA5B722909E6D0050F199 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5B622909E6D0050F199 /* OnBoarding.storyboard */; };
 		DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670802291EBDE008A5128 /* Endpoint.swift */; };
@@ -56,6 +64,14 @@
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.release.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.release.xcconfig"; sourceTree = "<group>"; };
 		746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhawaAlkhreej.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMajorsTableViewCell.swift; sourceTree = "<group>"; };
+		DD2505FC229712FB0032A30B /* SavedMajorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedMajorsTableViewCell.xib; sourceTree = "<group>"; };
+		DD250600229713770032A30B /* SavedMajorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMajorsVC.swift; sourceTree = "<group>"; };
+		DD25060222971AA10032A30B /* MajorsSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MajorsSectionView.xib; sourceTree = "<group>"; };
+		DD25060522971ABF0032A30B /* MajorsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorsSectionView.swift; sourceTree = "<group>"; };
+		DD25060722971CD40032A30B /* MajorDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorDetailsVC.swift; sourceTree = "<group>"; };
+		DD25060922971F9B0032A30B /* MajorDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		DD25060A22971F9B0032A30B /* MajorDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MajorDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		DD34D8A22293648C00C2C423 /* SectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
 		DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -87,7 +103,7 @@
 		DD9EA5A322908A270050F199 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DD9EA5A9229099570050F199 /* AboutUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
 		DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
-		DD9EA5AF22909BD40050F199 /* Sections.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sections.storyboard; sourceTree = "<group>"; };
+		DD9EA5AF22909BD40050F199 /* Majors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Majors.storyboard; sourceTree = "<group>"; };
 		DD9EA5B322909C650050F199 /* SavedItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedItems.storyboard; sourceTree = "<group>"; };
 		DD9EA5B622909E6D0050F199 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		DDF670802291EBDE008A5128 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -119,13 +135,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		DD34D8A82293682A00C2C423 /* Cell */ = {
+		DD2505FA229712BF0032A30B /* SectionsCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				DD34D8A42293682200C2C423 /* SectionsCollectionViewCell.swift */,
 				DD34D8A52293682200C2C423 /* SectionsCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = SectionsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DD2505FF229713070032A30B /* SavedMajorsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */,
+				DD2505FC229712FB0032A30B /* SavedMajorsTableViewCell.xib */,
+			);
+			path = SavedMajorsTableViewCell;
+			sourceTree = "<group>";
+		};
+		DD25060422971AB00032A30B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD25060222971AA10032A30B /* MajorsSectionView.xib */,
+				DD25060522971ABF0032A30B /* MajorsSectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD25060D22971FA70032A30B /* MajorDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD25060922971F9B0032A30B /* MajorDetailsTableViewCell.swift */,
+				DD25060A22971F9B0032A30B /* MajorDetailsTableViewCell.xib */,
+			);
+			path = MajorDetailsTableViewCell;
+			sourceTree = "<group>";
+		};
+		DD34D8A82293682A00C2C423 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DD2505FA229712BF0032A30B /* SectionsCollectionViewCell */,
+				DD2505FF229713070032A30B /* SavedMajorsTableViewCell */,
+				DD25060D22971FA70032A30B /* MajorDetailsTableViewCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DD3B1A20228F50AB00E89B88 = {
@@ -334,9 +387,12 @@
 		DD9EA5AE22909BC50050F199 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				DD34D8A82293682A00C2C423 /* Cell */,
-				DD9EA5AF22909BD40050F199 /* Sections.storyboard */,
+				DD25060422971AB00032A30B /* View */,
+				DD34D8A82293682A00C2C423 /* Cells */,
+				DD9EA5AF22909BD40050F199 /* Majors.storyboard */,
 				DD34D8A22293648C00C2C423 /* SectionsVC.swift */,
+				DD250600229713770032A30B /* SavedMajorsVC.swift */,
+				DD25060722971CD40032A30B /* MajorDetailsVC.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -450,11 +506,14 @@
 				DD9EA5B422909C650050F199 /* SavedItems.storyboard in Resources */,
 				DD34D8A72293682200C2C423 /* SectionsCollectionViewCell.xib in Resources */,
 				DD3B1A37228F50AC00E89B88 /* LaunchScreen.storyboard in Resources */,
+				DD25060C22971F9B0032A30B /* MajorDetailsTableViewCell.xib in Resources */,
 				DD3B1A34228F50AC00E89B88 /* Assets.xcassets in Resources */,
 				DD9EA5AD22909B8E0050F199 /* Calculator.storyboard in Resources */,
-				DD9EA5B022909BD40050F199 /* Sections.storyboard in Resources */,
+				DD25060322971AA10032A30B /* MajorsSectionView.xib in Resources */,
+				DD9EA5B022909BD40050F199 /* Majors.storyboard in Resources */,
 				DD3B1A32228F50AC00E89B88 /* Main.storyboard in Resources */,
 				DD9EA5B722909E6D0050F199 /* OnBoarding.storyboard in Resources */,
+				DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,14 +599,18 @@
 				DD3B1A65228F5EE900E89B88 /* AlertHelper.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,
 				DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */,
+				DD25060B22971F9B0032A30B /* MajorDetailsTableViewCell.swift in Sources */,
 				DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */,
+				DD25060822971CD40032A30B /* MajorDetailsVC.swift in Sources */,
 				DDF670872291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift in Sources */,
+				DD25060622971ABF0032A30B /* MajorsSectionView.swift in Sources */,
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
 				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
 				DD3B1A5A228F5CFF00E89B88 /* ColorType.swift in Sources */,
 				DD3B1A58228F5CC800E89B88 /* AppColors.swift in Sources */,
 				DDF6708A2292210F008A5128 /* Router.swift in Sources */,
 				DD3B1A44228F5A4600E89B88 /* DataRequester.swift in Sources */,
+				DD250601229713770032A30B /* SavedMajorsVC.swift in Sources */,
 				DD3B1A5E228F5DB200E89B88 /* FontType.swift in Sources */,
 				DD3B1A56228F5C2E00E89B88 /* Environment.swift in Sources */,
 				DD3B1A51228F5B4D00E89B88 /* Keys+NotificationCenter.swift in Sources */,
@@ -559,6 +622,7 @@
 				132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */,
 				DD3B1A72228F602E00E89B88 /* UIStoryboard+Extension.swift in Sources */,
 				DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */,
+				DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */,
 				130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */,
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,

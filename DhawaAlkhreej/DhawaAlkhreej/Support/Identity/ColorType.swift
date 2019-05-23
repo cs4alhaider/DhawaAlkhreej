@@ -13,6 +13,7 @@ enum ColorType {
     case primary
     case whiteBackground
     case whiteTextColor
+    case brownBackground
     case brownTextColor
     
     var color: UIColor {
@@ -23,6 +24,8 @@ enum ColorType {
             return .whiteBackground
         case .whiteTextColor:
             return .whiteTextColor
+        case .brownBackground:
+            return .brownBackground
         case .brownTextColor:
             return .brownTextColor
         }
