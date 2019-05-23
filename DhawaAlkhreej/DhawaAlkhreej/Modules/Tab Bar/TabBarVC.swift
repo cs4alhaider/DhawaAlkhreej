@@ -39,8 +39,9 @@ class TabBarVC: UITabBarController {
                                           unselectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           title: "")
         
+        // Middle VC
         let tabVC2 = createViewController(nv: UINavigationController(),
-                                          vc: UIViewController(),
+                                          vc: UIStoryboard.calculator.instantiateViewController(withClass: CalculatorVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           title: "")
