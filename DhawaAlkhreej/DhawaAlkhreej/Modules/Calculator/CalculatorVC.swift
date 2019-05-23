@@ -10,21 +10,25 @@ import UIKit
 
 class CalculatorVC: BaseViewController {
 
+    // MARK: Labels
     @IBOutlet var ThanwiyahLabel: UILabel!
     @IBOutlet var quodratLabel: UILabel!
     @IBOutlet var tahsilyLabel: UILabel!
     @IBOutlet var stepExamLabel: UILabel!
-    @IBOutlet var calculateButton: UIButton!
     @IBOutlet var resultLabel: UILabel!
     
+    // MARK: Buttons
+    @IBOutlet var calculateButton: UIButton!
+    
+    // MARK: Requsted TextFields
     @IBOutlet var requestedThanawiyahTF: DesignableTF!
     
+    // MARK: Class Variables
     var percantages = ["٠٪", "١٠٪", "٢٠٪", "٣٠٪", "٤٠٪", "٥٠٪", "٦٠٪"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createPercentagePicker()
-        createPickerToolbar()
         setupUI()
     }
     
@@ -60,6 +64,7 @@ class CalculatorVC: BaseViewController {
     
     private func createPercentagePicker() {
         
+        createPickerToolbar()
         let percentagePicker = UIPickerView()
         percentagePicker.delegate = self
         
