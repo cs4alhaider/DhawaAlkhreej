@@ -471,12 +471,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Helper4Swift/Helper4Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Helper4Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
