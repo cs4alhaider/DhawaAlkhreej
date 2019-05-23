@@ -15,13 +15,22 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var quodratLabel: UILabel!
     @IBOutlet var tahsilyLabel: UILabel!
     @IBOutlet var stepExamLabel: UILabel!
-    @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var calculatedPercentageLabel: UILabel!
     
     // MARK: Buttons
     @IBOutlet var calculateButton: UIButton!
     
-    // MARK: Requsted TextFields
+    // MARK: Requsted Textfields
     @IBOutlet var requestedThanawiyahTF: DesignableTF!
+    @IBOutlet var requestedQuodratTF: DesignableTF!
+    @IBOutlet var requestedTahsilyTF: DesignableTF!
+    @IBOutlet var requestedStepExamTF: DesignableTF!
+    
+    // MARK: Accomplished Textfields
+    @IBOutlet var accoplishedThanawiyahTF: DesignableTF!
+    @IBOutlet var accomplishedQuodratTF: DesignableTF!
+    @IBOutlet var accomplishedTahsilyTF: DesignableTF!
+    @IBOutlet var accomplishedStemExamTF: DesignableTF!
     
     // MARK: Class Variables
     var percantages = ["٠٪", "١٠٪", "٢٠٪", "٣٠٪", "٤٠٪", "٥٠٪", "٦٠٪"]
@@ -44,8 +53,8 @@ class CalculatorVC: BaseViewController {
         calculateButton.layer.shadowOpacity = 0.2
         calculateButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
         
-        resultLabel.textColor = UIColor.primary
-        resultLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+        calculatedPercentageLabel.textColor = UIColor.primary
+        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
     }
     
     private func createPickerToolbar() {
