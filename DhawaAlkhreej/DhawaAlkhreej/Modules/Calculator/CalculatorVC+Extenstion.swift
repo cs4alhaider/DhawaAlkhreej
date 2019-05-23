@@ -28,7 +28,15 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        requestedThanawiyahTF.text = percantages[row]
-    }
-    
+        if requestedThanawiyahTF.isFirstResponder {
+            requestedThanawiyahTF.text = percantages[row]
+        } else if requestedQuodratTF.isFirstResponder {
+            requestedQuodratTF.text = percantages[row]
+        } else if requestedTahsilyTF.isFirstResponder {
+            requestedTahsilyTF.text = percantages[row]
+        } else if requestedStepExamTF.isFirstResponder {
+            requestedStepExamTF.text = percantages[row]
+        }
+        
+    }    
 }

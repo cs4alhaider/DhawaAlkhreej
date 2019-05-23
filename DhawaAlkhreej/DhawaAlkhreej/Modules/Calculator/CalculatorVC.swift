@@ -68,6 +68,9 @@ class CalculatorVC: BaseViewController {
         toolBar.isUserInteractionEnabled = true
         
         requestedThanawiyahTF.inputAccessoryView = toolBar
+        requestedQuodratTF.inputAccessoryView = toolBar
+        requestedTahsilyTF.inputAccessoryView = toolBar
+        requestedStepExamTF.inputAccessoryView = toolBar
         
     }
     
@@ -78,6 +81,10 @@ class CalculatorVC: BaseViewController {
         percentagePicker.delegate = self
         
         requestedThanawiyahTF.inputView = percentagePicker
+        requestedQuodratTF.inputView = percentagePicker
+        requestedTahsilyTF.inputView = percentagePicker
+        requestedStepExamTF.inputView = percentagePicker
+        
         percentagePicker.backgroundColor = UIColor.whiteBackground
    
     }
