@@ -37,24 +37,54 @@ class CalculatorVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createPercentagePicker()
         setupUI()
+        createPercentagePicker()
+        
     }
     
     internal override func setupUI() {
+        
+        setupExamsLabels()
+        setupCalculateButton()
+        setupCalculatedPercentageLabel()
+
+    }
+    
+    private func setupExamsLabels() {
         
         ThanwiyahLabel.font = Identity.font(.custom(weight: .bold, size: 20))
         quodratLabel.font = Identity.font(.custom(weight: .bold, size: 20))
         tahsilyLabel.font = Identity.font(.custom(weight: .bold, size: 20))
         stepExamLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+    }
+    
+    private func setupCalculateButton() {
         
         calculateButton.layer.cornerRadius = 10
         calculateButton.layer.shadowOffset = CGSize.zero
         calculateButton.layer.shadowOpacity = 0.2
         calculateButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
+    }
+    
+    private func setupCalculatedPercentageLabel() {
         
         calculatedPercentageLabel.textColor = UIColor.primary
         calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+    }
+    
+    private func createPercentagePicker() {
+        
+        createPickerToolbar()
+        let percentagePicker = UIPickerView()
+        percentagePicker.delegate = self
+        
+        requestedThanawiyahTF.inputView = percentagePicker
+        requestedQuodratTF.inputView = percentagePicker
+        requestedTahsilyTF.inputView = percentagePicker
+        requestedStepExamTF.inputView = percentagePicker
+        
+        percentagePicker.backgroundColor = UIColor.whiteBackground
+        
     }
     
     private func createPickerToolbar() {
@@ -73,20 +103,5 @@ class CalculatorVC: BaseViewController {
         requestedStepExamTF.inputAccessoryView = toolBar
         
     }
-    
-    private func createPercentagePicker() {
-        
-        createPickerToolbar()
-        let percentagePicker = UIPickerView()
-        percentagePicker.delegate = self
-        
-        requestedThanawiyahTF.inputView = percentagePicker
-        requestedQuodratTF.inputView = percentagePicker
-        requestedTahsilyTF.inputView = percentagePicker
-        requestedStepExamTF.inputView = percentagePicker
-        
-        percentagePicker.backgroundColor = UIColor.whiteBackground
-   
-    }
-    
+ 
 }
