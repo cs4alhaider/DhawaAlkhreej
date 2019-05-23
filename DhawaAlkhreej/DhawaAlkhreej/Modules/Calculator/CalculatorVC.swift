@@ -17,9 +17,15 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var calculateButton: UIButton!
     @IBOutlet var resultLabel: UILabel!
     
+    @IBOutlet var requestedThanawiyahTF: DesignableTF!
+    
+    var percantage = ["30%", "40%", "50%"]
+    var selectedPercentage: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createPercentagePicker()
+        createPickerToolbar()
         ThanwiyahLabel.font = Identity.font(.custom(weight: .bold, size: 20))
         quodratLabel.font = Identity.font(.custom(weight: .bold, size: 20))
         tahsilyLabel.font = Identity.font(.custom(weight: .bold, size: 20))
@@ -33,4 +39,36 @@ class CalculatorVC: BaseViewController {
         resultLabel.textColor = UIColor.primary
         resultLabel.font = Identity.font(.custom(weight: .bold, size: 20))
     }
+    
+    private func createPickerToolbar() {
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        toolBar.tintColor = UIColor.primary
+        
+        let doneButton = UIBarButtonItem(title: "إنهاء", style: .plain, target: self, action: #selector(dismissKeyboard))
+        toolBar.setItems([doneButton], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        
+        requestedThanawiyahTF.inputAccessoryView = toolBar
+        
+    }
+    
+    private func createPercentagePicker() {
+        
+        let percentagePicker = UIPickerView()
+        percentagePicker.delegate = self
+        
+        requestedThanawiyahTF.inputView = percentagePicker
+        percentagePicker.backgroundColor = UIColor.clear
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    
+        // percentagePicker.addSubview(blurEffectView)
+       // blurEffectView.addSubview(percentagePicker)
+   
+    }
+    
 }

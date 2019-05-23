@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */; };
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
 		79B147F90F891E4D84BBA2D3 /* Pods_DhawaAlkhreej.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorVC+Extenstion.swift"; sourceTree = "<group>"; };
 		132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTF.swift; sourceTree = "<group>"; };
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.release.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.release.xcconfig"; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			children = (
 				DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */,
 				1330E03722936427001BC1EF /* CalculatorVC.swift */,
+				130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */,
 				132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */,
 			);
 			path = Calculator;
@@ -554,6 +557,7 @@
 				132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */,
 				DD3B1A72228F602E00E89B88 /* UIStoryboard+Extension.swift in Sources */,
 				DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */,
+				130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */,
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,
 				DD3B1A68228F5F8700E89B88 /* BaseViewProtocol.swift in Sources */,

@@ -45,6 +45,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
+                                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
@@ -356,6 +357,7 @@
                         <outlet property="ThanwiyahLabel" destination="1Op-6Z-hZo" id="O5u-sW-oTr"/>
                         <outlet property="calculateButton" destination="3qz-7g-hKT" id="s2t-t6-HhF"/>
                         <outlet property="quodratLabel" destination="lKC-3Y-zsV" id="ffL-TI-UOP"/>
+                        <outlet property="requestedThanawiyahTF" destination="f4d-pn-K5h" id="0MI-Vz-BTK"/>
                         <outlet property="resultLabel" destination="naa-lX-Dft" id="DKg-XP-qa0"/>
                         <outlet property="stepExamLabel" destination="OKK-fb-FJr" id="FIX-eU-Nqb"/>
                         <outlet property="tahsilyLabel" destination="UgJ-0s-GRm" id="Ldx-4e-4oh"/>
