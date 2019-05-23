@@ -19,16 +19,16 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return percantage.count
+        return percantages.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return percantage[row]
+        return percantages[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPercentage = percantage[row]
-        requestedThanawiyahTF.text = percantage[row]
+        selectedPercentage = percantages[row]
+        requestedThanawiyahTF.text = percantages[row]
     }
     
 }
