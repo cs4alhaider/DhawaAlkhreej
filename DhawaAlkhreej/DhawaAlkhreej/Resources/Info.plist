@@ -2,6 +2,41 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>tabBar1</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>net.alhaider.search</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>البحث</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>tabBar2</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>net.alhaider.calculate</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>احسب نسبتك</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>tabBar3</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>net.alhaider.viewMajors</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>التخصصات</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>tabBar4</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>net.alhaider.showFavorite</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>المفضلة</string>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
