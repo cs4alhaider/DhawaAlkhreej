@@ -37,17 +37,15 @@ class CalculatorVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         createPercentagePicker()
-        
     }
     
-    internal override func setupUI() {
+    override func setupUI() {
         
         setupExamsLabels()
         setupCalculateButton()
         setupCalculatedPercentageLabel()
-
+        setupRequstedTextfeilds()
     }
     
     private func setupExamsLabels() {
@@ -70,6 +68,13 @@ class CalculatorVC: BaseViewController {
         
         calculatedPercentageLabel.textColor = UIColor.primary
         calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+    }
+    
+    private func setupRequstedTextfeilds() {
+        requestedThanawiyahTF.tintColor = UIColor.primary
+        requestedQuodratTF.tintColor = UIColor.primary
+        requestedTahsilyTF.tintColor = UIColor.primary
+        requestedStepExamTF.tintColor = UIColor.primary
     }
     
     private func createPercentagePicker() {
