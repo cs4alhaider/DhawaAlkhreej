@@ -355,10 +355,17 @@
                     </view>
                     <connections>
                         <outlet property="ThanwiyahLabel" destination="1Op-6Z-hZo" id="O5u-sW-oTr"/>
+                        <outlet property="accomplishedQuodratTF" destination="CQR-nM-0kw" id="mwM-cT-3nq"/>
+                        <outlet property="accomplishedStemExamTF" destination="X87-eU-PXS" id="uL1-eg-Xno"/>
+                        <outlet property="accomplishedTahsilyTF" destination="YU2-fJ-JwD" id="TQ9-7l-Nmk"/>
+                        <outlet property="accoplishedThanawiyahTF" destination="kwJ-ox-TQb" id="Kpa-Sg-bSm"/>
                         <outlet property="calculateButton" destination="3qz-7g-hKT" id="s2t-t6-HhF"/>
+                        <outlet property="calculatedPercentageLabel" destination="naa-lX-Dft" id="DKg-XP-qa0"/>
                         <outlet property="quodratLabel" destination="lKC-3Y-zsV" id="ffL-TI-UOP"/>
+                        <outlet property="requestedQuodratTF" destination="fdQ-U2-cfM" id="DkG-zC-Xhq"/>
+                        <outlet property="requestedStepExamTF" destination="EWK-Ga-poE" id="ngw-xS-2Px"/>
+                        <outlet property="requestedTahsilyTF" destination="XVu-GQ-8BO" id="QUK-F5-Ice"/>
                         <outlet property="requestedThanawiyahTF" destination="f4d-pn-K5h" id="0MI-Vz-BTK"/>
-                        <outlet property="resultLabel" destination="naa-lX-Dft" id="DKg-XP-qa0"/>
                         <outlet property="stepExamLabel" destination="OKK-fb-FJr" id="FIX-eU-Nqb"/>
                         <outlet property="tahsilyLabel" destination="UgJ-0s-GRm" id="Ldx-4e-4oh"/>
                     </connections>
