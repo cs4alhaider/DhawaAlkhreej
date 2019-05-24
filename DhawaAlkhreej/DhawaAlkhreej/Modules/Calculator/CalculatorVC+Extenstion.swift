@@ -38,5 +38,23 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
             requestedStepExamTF.text = percantages[row]
         }
         
-    }    
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var label: UILabel
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = UIColor.brownTextColor
+        label.textAlignment = .center
+        label.text = percantages[row]
+        label.font = Identity.font(.custom(weight: .regular, size: 20))
+        
+        return label
+    }
 }
