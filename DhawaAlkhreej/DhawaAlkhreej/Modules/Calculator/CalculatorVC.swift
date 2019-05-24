@@ -102,7 +102,7 @@ class CalculatorVC: BaseViewController {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.primary
+        toolBar.tintColor = UIColor.brownTextColor
         
         let doneButton = UIBarButtonItem(title: "إنهاء", style: .plain, target: self, action: #selector(dismissKeyboard))
         toolBar.setItems([doneButton], animated: true)
