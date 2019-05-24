@@ -13,7 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupDependencies()
         return true
@@ -23,6 +24,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
     }
 
+    func application(_ application: UIApplication,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: @escaping (Bool) -> Void) {
+        
+        guard let tabBar = UIApplication.topViewController() else { return }
+        
+        switch shortcutItem.type {
+        case "net.alhaider.search":
+            tabBar.tabBarController?.selectedIndex = 0
+        case "net.alhaider.calculate":
+            tabBar.tabBarController?.selectedIndex = 1
+        case "net.alhaider.viewMajors":
+            tabBar.tabBarController?.selectedIndex = 2
+        case "net.alhaider.showFavorite":
+            tabBar.tabBarController?.selectedIndex = 3
+        default:
+            break
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur
         // for certain types of temporary interruptions (such as an incoming phone call or SMS message) or
@@ -50,21 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        
-        guard let tabBar = UIApplication.topViewController() else { return }
-        
-        if shortcutItem.type == "net.alhaider.search" {
-           tabBar.tabBarController?.selectedIndex = 0
-        } else if shortcutItem.type == "net.alhaider.calculate" {
-            tabBar.tabBarController?.selectedIndex = 1
-        } else if shortcutItem.type == "net.alhaider.viewMajors" {
-            tabBar.tabBarController?.selectedIndex = 2
-        } else if shortcutItem.type == "net.alhaider.showFavorite" {
-            tabBar.tabBarController?.selectedIndex = 3
-        }
     }
 
 }
