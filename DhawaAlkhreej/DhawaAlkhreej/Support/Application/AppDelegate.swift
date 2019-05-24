@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupDependencies() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "تم"
+        IQKeyboardManager.shared.placeholderColor = UIColor.brownTextColor
+        IQKeyboardManager.shared.toolbarTintColor = UIColor.primary
     }
 
     func application(_ application: UIApplication,
