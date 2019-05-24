@@ -43,7 +43,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bts-a7-1fW">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
@@ -73,7 +73,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-83-cSQ">
                                                                         <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwJ-ox-TQb" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwJ-ox-TQb" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -108,7 +108,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-zn-hxY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-U2-cfM" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-U2-cfM" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -137,7 +137,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4LE-U1-mDt">
                                                                         <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24.333333333333332"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-nM-0kw" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-nM-0kw" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24.333333333333332"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -172,7 +172,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-qT-Wvf">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-GQ-8BO" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-GQ-8BO" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -201,7 +201,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-Fn-2nZ">
                                                                         <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="24"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-fJ-JwD" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-fJ-JwD" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -236,7 +236,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IBO-uu-VO0">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="33.333333333333336"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-Ga-poE" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-Ga-poE" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="33.333333333333336"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -265,7 +265,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-EE-PeT">
                                                                         <rect key="frame" x="195.66666666666663" y="0.0" width="186.33333333333337" height="33.333333333333336"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X87-eU-PXS" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X87-eU-PXS" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="33.333333333333336"/>
                                                                                 <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
