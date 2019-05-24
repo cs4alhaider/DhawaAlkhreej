@@ -33,7 +33,7 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var accomplishedStemExamTF: DesignableTF!
     
     // MARK: Class Variables
-    var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
+    var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٢٥", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,7 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
+        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 25))
     }
     
     private func setupExamsLabels() {
