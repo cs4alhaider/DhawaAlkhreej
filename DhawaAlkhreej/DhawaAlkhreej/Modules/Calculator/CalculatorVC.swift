@@ -42,10 +42,11 @@ class CalculatorVC: BaseViewController {
     
     override func setupUI() {
         
+        setTitles(navigationTitle: "احسب نسبتك")
         setupExamsLabels()
         setupCalculateButton()
         setupCalculatedPercentageLabel()
-        setupRequstedTextfeilds()
+        setupTextfeilds()
     }
     
     private func setupExamsLabels() {
@@ -70,11 +71,16 @@ class CalculatorVC: BaseViewController {
         calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
     }
     
-    private func setupRequstedTextfeilds() {
+    private func setupTextfeilds() {
+        
         requestedThanawiyahTF.tintColor = UIColor.primary
         requestedQuodratTF.tintColor = UIColor.primary
         requestedTahsilyTF.tintColor = UIColor.primary
         requestedStepExamTF.tintColor = UIColor.primary
+        accoplishedThanawiyahTF.tintColor = UIColor.primary
+        accomplishedQuodratTF.tintColor = UIColor.primary
+        accomplishedTahsilyTF.tintColor = UIColor.primary
+        accomplishedStemExamTF.tintColor = UIColor.primary
     }
     
     private func createPercentagePicker() {
