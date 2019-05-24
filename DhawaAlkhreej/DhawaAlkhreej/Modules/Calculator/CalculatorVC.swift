@@ -37,17 +37,16 @@ class CalculatorVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         createPercentagePicker()
-        
     }
     
-    internal override func setupUI() {
+    override func setupUI() {
         
+        setTitles(navigationTitle: "احسب نسبتك")
         setupExamsLabels()
         setupCalculateButton()
         setupCalculatedPercentageLabel()
-
+        setupTextfeilds()
     }
     
     private func setupExamsLabels() {
@@ -72,6 +71,18 @@ class CalculatorVC: BaseViewController {
         calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
     }
     
+    private func setupTextfeilds() {
+        
+        requestedThanawiyahTF.tintColor = UIColor.primary
+        requestedQuodratTF.tintColor = UIColor.primary
+        requestedTahsilyTF.tintColor = UIColor.primary
+        requestedStepExamTF.tintColor = UIColor.primary
+        accoplishedThanawiyahTF.tintColor = UIColor.primary
+        accomplishedQuodratTF.tintColor = UIColor.primary
+        accomplishedTahsilyTF.tintColor = UIColor.primary
+        accomplishedStemExamTF.tintColor = UIColor.primary
+    }
+    
     private func createPercentagePicker() {
         
         createPickerToolbar()
@@ -91,7 +102,7 @@ class CalculatorVC: BaseViewController {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.primary
+        toolBar.tintColor = UIColor.brownTextColor
         
         let doneButton = UIBarButtonItem(title: "إنهاء", style: .plain, target: self, action: #selector(dismissKeyboard))
         toolBar.setItems([doneButton], animated: true)
