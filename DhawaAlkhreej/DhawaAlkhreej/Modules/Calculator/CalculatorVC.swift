@@ -47,7 +47,6 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
-        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 25))
     }
     
     private func setupExamsLabels() {
@@ -69,7 +68,7 @@ class CalculatorVC: BaseViewController {
     private func setupCalculatedPercentageLabel() {
         
         calculatedPercentageLabel.textColor = UIColor.primary
-        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 25))
     }
     
     private func setupTextfeilds() {
