@@ -299,7 +299,7 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-7g-hKT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-7g-hKT" customClass="CalculateButton" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                 <rect key="frame" x="117" y="385" width="180" height="50"/>
                                                 <color key="backgroundColor" name="primary"/>
                                                 <constraints>

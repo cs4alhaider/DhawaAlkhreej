@@ -21,7 +21,7 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var calculatedPercentageLabel: UILabel!
     
     // MARK: Buttons
-    @IBOutlet var calculateButton: UIButton!
+    @IBOutlet var calculateButton: CalculateButton!
     
     // MARK: Requsted Textfields
     @IBOutlet var requestedThanawiyahTF: DesignableTF!
@@ -50,6 +50,10 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.calculateButton.changeStatus(to: .disabled)
+        }
     }
     
     private func setupExamsLabels() {
