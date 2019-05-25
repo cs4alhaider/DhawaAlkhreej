@@ -10,6 +10,9 @@ import UIKit
 
 class CalculatorVC: BaseViewController {
     
+    @IBOutlet var calculatedPercangedStackViewYPosition: NSLayoutConstraint!
+    @IBOutlet var scrollView: UIScrollView!
+    
     // MARK: Labels
     @IBOutlet var ThanwiyahLabel: UILabel!
     @IBOutlet var quodratLabel: UILabel!
@@ -67,6 +70,7 @@ class CalculatorVC: BaseViewController {
     
     private func setupCalculatedPercentageLabel() {
         
+        calculatedPercangedStackViewYPosition.constant = 500
         calculatedPercentageLabel.textColor = UIColor.primary
         calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 25))
     }
@@ -122,5 +126,18 @@ class CalculatorVC: BaseViewController {
     @IBAction func accoplishedStepExamEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
     }
-    
+    @IBAction func calculateButtonPressed(_ sender: Any) {
+        
+        scrollView.scrollToBottom()
+        calculatedPercentageLabel.fadeTransition(0.4)
+        calculatedPercentageLabel.text = "نسبتك الموزونة: \(self.accoplishedThanawiyahTF.text ?? "")٪"
+        UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            
+            self.calculatedPercangedStackViewYPosition.constant = 220
+            self.view.layoutIfNeeded()
+            
+        }) { (_) in
+            
+        }
+    }
 }
