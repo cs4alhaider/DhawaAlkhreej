@@ -10,6 +10,8 @@
 		130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */; };
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
+		1356CB002299C5370010A3CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CAFF2299C5370010A3CE /* Validator.swift */; };
+		1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB032299D19A0010A3CE /* UITextField+Extension.swift */; };
 		79B147F90F891E4D84BBA2D3 /* Pods_DhawaAlkhreej.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */; };
 		DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */; };
 		DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2505FC229712FB0032A30B /* SavedMajorsTableViewCell.xib */; };
@@ -62,6 +64,8 @@
 		130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorVC+Extenstion.swift"; sourceTree = "<group>"; };
 		132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTF.swift; sourceTree = "<group>"; };
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
+		1356CAFF2299C5370010A3CE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		1356CB032299D19A0010A3CE /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.release.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.release.xcconfig"; sourceTree = "<group>"; };
 		746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhawaAlkhreej.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMajorsTableViewCell.swift; sourceTree = "<group>"; };
@@ -380,6 +384,8 @@
 				1330E03722936427001BC1EF /* CalculatorVC.swift */,
 				130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */,
 				132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */,
+				1356CAFF2299C5370010A3CE /* Validator.swift */,
+				1356CB032299D19A0010A3CE /* UITextField+Extension.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */,
 				DD3B1A53228F5B9500E89B88 /* Keys+UserDefaults.swift in Sources */,
 				DD3B1A60228F5DF200E89B88 /* Helper.swift in Sources */,
 				DD3B1A42228F59D400E89B88 /* Resources.swift in Sources */,
@@ -606,6 +613,7 @@
 				DD25060622971ABF0032A30B /* MajorsSectionView.swift in Sources */,
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
 				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
+				1356CB002299C5370010A3CE /* Validator.swift in Sources */,
 				DD3B1A5A228F5CFF00E89B88 /* ColorType.swift in Sources */,
 				DD3B1A58228F5CC800E89B88 /* AppColors.swift in Sources */,
 				DDF6708A2292210F008A5128 /* Router.swift in Sources */,

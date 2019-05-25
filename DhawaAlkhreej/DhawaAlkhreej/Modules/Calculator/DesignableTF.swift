@@ -10,6 +10,12 @@ import UIKit
 
 @IBDesignable class DesignableTF: UITextField {
     
+    var hasCorretInputValue: Bool = true {
+        didSet {
+             textColor = hasCorretInputValue ? UIColor.brownTextColor : .red
+        }
+    }
+    
     // MARK: Buttom Border TextField Image
     @IBInspectable var buttomBorder: CGFloat = 0 {
         didSet {

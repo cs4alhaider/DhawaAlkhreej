@@ -86,6 +86,9 @@
                                                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="accomplishedThanawiyahTfEditingChanged:" destination="Lam-e9-sG5" eventType="editingChanged" id="CV0-QN-W1m"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -150,6 +153,9 @@
                                                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="accoplishedQuodratTfEditingChanged:" destination="Lam-e9-sG5" eventType="editingChanged" id="lty-nE-5HW"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -214,6 +220,9 @@
                                                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="accoplishedTahsilyTfEditingChanged:" destination="Lam-e9-sG5" eventType="editingChanged" id="gvS-Om-ruc"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -278,6 +287,9 @@
                                                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="accoplishedStepExamEditingChanged:" destination="Lam-e9-sG5" eventType="editingChanged" id="5sP-0U-kex"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -356,7 +368,7 @@
                     <connections>
                         <outlet property="ThanwiyahLabel" destination="1Op-6Z-hZo" id="O5u-sW-oTr"/>
                         <outlet property="accomplishedQuodratTF" destination="CQR-nM-0kw" id="mwM-cT-3nq"/>
-                        <outlet property="accomplishedStemExamTF" destination="X87-eU-PXS" id="uL1-eg-Xno"/>
+                        <outlet property="accomplishedStepExamTF" destination="X87-eU-PXS" id="uL1-eg-Xno"/>
                         <outlet property="accomplishedTahsilyTF" destination="YU2-fJ-JwD" id="TQ9-7l-Nmk"/>
                         <outlet property="accoplishedThanawiyahTF" destination="kwJ-ox-TQb" id="Kpa-Sg-bSm"/>
                         <outlet property="calculateButton" destination="3qz-7g-hKT" id="s2t-t6-HhF"/>
