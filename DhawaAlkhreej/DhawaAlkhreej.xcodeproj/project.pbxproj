@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */; };
+		130ED21222960E4E00080BAB /* CalculatorVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ED21122960E4E00080BAB /* CalculatorVC+Extension.swift */; };
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
 		1356CB002299C5370010A3CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CAFF2299C5370010A3CE /* Validator.swift */; };
@@ -68,7 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorVC+Extenstion.swift"; sourceTree = "<group>"; };
+		130ED21122960E4E00080BAB /* CalculatorVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorVC+Extension.swift"; sourceTree = "<group>"; };
 		132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTF.swift; sourceTree = "<group>"; };
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		1356CAFF2299C5370010A3CE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -409,7 +409,7 @@
 				DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */,
 				1330E03722936427001BC1EF /* CalculatorVC.swift */,
 				1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */,
-				130ED21122960E4E00080BAB /* CalculatorVC+Extenstion.swift */,
+				130ED21122960E4E00080BAB /* CalculatorVC+Extension.swift */,
 				132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */,
 				1356CAFF2299C5370010A3CE /* Validator.swift */,
 				1356CB032299D19A0010A3CE /* UITextField+Extension.swift */,
@@ -675,7 +675,7 @@
 				DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */,
 				1356CB082299FD930010A3CE /* UIView+Extension.swift in Sources */,
 				DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */,
-				130ED21222960E4E00080BAB /* CalculatorVC+Extenstion.swift in Sources */,
+				130ED21222960E4E00080BAB /* CalculatorVC+Extension.swift in Sources */,
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,
 				DD3B1A68228F5F8700E89B88 /* BaseViewProtocol.swift in Sources */,
