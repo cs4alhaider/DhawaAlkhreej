@@ -29,4 +29,9 @@ extension UIStoryboard {
     static var savedItems: UIStoryboard {
         return "SavedItems".asStoryboard
     }
+    
+    /// "Search"
+    static var search: UIStoryboard {
+        return "Search".asStoryboard
+    }
 }

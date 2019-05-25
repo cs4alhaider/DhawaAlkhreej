@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchTextField">
+            <connections>
+                <outlet property="cancelButton" destination="fzq-ty-u95" id="M3V-Xj-AMO"/>
+                <outlet property="clearButton" destination="0Qs-Gn-wBa" id="62W-Fv-fLY"/>
+                <outlet property="searchImageView" destination="8y7-Fe-UV5" id="lal-QV-dUY"/>
+                <outlet property="textBackView" destination="3ED-Tz-cKq" id="Hwp-ui-MPG"/>
+                <outlet property="textField" destination="awr-UV-HUJ" id="hkP-FA-M75"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayJ-3k-ktq">
+                    <rect key="frame" x="5" y="5" width="357" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzq-ty-u95">
+                            <rect key="frame" x="2" y="2" width="45" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="qoA-Ob-G0u"/>
+                            </constraints>
+                            <state key="normal" title="العودة">
+                                <color key="titleColor" name="brownTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="VYs-Eo-jCq"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ED-Tz-cKq">
+                            <rect key="frame" x="55" y="2" width="300" height="47"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tnU-xe-nKT">
+                                    <rect key="frame" x="5" y="5" width="290" height="37"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qs-Gn-wBa">
+                                            <rect key="frame" x="0.0" y="0.0" width="35" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="Xvh-SL-VG7"/>
+                                            </constraints>
+                                            <state key="normal" image="Search_icon">
+                                                <color key="titleColor" name="brownTextColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clearTapped:" destination="-1" eventType="touchUpInside" id="ehT-Cs-eYt"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awr-UV-HUJ">
+                                            <rect key="frame" x="39" y="0.0" width="216" height="37"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="editingChanged:" destination="-1" eventType="editingChanged" id="48a-ZL-Lic"/>
+                                                <action selector="editingDidBegin:" destination="-1" eventType="editingDidEnd" id="vno-Vg-ywO"/>
+                                                <action selector="editingDidEnd:" destination="-1" eventType="editingDidEnd" id="T7P-5N-PpS"/>
+                                            </connections>
+                                        </textField>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-Fe-UV5">
+                                            <rect key="frame" x="259" y="0.0" width="31" height="37"/>
+                                        </imageView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="whiteBackground"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="tnU-xe-nKT" secondAttribute="bottom" constant="5" id="bif-Rh-jWt"/>
+                                <constraint firstItem="tnU-xe-nKT" firstAttribute="leading" secondItem="3ED-Tz-cKq" secondAttribute="leading" constant="5" id="fJm-ZG-KTE"/>
+                                <constraint firstItem="tnU-xe-nKT" firstAttribute="top" secondItem="3ED-Tz-cKq" secondAttribute="top" constant="5" id="jZf-Mj-nbA"/>
+                                <constraint firstAttribute="trailing" secondItem="tnU-xe-nKT" secondAttribute="trailing" constant="5" id="qj6-rT-bVX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fzq-ty-u95" firstAttribute="top" secondItem="ayJ-3k-ktq" secondAttribute="top" constant="2" id="Hr1-ea-kpb"/>
+                        <constraint firstItem="3ED-Tz-cKq" firstAttribute="top" secondItem="ayJ-3k-ktq" secondAttribute="top" constant="2" id="IrM-tD-BcA"/>
+                        <constraint firstItem="fzq-ty-u95" firstAttribute="leading" secondItem="ayJ-3k-ktq" secondAttribute="leading" constant="2" id="MFx-Qn-yj4"/>
+                        <constraint firstItem="3ED-Tz-cKq" firstAttribute="leading" secondItem="fzq-ty-u95" secondAttribute="trailing" constant="8" id="bgc-ZY-jOP"/>
+                        <constraint firstAttribute="trailing" secondItem="3ED-Tz-cKq" secondAttribute="trailing" constant="2" id="fdT-vF-kdQ"/>
+                        <constraint firstAttribute="bottom" secondItem="3ED-Tz-cKq" secondAttribute="bottom" constant="2" id="suD-b2-znY"/>
+                        <constraint firstAttribute="bottom" secondItem="fzq-ty-u95" secondAttribute="bottom" constant="2" id="zJ8-kF-mhx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ayJ-3k-ktq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="fe9-91-CqR"/>
+                <constraint firstItem="ayJ-3k-ktq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="n2v-Lp-Hme"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ayJ-3k-ktq" secondAttribute="trailing" constant="5" id="taI-Y5-Wrs"/>
+                <constraint firstAttribute="bottom" secondItem="ayJ-3k-ktq" secondAttribute="bottom" constant="5" id="vxN-Ny-mmX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="103.62318840579711" y="228.68303571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Search_icon" width="31" height="31"/>
+        <namedColor name="brownTextColor">
+            <color red="0.34901960784313724" green="0.33333333333333331" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
