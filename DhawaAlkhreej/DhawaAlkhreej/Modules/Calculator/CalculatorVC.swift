@@ -33,7 +33,7 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var accomplishedStemExamTF: DesignableTF!
     
     // MARK: Class Variables
-    var percantages = ["٠٪", "١٠٪", "٢٠٪", "٣٠٪", "٤٠٪", "٥٠٪", "٦٠٪"]
+    var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٢٥", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,7 @@ class CalculatorVC: BaseViewController {
     private func setupCalculatedPercentageLabel() {
         
         calculatedPercentageLabel.textColor = UIColor.primary
-        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 20))
+        calculatedPercentageLabel.font = Identity.font(.custom(weight: .bold, size: 25))
     }
     
     private func setupTextfeilds() {
@@ -85,7 +85,6 @@ class CalculatorVC: BaseViewController {
     
     private func createPercentagePicker() {
         
-        createPickerToolbar()
         let percentagePicker = UIPickerView()
         percentagePicker.delegate = self
         
@@ -95,24 +94,6 @@ class CalculatorVC: BaseViewController {
         requestedStepExamTF.inputView = percentagePicker
         
         percentagePicker.backgroundColor = UIColor.whiteBackground
-        
-    }
-    
-    private func createPickerToolbar() {
-        
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.brownTextColor
-        
-        let doneButton = UIBarButtonItem(title: "إنهاء", style: .plain, target: self, action: #selector(dismissKeyboard))
-        toolBar.setItems([doneButton], animated: true)
-        toolBar.isUserInteractionEnabled = true
-        
-        requestedThanawiyahTF.inputAccessoryView = toolBar
-        requestedQuodratTF.inputAccessoryView = toolBar
-        requestedTahsilyTF.inputAccessoryView = toolBar
-        requestedStepExamTF.inputAccessoryView = toolBar
-        
     }
  
 }

@@ -46,7 +46,7 @@
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4d-pn-K5h" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
                                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -75,7 +75,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwJ-ox-TQb" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -110,7 +110,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-U2-cfM" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -139,7 +139,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-nM-0kw" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24.333333333333332"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -174,7 +174,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-GQ-8BO" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -203,7 +203,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-fJ-JwD" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="24"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -238,7 +238,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="المطلوبة من الجامعة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-Ga-poE" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="33.333333333333336"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -267,7 +267,7 @@
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الحاصل عليها" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X87-eU-PXS" customClass="DesignableTF" customModule="DhawaAlkhreej" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="33.333333333333336"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="brownTextColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -299,16 +299,16 @@
                                                 </state>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-rC-oQW">
-                                                <rect key="frame" x="64.666666666666686" y="450" width="285" height="40"/>
+                                                <rect key="frame" x="87" y="450" width="240" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسبتك الموزونة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naa-lX-Dft">
-                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="39"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسبتك الموزونة:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naa-lX-Dft">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="39"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="brownTextColor"/>
+                                                        <color key="textColor" name="primary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-Vp-Oy4" userLabel="Line">
-                                                        <rect key="frame" x="0.0" y="39" width="285" height="1"/>
+                                                        <rect key="frame" x="0.0" y="39" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="XHQ-wo-GuT"/>
@@ -317,7 +317,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="q42-v3-g4A"/>
-                                                    <constraint firstAttribute="width" constant="285" id="ybg-r3-bz8"/>
+                                                    <constraint firstAttribute="width" constant="240" id="ybg-r3-bz8"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>

@@ -67,4 +67,10 @@ import UIKit
         }
     }
     
+    @IBInspectable var placeholderTextColor: UIColor = .black {
+        didSet {
+            setPlaceHolderTextColor(placeholderTextColor)
+        }
+    }
+    
 }
