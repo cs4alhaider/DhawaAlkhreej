@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculatorVC: BaseViewController {
-
+    
     // MARK: Labels
     @IBOutlet var ThanwiyahLabel: UILabel!
     @IBOutlet var quodratLabel: UILabel!
@@ -30,7 +30,7 @@ class CalculatorVC: BaseViewController {
     @IBOutlet var accoplishedThanawiyahTF: DesignableTF!
     @IBOutlet var accomplishedQuodratTF: DesignableTF!
     @IBOutlet var accomplishedTahsilyTF: DesignableTF!
-    @IBOutlet var accomplishedStemExamTF: DesignableTF!
+    @IBOutlet var accomplishedStepExamTF: DesignableTF!
     
     // MARK: Class Variables
     var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٢٥", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
@@ -80,7 +80,7 @@ class CalculatorVC: BaseViewController {
         accoplishedThanawiyahTF.tintColor = UIColor.primary
         accomplishedQuodratTF.tintColor = UIColor.primary
         accomplishedTahsilyTF.tintColor = UIColor.primary
-        accomplishedStemExamTF.tintColor = UIColor.primary
+        accomplishedStepExamTF.tintColor = UIColor.primary
     }
     
     private func createPercentagePicker() {
@@ -95,5 +95,32 @@ class CalculatorVC: BaseViewController {
         
         percentagePicker.backgroundColor = UIColor.whiteBackground
     }
- 
+    
+    // Validates for: empty value, value > 100, value has incorret Double format
+    private func validateTextfieldInput(_ textField: DesignableTF) {
+        
+        textField.hasCorretInputValue = true
+        do {
+            _ = try textField.validatedText(validationType: .percentage)
+        } catch {
+            textField.hasCorretInputValue = false
+        }
+    }
+    
+    @IBAction func accomplishedThanawiyahTfEditingChanged(_ sender: DesignableTF) {
+        validateTextfieldInput(sender)
+    }
+    
+    @IBAction func accoplishedQuodratTfEditingChanged(_ sender: DesignableTF) {
+        validateTextfieldInput(sender)
+    }
+    
+    @IBAction func accoplishedTahsilyTfEditingChanged(_ sender: DesignableTF) {
+        validateTextfieldInput(sender)
+    }
+    
+    @IBAction func accoplishedStepExamEditingChanged(_ sender: DesignableTF) {
+        validateTextfieldInput(sender)
+    }
+    
 }
