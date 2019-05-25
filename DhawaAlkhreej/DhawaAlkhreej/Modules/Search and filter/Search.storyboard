@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="JiR-3q-Ag0">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="R7r-oz-yT5" customClass="SearchVC" customModule="DhawaAlkhreej" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4Z-KE-gg5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kw8-xu-IdT" customClass="SearchTextField" customModule="DhawaAlkhreej" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Tah-Ym-95a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C12-do-ApH" firstAttribute="trailing" secondItem="kw8-xu-IdT" secondAttribute="trailing" id="24Z-ND-55d"/>
+                            <constraint firstItem="kw8-xu-IdT" firstAttribute="top" secondItem="C12-do-ApH" secondAttribute="top" id="amS-Ln-J3S"/>
+                            <constraint firstItem="kw8-xu-IdT" firstAttribute="leading" secondItem="C12-do-ApH" secondAttribute="leading" id="xto-lX-Fte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C12-do-ApH"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="kw8-xu-IdT" id="2Cv-bT-rdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-2F-83B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="138"/>
+        </scene>
+    </scenes>
+</document>
