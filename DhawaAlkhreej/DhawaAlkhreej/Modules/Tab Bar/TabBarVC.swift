@@ -34,7 +34,7 @@ class TabBarVC: UITabBarController {
     func rootViewControllers() {
         
         let tabVC1 = createViewController(nv: UINavigationController(),
-                                          vc: UIViewController(),
+                                          vc: UIStoryboard.search.instantiateViewController(withClass: SearchVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           title: "")

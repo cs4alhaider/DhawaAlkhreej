@@ -26,7 +26,7 @@ struct Resources {
     }
     
     struct Riham: ResourcesProtocol {
-        var email: String? = "Heemdesigner@gmail.com"
+        var email: String? = "heemdesigner@gmail.com"
         var twitter: String? = "rihamdes"
     }
     
