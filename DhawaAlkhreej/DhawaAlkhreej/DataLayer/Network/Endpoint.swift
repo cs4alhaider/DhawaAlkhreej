@@ -30,5 +30,5 @@ protocol Endpoint {
     var location: DataLocation { get }
     
     /// Calling the interface for the defined router endpoint. the default implementation should not be ignored
-    func request<T: Codable>(completion: Result<T, Error>)
+    func request<T: Codable>(completion: @escaping (Result<T, Error>) -> Void)
 }

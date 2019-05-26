@@ -21,6 +21,15 @@ class SearchVC: BaseViewController {
     override func setupUI() {
         searchTextField.delegate = self
         searchTextField.placeholder = "ابحث بالتخصصات"
+        
+        TestData.getData { (result) in
+            switch result {
+            case .success(let data):
+                logger("HERE IS THE NAME FROM THE JSON FILE: \(data.name)")
+            case .failure:
+                break
+            }
+        }
     }
 
 }

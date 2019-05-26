@@ -10,18 +10,20 @@ import Foundation
 
 struct DataRequester {
     
-    static func request(url: String,
-                        headers: [String: String]? = nil,
-                        httpMethod: HTTPMethod,
-                        parameters: [String: Any]? = nil,
-                        isPrintable: Bool,
-                        location: DataLocation,
-                        completion: @escaping (Result<Data, Error>) -> Void) {
+    static func request<T: Decodable>(url: String,
+                                      headers: [String: String]? = nil,
+                                      httpMethod: HTTPMethod,
+                                      parameters: [String: Any]? = nil,
+                                      isPrintable: Bool,
+                                      location: DataLocation,
+                                      completion: @escaping (Result<T, Error>) -> Void) {
         if location == .online {
-            // Api request
+            // Implement api request in the future
         } else if location == .offline {
-            // notaToDo
             // From a json file
+            let data = Bundle.main.decode(T.self, from: url)
+            completion(.success(data))
+            // TODO: Handel the error
         }
     }
 }
