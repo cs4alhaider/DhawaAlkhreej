@@ -28,3 +28,22 @@ extension DhawaAlkhreejEndpoint {
         return .offline
     }
 }
+
+extension DhawaAlkhreejEndpoint {
+    
+    /// The New Function for every request
+    ///
+    /// - Parameter completion: Result<T>
+    ///
+    /// - Author: Abdulla Alhaider
+    func request<T: Decodable>(completion: @escaping DataResponse<T>) {
+        DataRequester.request(url: url,
+                              headers: headers,
+                              httpMethod: method,
+                              parameters: parameters,
+                              isPrintable: isPrintable,
+                              location: location,
+                              completion: completion)
+        
+    }
+}

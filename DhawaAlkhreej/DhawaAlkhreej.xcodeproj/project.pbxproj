@@ -60,6 +60,9 @@
 		DDB3778E2299F1A100D1ADCA /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3778D2299F1A100D1ADCA /* CalculateButton.swift */; };
 		DDBD182E2299BFA000E0CFD5 /* SearchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBD182D2299BFA000E0CFD5 /* SearchTextField.xib */; };
 		DDBD18302299BFAE00E0CFD5 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD182F2299BFAE00E0CFD5 /* SearchTextField.swift */; };
+		DDD047CB229B1E5A00DC78D5 /* Test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = DDD047CA229B1E5A00DC78D5 /* Test-data.json */; };
+		DDD047CD229B1EB000DC78D5 /* TestData+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */; };
+		DDD047D0229B1EEE00DC78D5 /* TestData+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */; };
 		DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670802291EBDE008A5128 /* Endpoint.swift */; };
 		DDF670832291EC00008A5128 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670822291EC00008A5128 /* HTTPMethod.swift */; };
 		DDF670852291ED51008A5128 /* DataLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF670842291ED51008A5128 /* DataLocation.swift */; };
@@ -124,6 +127,9 @@
 		DDB3778D2299F1A100D1ADCA /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 		DDBD182D2299BFA000E0CFD5 /* SearchTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextField.xib; sourceTree = "<group>"; };
 		DDBD182F2299BFAE00E0CFD5 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		DDD047CA229B1E5A00DC78D5 /* Test-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Test-data.json"; sourceTree = "<group>"; };
+		DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestData+Model.swift"; sourceTree = "<group>"; };
+		DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestData+Router.swift"; sourceTree = "<group>"; };
 		DDF670802291EBDE008A5128 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DDF670822291EC00008A5128 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		DDF670842291ED51008A5128 /* DataLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLocation.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				DD3B1A35228F50AC00E89B88 /* LaunchScreen.storyboard */,
 				DD3B1A38228F50AC00E89B88 /* Info.plist */,
 				DD3B1A33228F50AC00E89B88 /* Assets.xcassets */,
+				DDD047CA229B1E5A00DC78D5 /* Test-data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,6 +251,7 @@
 			children = (
 				DDF67088229220F1008A5128 /* Network */,
 				DDF6708B2292212C008A5128 /* Router */,
+				DDD047CE229B1ED900DC78D5 /* Models */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -456,6 +464,14 @@
 			path = SearchTextFieldView;
 			sourceTree = "<group>";
 		};
+		DDD047CE229B1ED900DC78D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DDF67088229220F1008A5128 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				DDF670892292210F008A5128 /* Router.swift */,
+				DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -555,6 +572,7 @@
 				DD9EA5AD22909B8E0050F199 /* Calculator.storyboard in Resources */,
 				DD25060322971AA10032A30B /* MajorsSectionView.xib in Resources */,
 				DD9EA5B022909BD40050F199 /* Majors.storyboard in Resources */,
+				DDD047CB229B1E5A00DC78D5 /* Test-data.json in Resources */,
 				DD3B1A32228F50AC00E89B88 /* Main.storyboard in Resources */,
 				DD9EA5B722909E6D0050F199 /* OnBoarding.storyboard in Resources */,
 				DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */,
@@ -636,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD047D0229B1EEE00DC78D5 /* TestData+Router.swift in Sources */,
 				1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */,
 				DD3B1A53228F5B9500E89B88 /* Keys+UserDefaults.swift in Sources */,
 				DD3B1A60228F5DF200E89B88 /* Helper.swift in Sources */,
@@ -669,6 +688,7 @@
 				DD3B1A5C228F5D5800E89B88 /* Font.swift in Sources */,
 				DD3B1A4A228F5B0D00E89B88 /* Identity.swift in Sources */,
 				DD3B1A2F228F50AC00E89B88 /* SplashVC.swift in Sources */,
+				DDD047CD229B1EB000DC78D5 /* TestData+Model.swift in Sources */,
 				DD3B1A2D228F50AC00E89B88 /* AppDelegate.swift in Sources */,
 				132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */,
 				DD3B1A72228F602E00E89B88 /* UIStoryboard+Extension.swift in Sources */,
