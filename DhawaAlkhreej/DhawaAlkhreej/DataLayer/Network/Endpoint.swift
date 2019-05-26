@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DataResponse<T> = (Result<T, Error>) -> Void
+
 /// Server endpoint interface, any server router should implement this interface to be able to connect
 protocol Endpoint {
     
@@ -30,5 +32,5 @@ protocol Endpoint {
     var location: DataLocation { get }
     
     /// Calling the interface for the defined router endpoint. the default implementation should not be ignored
-    func request<T: Codable>(completion: @escaping (Result<T, Error>) -> Void)
+    func request<T: Codable>(completion: @escaping DataResponse<T>)
 }

@@ -15,7 +15,7 @@ struct TestData: Codable {
 }
 
 extension TestData {
-    static func getData(completion: @escaping (Result<TestData, Error>) -> Void) {
+    static func getData(completion: @escaping DataResponse<TestData>) {
         Router.TestData.getCollection.request(completion: completion)
     }
 }

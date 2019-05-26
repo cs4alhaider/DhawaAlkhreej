@@ -16,7 +16,7 @@ struct DataRequester {
                                       parameters: [String: Any]? = nil,
                                       isPrintable: Bool,
                                       location: DataLocation,
-                                      completion: @escaping (Result<T, Error>) -> Void) {
+                                      completion: @escaping DataResponse<T>) {
         if location == .online {
             // Implement api request in the future
         } else if location == .offline {

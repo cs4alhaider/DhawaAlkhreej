@@ -36,7 +36,7 @@ extension DhawaAlkhreejEndpoint {
     /// - Parameter completion: Result<T>
     ///
     /// - Author: Abdulla Alhaider
-    func request<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(completion: @escaping DataResponse<T>) {
         DataRequester.request(url: url,
                               headers: headers,
                               httpMethod: method,
