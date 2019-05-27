@@ -16,11 +16,13 @@ The app contains most of Saudi Arabia universities.
 
 
 ## Requirements
+
 - Xcode version 10.2.1 
 - swift version 5
 
 
 ## Team
+
 ![Abdullah Alhaider](https://i.imgur.com/Xv4lcXc.jpg)  . ![Mohamed Farouk](https://i.imgur.com/4Fg9PAK.jpg)  ![Riham Mastour](https://i.imgur.com/7WbXLhf.jpg) ![Norah Mohsen](https://i.imgur.com/Kd3gq6T.jpg)
 
 [Abdullah Alhaider](https://github.com/cs4alhaider)  | [Mohamed Farouk](https://github.com/FaroukZeino) | [Riham  Mastour](https://github.com/rihammastour) | [Nourah Mohsen](https://github.com/nourahchi)
