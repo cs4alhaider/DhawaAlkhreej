@@ -28,17 +28,7 @@ extension Keys {
         /// set & get the saved|fav items - "DhawaAlkhreej.UserDefaults.savedItems"
         static let savedItems = "DhawaAlkhreej.UserDefaults.savedItems"
         
-        struct TextfieldsData {
-            
-            static let requestedThanawiyahTF = "DhawaAlkhreej.UserDefaults.requestedThanawiyahTF"
-            static let requestedQuodratTF = "DhawaAlkhreej.UserDefaults.requestedQuodratTF"
-            static let requestedTahsilyTF = "DhawaAlkhreej.UserDefaults.requestedTahsilyTF"
-            static let requestedStepExamTF = "DhawaAlkhreej.UserDefaults.requestedStepExamTF"
-            
-            static let accoplishedThanawiyahTF = "DhawaAlkhreej.UserDefaults.accoplishedThanawiyahTF"
-            static let accomplishedQuodratTF = "DhawaAlkhreej.UserDefaults.accomplishedQuodratTF"
-            static let accomplishedTahsilyTF = "DhawaAlkhreej.UserDefaults.accomplishedTahsilyTF"
-            static let accomplishedStepExamTF = "DhawaAlkhreej.UserDefaults.accomplishedStepExamTF"
-        }
+        static let savedTextfields = "DhawaAlkhreej.UserDefaults.savedTextfields"
+        
     }
 }

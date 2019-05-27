@@ -50,7 +50,8 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
-        getTextfieldsData()
+        // getTextfieldsData()
+        retrieveTextfieldsData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.calculateButton.changeStatus(to: .disabled)
         }
@@ -91,12 +92,34 @@ class CalculatorVC: BaseViewController {
         accomplishedStepExamTF.tintColor = UIColor.primary
     }
     
-    private func getTextfieldsData() {
-        let userDefaults = UserDefaults.standard
-        if let text = userDefaults.string(forKey: Keys.UserDefaults.TextfieldsData.requestedThanawiyahTF) {
-            requestedThanawiyahTF.text = text
+    func saveTextfieldData(textFieldName: textFieldName, data: String) {
+        
+        var dic = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String]
+        
+        if dic == nil {
+            var newDic: [String: String]? = [:]
+            newDic?[textFieldName.rawValue] = data
+            UserDefaults.standard.set(newDic, forKey: K.UserDefaults.savedTextfields)
+        } else {
+            dic?[textFieldName.rawValue] = data
+            UserDefaults.standard.set(dic, forKey: K.UserDefaults.savedTextfields)
         }
         
+    }
+    
+    private func retrieveTextfieldsData() {
+        
+        if let data = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String] {
+            
+            requestedThanawiyahTF.text = data[textFieldName.requestedThanawiyahTF.rawValue]
+            requestedQuodratTF.text = data[textFieldName.requestedQuodratTF.rawValue]
+            requestedTahsilyTF.text = data[textFieldName.requestedTahsilyTF.rawValue]
+            requestedStepExamTF.text = data[textFieldName.requestedStepExamTF.rawValue]
+            accoplishedThanawiyahTF.text = data[textFieldName.accoplishedThanawiyahTF.rawValue]
+            accomplishedQuodratTF.text = data[textFieldName.accomplishedQuodratTF.rawValue]
+            accomplishedTahsilyTF.text = data[textFieldName.accomplishedTahsilyTF.rawValue]
+            accomplishedStepExamTF.text = data[textFieldName.accomplishedStepExamTF.rawValue]
+        }
     }
     
     private func createPercentagePicker() {
@@ -125,18 +148,22 @@ class CalculatorVC: BaseViewController {
     
     @IBAction func accomplishedThanawiyahTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
+        saveTextfieldData(textFieldName: .accoplishedThanawiyahTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedQuodratTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
+        saveTextfieldData(textFieldName: .accomplishedQuodratTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedTahsilyTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
+        saveTextfieldData(textFieldName: .accomplishedTahsilyTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedStepExamEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
+        saveTextfieldData(textFieldName: .accomplishedStepExamTF, data: sender.text ?? "")
     }
     @IBAction func calculateButtonPressed(_ sender: Any) {
         
@@ -152,4 +179,16 @@ class CalculatorVC: BaseViewController {
             
         }
     }
+}
+
+enum textFieldName: String {
+    
+    case requestedThanawiyahTF
+    case requestedQuodratTF
+    case requestedTahsilyTF
+    case requestedStepExamTF
+    case accoplishedThanawiyahTF
+    case accomplishedQuodratTF
+    case accomplishedTahsilyTF
+    case accomplishedStepExamTF
 }
