@@ -23,7 +23,7 @@ The app contains most of Saudi Arabia universities.
 
 ## Team
 
-![Abdullah Alhaider](https://i.imgur.com/Xv4lcXc.jpg)  . ![Mohamed Farouk](https://i.imgur.com/4Fg9PAK.jpg)  ![Riham Mastour](https://i.imgur.com/7WbXLhf.jpg) ![Norah Mohsen](https://i.imgur.com/Kd3gq6T.jpg)
+<a href="https://github.com/cs4alhaider"><img src="https://i.imgur.com/Xv4lcXc.jpg" alt="Abdullah"></a><a href="https://github.com/FaroukZeino"><img src="https://i.imgur.com/4Fg9PAK.jpg" alt="Mohamed"></a><a href="https://github.com/rihammastour"><img src="https://i.imgur.com/7WbXLhf.jpg" alt="Riham"></a><a href="https://github.com/nourahchi"><img src="https://i.imgur.com/Kd3gq6T.jpg" alt="Nourah"></a>
 
 [Abdullah Alhaider](https://github.com/cs4alhaider)  | [Mohamed Farouk](https://github.com/FaroukZeino) | [Riham  Mastour](https://github.com/rihammastour) | [Nourah Mohsen](https://github.com/nourahchi)
 
