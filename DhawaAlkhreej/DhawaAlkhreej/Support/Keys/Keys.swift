@@ -10,3 +10,5 @@ import Foundation
 
 /// Please do not add any extra code here, just extensions
 struct Keys {}
+
+typealias K = Keys

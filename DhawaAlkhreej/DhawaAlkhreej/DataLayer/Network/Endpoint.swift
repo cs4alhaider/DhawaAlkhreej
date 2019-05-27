@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias DataResponse<T> = (Result<T, Error>) -> Void
+typealias DataResponse<T: Codable> = (Result<T, Error>) -> Void
 
 /// Server endpoint interface, any server router should implement this interface to be able to connect
 protocol Endpoint {

@@ -7,6 +7,25 @@
 
 import Foundation
 
+public enum H4SLocalFilesError {
+    case failedToLocateFile(String)
+    case failedToLoadFile(String)
+    case failedToDecodeFile(String)
+}
+
+extension H4SLocalFilesError: Error, LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .failedToLocateFile(let file):
+            return #"Failed to locate "\#(file)" file in app bundle."#
+        case .failedToLoadFile(let file):
+            return #"Failed to load "\#(file)" file in app bundle."#
+        case .failedToDecodeFile(let file):
+            return #"Failed to decode "\#(file)" file from app bundle."#
+        }
+    }
+}
+
 public extension Bundle {
     
     /// Decode an exesting json file
@@ -21,20 +40,23 @@ public extension Bundle {
     /// - Returns: decoded object
     ///
     /// - Author: Abdullah Alhaider
-    func decode<T: Decodable>(_ type: T.Type, from file: String) -> T {
+    func decode<T: Decodable>(_ type: T.Type, from file: String, completion: ((Result<T, H4SLocalFilesError>) -> Void)? = nil) {
         guard let url = self.url(forResource: file, withExtension: nil) else {
-            fatalError("Failed to locate \(file) in app bundle.")
+            completion?(.failure(.failedToLocateFile(file)))
+            return
         }
         guard let data = try? Data(contentsOf: url) else {
-            fatalError("Failed to load \(file) in app bundle.")
+            completion?(.failure(.failedToLoadFile(file)))
+            return
         }
         
         let decoder = JSONDecoder()
         
         guard let loaded = try? decoder.decode(T.self, from: data) else {
-            fatalError("Failed to decode \(file) from app bundle.")
+            completion?(.failure(.failedToDecodeFile(file)))
+            return
         }
-        return loaded
+        completion?(.success(loaded))
     }
 }
 
