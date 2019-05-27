@@ -8,8 +8,6 @@
 
 import Helper4Swift
 
-typealias K = Keys
-
 class SearchVC: BaseViewController {
 
     @IBOutlet weak var searchTextField: SearchTextField!
