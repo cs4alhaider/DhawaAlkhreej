@@ -6,7 +6,7 @@
 //  Copyright © 2019 DhawaAlkhreej. All rights reserved.
 //
 
-import UIKit
+import Helper4Swift
 
 class SearchVC: BaseViewController {
 
@@ -14,7 +14,8 @@ class SearchVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        saveDictionary()
+        retreveFromDictionary()
         // Do any additional setup after loading the view.
     }
     
@@ -25,10 +26,25 @@ class SearchVC: BaseViewController {
         TestData.getData { (result) in
             switch result {
             case .success(let data):
-                logger("HERE IS THE NAME FROM THE JSON FILE: \(data.name)")
-            case .failure:
-                break
+                AlertHelper.showAlert(vc: self, .normal, title: "Data", body: "\(data.map({$0.title}))", buttonTitle: "Ok", completion: nil)
+            case .failure(let error):
+                AlertHelper.showAlert(vc: self, .normal, title: "Error", body: error.localizedDescription, buttonTitle: "Ok", completion: nil)
             }
+        }
+    }
+    
+    func saveDictionary() {
+        var params: [String: String]? = [:]
+        params?["firstTF"] = "firstfirstfirst"
+        params?["secTF"] = "secsecsec"
+        
+        UserDefaults.standard.set(params, forKey: K.UserDefaults.savedItems)
+    }
+    
+    func retreveFromDictionary() {
+        if let first = UserDefaults.standard.value(forKey: K.UserDefaults.savedItems) as? [String: String] {
+            logger(first["firstTF"])
+            logger(first["secTF"])
         }
     }
 

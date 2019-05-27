@@ -9,13 +9,14 @@
 import Foundation
 
 struct TestData: Codable {
-    let name: String
-    let color: String
-    let ver: Int
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
 }
 
 extension TestData {
-    static func getData(completion: @escaping DataResponse<TestData>) {
+    static func getData(completion: @escaping DataResponse<[TestData]>) {
         Router.TestData.getCollection.request(completion: completion)
     }
 }
