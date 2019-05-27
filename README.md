@@ -16,8 +16,8 @@ The app contains most of Saudi Arabia universities.
 
 
 ## Requirements
-- Xcode version ...
-- swift version ... 
+- Xcode version 10.2.1 
+- swift version 5
 
 
 ## Team
