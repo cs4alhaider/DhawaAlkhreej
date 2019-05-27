@@ -21,9 +21,14 @@ struct DataRequester {
             // Implement api request in the future
         } else if location == .offline {
             // From a json file
-            let data = Bundle.main.decode(T.self, from: url)
-            completion(.success(data))
-            // TODO: Handel the error
+            Bundle.main.decode(T.self, from: url) { (result) in
+                switch result {
+                case .success(let data):
+                    completion(.success(data))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
         }
     }
 }
