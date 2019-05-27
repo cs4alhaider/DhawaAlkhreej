@@ -50,7 +50,7 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
-        
+        getTextfieldsData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.calculateButton.changeStatus(to: .disabled)
         }
@@ -89,6 +89,14 @@ class CalculatorVC: BaseViewController {
         accomplishedQuodratTF.tintColor = UIColor.primary
         accomplishedTahsilyTF.tintColor = UIColor.primary
         accomplishedStepExamTF.tintColor = UIColor.primary
+    }
+    
+    private func getTextfieldsData() {
+        let userDefaults = UserDefaults.standard
+        if let text = userDefaults.string(forKey: Keys.UserDefaults.TextfieldsData.requestedThanawiyahTF) {
+            requestedThanawiyahTF.text = text
+        }
+        
     }
     
     private func createPercentagePicker() {

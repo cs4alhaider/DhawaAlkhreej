@@ -28,14 +28,20 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+        let userDefaults = UserDefaults.standard
+        
         if requestedThanawiyahTF.isFirstResponder {
             requestedThanawiyahTF.text = percantages[row]
+            userDefaults.set(percantages[row], forKey: Keys.UserDefaults.TextfieldsData.requestedThanawiyahTF)
         } else if requestedQuodratTF.isFirstResponder {
             requestedQuodratTF.text = percantages[row]
+            userDefaults.set(percantages[row], forKey: Keys.UserDefaults.TextfieldsData.requestedQuodratTF)
         } else if requestedTahsilyTF.isFirstResponder {
             requestedTahsilyTF.text = percantages[row]
+            userDefaults.set(percantages[row], forKey: Keys.UserDefaults.TextfieldsData.requestedTahsilyTF)
         } else if requestedStepExamTF.isFirstResponder {
             requestedStepExamTF.text = percantages[row]
+            userDefaults.set(percantages[row], forKey: Keys.UserDefaults.TextfieldsData.requestedStepExamTF)
         }
         
     }
