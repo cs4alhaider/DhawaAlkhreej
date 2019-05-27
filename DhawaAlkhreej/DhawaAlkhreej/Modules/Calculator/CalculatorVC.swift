@@ -50,7 +50,6 @@ class CalculatorVC: BaseViewController {
         setupCalculateButton()
         setupCalculatedPercentageLabel()
         setupTextfeilds()
-        // getTextfieldsData()
         retrieveTextfieldsData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.calculateButton.changeStatus(to: .disabled)
@@ -119,6 +118,13 @@ class CalculatorVC: BaseViewController {
             accomplishedQuodratTF.text = data[textFieldName.accomplishedQuodratTF.rawValue]
             accomplishedTahsilyTF.text = data[textFieldName.accomplishedTahsilyTF.rawValue]
             accomplishedStepExamTF.text = data[textFieldName.accomplishedStepExamTF.rawValue]
+        }
+
+        DispatchQueue.main.async {
+            self.validateTextfieldInput(self.accoplishedThanawiyahTF)
+            self.validateTextfieldInput(self.accomplishedQuodratTF)
+            self.validateTextfieldInput(self.accomplishedTahsilyTF)
+            self.validateTextfieldInput(self.accomplishedStepExamTF)
         }
     }
     
