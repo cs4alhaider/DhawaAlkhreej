@@ -14,8 +14,6 @@ class SearchVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveDictionary()
-        retreveFromDictionary()
         // Do any additional setup after loading the view.
     }
     
@@ -32,22 +30,6 @@ class SearchVC: BaseViewController {
             }
         }
     }
-    
-    func saveDictionary() {
-        var params: [String: String]? = [:]
-        params?["firstTF"] = "firstfirstfirst"
-        params?["secTF"] = "secsecsec"
-        
-        UserDefaults.standard.set(params, forKey: K.UserDefaults.savedItems)
-    }
-    
-    func retreveFromDictionary() {
-        if let first = UserDefaults.standard.value(forKey: K.UserDefaults.savedItems) as? [String: String] {
-            logger(first["firstTF"])
-            logger(first["secTF"])
-        }
-    }
-
 }
 
 extension SearchVC: SearchTextFieldDelegate {
