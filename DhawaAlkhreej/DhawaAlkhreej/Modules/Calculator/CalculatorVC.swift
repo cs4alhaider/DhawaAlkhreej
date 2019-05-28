@@ -81,14 +81,15 @@ class CalculatorVC: BaseViewController {
     
     private func setupTextfeilds() {
         
-        requestedThanawiyahTF.tintColor = UIColor.primary
-        requestedQuodratTF.tintColor = UIColor.primary
-        requestedTahsilyTF.tintColor = UIColor.primary
-        requestedStepExamTF.tintColor = UIColor.primary
-        accoplishedThanawiyahTF.tintColor = UIColor.primary
-        accomplishedQuodratTF.tintColor = UIColor.primary
-        accomplishedTahsilyTF.tintColor = UIColor.primary
-        accomplishedStepExamTF.tintColor = UIColor.primary
+        changeTextField([requestedThanawiyahTF,
+                         requestedQuodratTF,
+                         requestedTahsilyTF,
+                         requestedStepExamTF,
+                         accoplishedThanawiyahTF,
+                         accomplishedQuodratTF,
+                         accomplishedTahsilyTF,
+                         accomplishedStepExamTF],
+                        tintColor: .primary)
     }
     
     func saveTextfieldData(_ textFieldName: TextFieldName, data: String) {
