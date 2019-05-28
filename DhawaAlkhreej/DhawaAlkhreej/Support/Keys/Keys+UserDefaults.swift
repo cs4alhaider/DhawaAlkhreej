@@ -25,9 +25,7 @@ extension Keys {
         /// Determine if the it's the first time to present the onboarding process - "DhawaAlkhreej.UserDefaults.isFirstTime"
         static let isFirstTime = "DhawaAlkhreej.UserDefaults.isFirstTime"
         
-        /// set & get the saved|fav items - "DhawaAlkhreej.UserDefaults.savedItems"
-        static let savedItems = "DhawaAlkhreej.UserDefaults.savedItems"
-        
+        /// Stores last user input in Requested and Accoplished Textfields to restore it upon app launch
         static let savedTextfields = "DhawaAlkhreej.UserDefaults.savedTextfields"
         
     }

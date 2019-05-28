@@ -30,16 +30,16 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
         
         if requestedThanawiyahTF.isFirstResponder {
             requestedThanawiyahTF.text = percantages[row]
-            saveTextfieldData(textFieldName: .requestedThanawiyahTF, data: percantages[row])
+            saveTextfieldData(.requestedThanawiyahTF, data: percantages[row])
         } else if requestedQuodratTF.isFirstResponder {
             requestedQuodratTF.text = percantages[row]
-              saveTextfieldData(textFieldName: .requestedQuodratTF, data: percantages[row])
+              saveTextfieldData(.requestedQuodratTF, data: percantages[row])
         } else if requestedTahsilyTF.isFirstResponder {
             requestedTahsilyTF.text = percantages[row]
-              saveTextfieldData(textFieldName: .requestedTahsilyTF, data: percantages[row])
+              saveTextfieldData(.requestedTahsilyTF, data: percantages[row])
         } else if requestedStepExamTF.isFirstResponder {
             requestedStepExamTF.text = percantages[row]
-              saveTextfieldData(textFieldName: .requestedStepExamTF, data: percantages[row])
+              saveTextfieldData(.requestedStepExamTF, data: percantages[row])
         }
         
     }

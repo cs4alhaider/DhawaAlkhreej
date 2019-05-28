@@ -91,7 +91,7 @@ class CalculatorVC: BaseViewController {
         accomplishedStepExamTF.tintColor = UIColor.primary
     }
     
-    func saveTextfieldData(textFieldName: textFieldName, data: String) {
+    func saveTextfieldData(_ textFieldName: TextFieldName, data: String) {
         
         var dic = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String]
         
@@ -106,26 +106,30 @@ class CalculatorVC: BaseViewController {
         
     }
     
-    private func retrieveTextfieldsData() {
-        
-        if let data = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String] {
-            
-            requestedThanawiyahTF.text = data[textFieldName.requestedThanawiyahTF.rawValue]
-            requestedQuodratTF.text = data[textFieldName.requestedQuodratTF.rawValue]
-            requestedTahsilyTF.text = data[textFieldName.requestedTahsilyTF.rawValue]
-            requestedStepExamTF.text = data[textFieldName.requestedStepExamTF.rawValue]
-            accoplishedThanawiyahTF.text = data[textFieldName.accoplishedThanawiyahTF.rawValue]
-            accomplishedQuodratTF.text = data[textFieldName.accomplishedQuodratTF.rawValue]
-            accomplishedTahsilyTF.text = data[textFieldName.accomplishedTahsilyTF.rawValue]
-            accomplishedStepExamTF.text = data[textFieldName.accomplishedStepExamTF.rawValue]
-        }
-
+    private func validstesAccoplishedTFsInputs() {
         DispatchQueue.main.async {
             self.validateTextfieldInput(self.accoplishedThanawiyahTF)
             self.validateTextfieldInput(self.accomplishedQuodratTF)
             self.validateTextfieldInput(self.accomplishedTahsilyTF)
             self.validateTextfieldInput(self.accomplishedStepExamTF)
         }
+    }
+    
+    private func retrieveTextfieldsData() {
+        
+        if let data = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String] {
+            
+            requestedThanawiyahTF.text = data[TextFieldName.requestedThanawiyahTF.rawValue]
+            requestedQuodratTF.text = data[TextFieldName.requestedQuodratTF.rawValue]
+            requestedTahsilyTF.text = data[TextFieldName.requestedTahsilyTF.rawValue]
+            requestedStepExamTF.text = data[TextFieldName.requestedStepExamTF.rawValue]
+            accoplishedThanawiyahTF.text = data[TextFieldName.accoplishedThanawiyahTF.rawValue]
+            accomplishedQuodratTF.text = data[TextFieldName.accomplishedQuodratTF.rawValue]
+            accomplishedTahsilyTF.text = data[TextFieldName.accomplishedTahsilyTF.rawValue]
+            accomplishedStepExamTF.text = data[TextFieldName.accomplishedStepExamTF.rawValue]
+        }
+        
+        validstesAccoplishedTFsInputs()
     }
     
     private func createPercentagePicker() {
@@ -154,22 +158,22 @@ class CalculatorVC: BaseViewController {
     
     @IBAction func accomplishedThanawiyahTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
-        saveTextfieldData(textFieldName: .accoplishedThanawiyahTF, data: sender.text ?? "")
+        saveTextfieldData(.accoplishedThanawiyahTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedQuodratTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
-        saveTextfieldData(textFieldName: .accomplishedQuodratTF, data: sender.text ?? "")
+        saveTextfieldData(.accomplishedQuodratTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedTahsilyTfEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
-        saveTextfieldData(textFieldName: .accomplishedTahsilyTF, data: sender.text ?? "")
+        saveTextfieldData(.accomplishedTahsilyTF, data: sender.text ?? "")
     }
     
     @IBAction func accoplishedStepExamEditingChanged(_ sender: DesignableTF) {
         validateTextfieldInput(sender)
-        saveTextfieldData(textFieldName: .accomplishedStepExamTF, data: sender.text ?? "")
+        saveTextfieldData(.accomplishedStepExamTF, data: sender.text ?? "")
     }
     @IBAction func calculateButtonPressed(_ sender: Any) {
         
@@ -185,16 +189,16 @@ class CalculatorVC: BaseViewController {
             
         }
     }
-}
-
-enum textFieldName: String {
     
-    case requestedThanawiyahTF
-    case requestedQuodratTF
-    case requestedTahsilyTF
-    case requestedStepExamTF
-    case accoplishedThanawiyahTF
-    case accomplishedQuodratTF
-    case accomplishedTahsilyTF
-    case accomplishedStepExamTF
+    enum TextFieldName: String {
+        
+        case requestedThanawiyahTF
+        case requestedQuodratTF
+        case requestedTahsilyTF
+        case requestedStepExamTF
+        case accoplishedThanawiyahTF
+        case accomplishedQuodratTF
+        case accomplishedTahsilyTF
+        case accomplishedStepExamTF
+    }
 }
