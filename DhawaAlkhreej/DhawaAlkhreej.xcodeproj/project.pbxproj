@@ -60,6 +60,7 @@
 		DDB3778E2299F1A100D1ADCA /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3778D2299F1A100D1ADCA /* CalculateButton.swift */; };
 		DDBD182E2299BFA000E0CFD5 /* SearchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBD182D2299BFA000E0CFD5 /* SearchTextField.xib */; };
 		DDBD18302299BFAE00E0CFD5 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD182F2299BFAE00E0CFD5 /* SearchTextField.swift */; };
+		DDC7E9F3229DABEE005598E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7E9F2229DABEE005598E3 /* Extensions.swift */; };
 		DDD047CB229B1E5A00DC78D5 /* Test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = DDD047CA229B1E5A00DC78D5 /* Test-data.json */; };
 		DDD047CD229B1EB000DC78D5 /* TestData+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */; };
 		DDD047D0229B1EEE00DC78D5 /* TestData+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */; };
@@ -127,6 +128,7 @@
 		DDB3778D2299F1A100D1ADCA /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 		DDBD182D2299BFA000E0CFD5 /* SearchTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextField.xib; sourceTree = "<group>"; };
 		DDBD182F2299BFAE00E0CFD5 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		DDC7E9F2229DABEE005598E3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DDD047CA229B1E5A00DC78D5 /* Test-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Test-data.json"; sourceTree = "<group>"; };
 		DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestData+Model.swift"; sourceTree = "<group>"; };
 		DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestData+Router.swift"; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3B1A71228F602E00E89B88 /* UIStoryboard+Extension.swift */,
+				DDC7E9F2229DABEE005598E3 /* Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				DDBD18302299BFAE00E0CFD5 /* SearchTextField.swift in Sources */,
 				DD3B1A5A228F5CFF00E89B88 /* ColorType.swift in Sources */,
 				DD3B1A58228F5CC800E89B88 /* AppColors.swift in Sources */,
+				DDC7E9F3229DABEE005598E3 /* Extensions.swift in Sources */,
 				DDF6708A2292210F008A5128 /* Router.swift in Sources */,
 				DD3B1A44228F5A4600E89B88 /* DataRequester.swift in Sources */,
 				DD250601229713770032A30B /* SavedMajorsVC.swift in Sources */,
