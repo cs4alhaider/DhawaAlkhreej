@@ -200,7 +200,11 @@ class CalculatorVC: BaseViewController {
             
         }
     }
+}
+
+extension CalculatorVC {
     
+    // Used to save textfields values in UserDefualts
     enum TextFieldName: String {
         
         case requestedThanawiyahTF
@@ -217,12 +221,13 @@ class CalculatorVC: BaseViewController {
         case all
         case requested
         case accomplished
-
+        
     }
     
     private func getTextFields(_ type: TextFieldType) -> [UITextField] {
         
         switch type {
+            
         case .all:
             return [requestedThanawiyahTF, requestedQuodratTF, requestedTahsilyTF, requestedStepExamTF, accoplishedThanawiyahTF, accomplishedQuodratTF,
                     accomplishedTahsilyTF, accomplishedStepExamTF]
