@@ -132,7 +132,7 @@ struct AlertHelper {
                                     btn2Title: String,
                                     btn1Handler: AlertButtonAction = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action1 = UIAlertAction(title: btn1Title, style: .default) { _ in
+        let action1 = UIAlertAction(title: btn1Title, style: .destructive) { _ in
             btn1Handler?()
         }
         let action2 = UIAlertAction(title: btn2Title, style: .default)

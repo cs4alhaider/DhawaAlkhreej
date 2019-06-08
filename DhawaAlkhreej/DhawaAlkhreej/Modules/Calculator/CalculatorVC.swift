@@ -51,8 +51,26 @@ class CalculatorVC: BaseViewController {
         setupCalculatedPercentageLabel()
         setupTextfeilds()
         retrieveTextfieldsData()
+        setupNavbarButtons()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.calculateButton.changeStatus(to: .disabled)
+        }
+    }
+    
+    private func setupNavbarButtons() {
+        
+        let button = UIBarButtonItem(image: #imageLiteral(resourceName: "trash"), style: .plain, target: self, action: #selector(deleteTextfieldsValues))
+        navigationItem.rightBarButtonItem = button
+        
+    }
+    
+    @objc private func deleteTextfieldsValues() {
+        
+        AlertHelper.showTwoActionsAlert(vc: self, title: "حذف القيم", message: "سيتم حذف جميع القيم المدخلة", btn1Title: "حذف", btn2Title: "إلغاء") {
+            self.changeTextField(self.getTextFields(.all), text: "")
+            
+            // Delete saved values in UserDefaults
+            UserDefaults.standard.set(nil, forKey: K.UserDefaults.savedTextfields)
         }
     }
     
@@ -81,15 +99,7 @@ class CalculatorVC: BaseViewController {
     
     private func setupTextfeilds() {
         
-        changeTextField([requestedThanawiyahTF,
-                         requestedQuodratTF,
-                         requestedTahsilyTF,
-                         requestedStepExamTF,
-                         accoplishedThanawiyahTF,
-                         accomplishedQuodratTF,
-                         accomplishedTahsilyTF,
-                         accomplishedStepExamTF],
-                        tintColor: .primary)
+        changeTextField(getTextFields(.all), tintColor: .primary)
     }
     
     func saveTextfieldData(_ textFieldName: TextFieldName, data: String) {
@@ -190,7 +200,11 @@ class CalculatorVC: BaseViewController {
             
         }
     }
+}
+
+extension CalculatorVC {
     
+    // Used to save textfields values in UserDefualts
     enum TextFieldName: String {
         
         case requestedThanawiyahTF
@@ -201,5 +215,26 @@ class CalculatorVC: BaseViewController {
         case accomplishedQuodratTF
         case accomplishedTahsilyTF
         case accomplishedStepExamTF
+    }
+    
+    private enum TextFieldType {
+        case all
+        case requested
+        case accomplished
+        
+    }
+    
+    private func getTextFields(_ type: TextFieldType) -> [UITextField] {
+        
+        switch type {
+            
+        case .all:
+            return [requestedThanawiyahTF, requestedQuodratTF, requestedTahsilyTF, requestedStepExamTF, accoplishedThanawiyahTF, accomplishedQuodratTF,
+                    accomplishedTahsilyTF, accomplishedStepExamTF]
+        case .requested:
+            return [requestedThanawiyahTF, requestedQuodratTF, requestedTahsilyTF, requestedStepExamTF]
+        case .accomplished:
+            return [accoplishedThanawiyahTF, accomplishedQuodratTF, accomplishedTahsilyTF, accomplishedStepExamTF]
+        }
     }
 }
