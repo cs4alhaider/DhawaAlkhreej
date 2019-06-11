@@ -223,6 +223,20 @@ class CalculatorVC: BaseViewController {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في اختبار STEP", buttonTitle: "حسناً")
             throw ValidationError("")
         }
+        
+        if (!accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة الثانوية", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة القدرات", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة التحصيلي", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة اختبار STEP", buttonTitle: "حسناً")
+            throw ValidationError("")
+        }
     }
     
     private func calulatePercentage() throws -> Double {
