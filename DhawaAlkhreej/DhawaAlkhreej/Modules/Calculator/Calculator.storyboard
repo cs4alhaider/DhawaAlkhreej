@@ -314,16 +314,16 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-rC-oQW">
-                                                <rect key="frame" x="87" y="450" width="240" height="40"/>
+                                                <rect key="frame" x="79.666666666666686" y="450" width="255" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسبتك الموزونة:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naa-lX-Dft">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="39"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="39"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="primary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-Vp-Oy4" userLabel="Line">
-                                                        <rect key="frame" x="0.0" y="39" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="39" width="255" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="XHQ-wo-GuT"/>
@@ -332,7 +332,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="q42-v3-g4A"/>
-                                                    <constraint firstAttribute="width" constant="240" id="ybg-r3-bz8"/>
+                                                    <constraint firstAttribute="width" constant="255" id="ybg-r3-bz8"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>

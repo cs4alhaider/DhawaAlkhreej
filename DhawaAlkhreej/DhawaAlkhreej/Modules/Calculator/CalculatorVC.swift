@@ -265,7 +265,7 @@ class CalculatorVC: BaseViewController {
         let StepExamPart: Double = (Double(accomplishedStepExamTFText) ?? 0.0) * requestedStepExamTFValue
         
         let calcultedPercetage: Double = ThanawiyahPart + QuodratPart + TahsilyPart + StepExamPart
-        return calcultedPercetage
+        return (calcultedPercetage * 100).rounded() / 100
         
     }
     
