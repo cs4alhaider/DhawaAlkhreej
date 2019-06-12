@@ -54,16 +54,12 @@ class CalculatorVC: BaseViewController {
         setupTextfeilds()
         retrieveTextfieldsData()
         setupNavbarButtons()
-        //        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        //            self.calculateButton.changeStatus(to: .disabled)
-        //        }
     }
     
     private func setupNavbarButtons() {
         
         let button = UIBarButtonItem(image: #imageLiteral(resourceName: "trash"), style: .plain, target: self, action: #selector(deleteTextfieldsValues))
         navigationItem.rightBarButtonItem = button
-        
     }
     
     @objc private func deleteTextfieldsValues() {
@@ -76,10 +72,8 @@ class CalculatorVC: BaseViewController {
             self.numOfEnteredTFs = 0
             self.errorMessage = ""
             UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-                
                 self.calculatedPercangedStackViewYPosition.constant = 500
                 self.view.layoutIfNeeded()
-                
             })
         }
     }
@@ -127,23 +121,6 @@ class CalculatorVC: BaseViewController {
         
     }
     
-    private func validstesAccoplishedTFsInputs() {
-        DispatchQueue.main.async {
-            if !self.accoplishedThanawiyahTF.text!.isEmpty {
-                 self.validateTextfieldInput(self.accoplishedThanawiyahTF)
-            }
-            if !self.accomplishedQuodratTF.text!.isEmpty {
-                self.validateTextfieldInput(self.accomplishedQuodratTF)
-            }
-            if !self.accomplishedTahsilyTF.text!.isEmpty {
-                self.validateTextfieldInput(self.accomplishedTahsilyTF)
-            }
-            if !self.accomplishedStepExamTF.text!.isEmpty {
-                self.validateTextfieldInput(self.accomplishedStepExamTF)
-            }
-        }
-    }
-    
     private func retrieveTextfieldsData() {
         
         if let data = UserDefaults.standard.value(forKey: K.UserDefaults.savedTextfields) as? [String: String] {
@@ -165,12 +142,7 @@ class CalculatorVC: BaseViewController {
         
         let percentagePicker = UIPickerView()
         percentagePicker.delegate = self
-        
-        requestedThanawiyahTF.inputView = percentagePicker
-        requestedQuodratTF.inputView = percentagePicker
-        requestedTahsilyTF.inputView = percentagePicker
-        requestedStepExamTF.inputView = percentagePicker
-        
+        changeTextField(getTextFields(.requested), pickerView: percentagePicker)
         percentagePicker.backgroundColor = UIColor.whiteBackground
     }
     
@@ -183,7 +155,6 @@ class CalculatorVC: BaseViewController {
         } catch let error {
             textField.hasCorretInputValue = false
             errorMessage = (error as? ValidationError)?.message ?? ""
-            
         }
     }
     
@@ -205,6 +176,23 @@ class CalculatorVC: BaseViewController {
         if numOfEnteredTFs < 2 {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتين على الأقل لحساب النسبة المئوية!", buttonTitle: "حسناً")
             throw ValidationError("")
+        }
+    }
+    
+    private func validstesAccoplishedTFsInputs() {
+        DispatchQueue.main.async {
+            if !self.accoplishedThanawiyahTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accoplishedThanawiyahTF)
+            }
+            if !self.accomplishedQuodratTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedQuodratTF)
+            }
+            if !self.accomplishedTahsilyTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedTahsilyTF)
+            }
+            if !self.accomplishedStepExamTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedStepExamTF)
+            }
         }
     }
     
@@ -272,7 +260,6 @@ class CalculatorVC: BaseViewController {
         
         let calcultedPercetage: Double = ThanawiyahPart + QuodratPart + TahsilyPart + StepExamPart
         return calcultedPercetage.rounded(toPlaces: 2)
-        
     }
     
     @IBAction func accomplishedThanawiyahTfEditingChanged(_ sender: DesignableTF) {
@@ -297,15 +284,14 @@ class CalculatorVC: BaseViewController {
     @IBAction func calculateButtonPressed(_ sender: Any) {
 
         UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-            
             self.calculatedPercangedStackViewYPosition.constant = 500
             self.view.layoutIfNeeded()
-            
         })
         
         do {
             try checkForNumberOfEnteredTFs()
         } catch {
+            Helper.feedbackGenerator(type: .error)
             return
         }
         
@@ -313,32 +299,33 @@ class CalculatorVC: BaseViewController {
         do {
             calcultedPercetage = try calulatePercentage()
         } catch {
+            Helper.feedbackGenerator(type: .error)
             return
         }
         
         do {
             try validateForAccomplishedAndRequestedTFs()
         } catch {
+            Helper.feedbackGenerator(type: .error)
             return
         }
         
         if errorMessage != "" {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: errorMessage, buttonTitle: "حسناً")
+            Helper.feedbackGenerator(type: .error)
             return
         }
-        // let arabicPercentage = String(calcultedPercetage).toArabicNumbers.replacingOccurrences(of: ".", with: "٫")
-        // FIXME: Convert the number to arabic one.
+        
+        let arabicPercentage = String(calcultedPercetage).toArabicNumbers.replacingOccurrences(of: ".", with: "٫")
+        
         scrollView.scrollToBottom()
         calculatedPercentageLabel.fadeTransition(0.4)
-        calculatedPercentageLabel.text = "نسبتك الموزونة: \(calcultedPercetage)٪"
+        calculatedPercentageLabel.text = "نسبتك الموزونة: \(arabicPercentage)٪"
+        Helper.feedbackGenerator(type: .success)
         UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-            
             self.calculatedPercangedStackViewYPosition.constant = 220
             self.view.layoutIfNeeded()
-            
-        }) { (_) in
-            
-        }
+        })
     }
 }
 
@@ -361,7 +348,6 @@ extension CalculatorVC {
         case all
         case requested
         case accomplished
-        
     }
     
     private func getTextFields(_ type: TextFieldType) -> [UITextField] {

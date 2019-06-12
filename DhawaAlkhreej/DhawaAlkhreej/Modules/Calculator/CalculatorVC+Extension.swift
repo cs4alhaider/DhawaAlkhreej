@@ -29,13 +29,13 @@ extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
             saveTextfieldData(.requestedThanawiyahTF, data: percantages[row])
         } else if requestedQuodratTF.isFirstResponder {
             requestedQuodratTF.text = percantages[row]
-              saveTextfieldData(.requestedQuodratTF, data: percantages[row])
+            saveTextfieldData(.requestedQuodratTF, data: percantages[row])
         } else if requestedTahsilyTF.isFirstResponder {
             requestedTahsilyTF.text = percantages[row]
-              saveTextfieldData(.requestedTahsilyTF, data: percantages[row])
+            saveTextfieldData(.requestedTahsilyTF, data: percantages[row])
         } else if requestedStepExamTF.isFirstResponder {
             requestedStepExamTF.text = percantages[row]
-              saveTextfieldData(.requestedStepExamTF, data: percantages[row])
+            saveTextfieldData(.requestedStepExamTF, data: percantages[row])
         }
         
     }

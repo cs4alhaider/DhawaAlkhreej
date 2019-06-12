@@ -78,5 +78,4 @@ import UIKit
             setPlaceHolderTextColor(placeholderTextColor)
         }
     }
-    
 }
