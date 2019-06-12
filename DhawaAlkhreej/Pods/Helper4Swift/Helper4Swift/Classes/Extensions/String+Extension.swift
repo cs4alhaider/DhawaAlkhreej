@@ -28,6 +28,25 @@ public extension String {
         return str
     }
     
+    /// Convert English numbers to Arabic numbers
+    ///
+    /// - Author: Abdullah Alhaider
+    var toArabicNumbers: String {
+        var str = self
+        let map = ["٠": "0",
+                   "١": "1",
+                   "٢": "2",
+                   "٣": "3",
+                   "٤": "4",
+                   "٥": "5",
+                   "٦": "6",
+                   "٧": "7",
+                   "٨": "8",
+                   "٩": "9"]
+        map.forEach { str = str.replacingOccurrences(of: $1, with: $0) }
+        return str
+    }
+    
     /// Used for change the language
     ///
     /// - Author: Abdullah Alhaider

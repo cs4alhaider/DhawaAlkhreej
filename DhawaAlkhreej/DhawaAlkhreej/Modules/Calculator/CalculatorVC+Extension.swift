@@ -8,10 +8,6 @@
 
 import UIKit
 
-extension CalculatorVC {
-    
-}
-
 extension CalculatorVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

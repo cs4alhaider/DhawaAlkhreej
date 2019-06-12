@@ -210,16 +210,21 @@ class CalculatorVC: BaseViewController {
     
     private func validateForAccomplishedAndRequestedTFs() throws {
         
-        if (accoplishedThanawiyahTF.text!.isEmpty) && (!requestedThanawiyahTF.text!.isEmpty) {
+        let requestedThanawiyahTFValue: Double = (Double(String((requestedThanawiyahTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedQuodratTFValue: Double = (Double(String((requestedQuodratTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedTahsilyTFValue: Double = (Double(String((requestedTahsilyTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedStepExamTFValue: Double = (Double(String((requestedStepExamTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        
+        if (accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isNotEmpty && requestedThanawiyahTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في الثانوية", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedQuodratTF.text!.isEmpty) && (!requestedQuodratTF.text!.isEmpty) {
+        } else if (accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isNotEmpty && requestedQuodratTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في القدرات", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedTahsilyTF.text!.isEmpty) && (!requestedTahsilyTF.text!.isEmpty) {
+        } else if (accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isNotEmpty && requestedTahsilyTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في التحصيلي", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedStepExamTF.text!.isEmpty) && (!requestedStepExamTF.text!.isEmpty) {
+        } else if (accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isNotEmpty && requestedStepExamTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في اختبار STEP", buttonTitle: "حسناً")
             throw ValidationError("")
         }
@@ -251,10 +256,11 @@ class CalculatorVC: BaseViewController {
         let requestedTahsilyTFValue: Double = (Double(String((requestedTahsilyTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
         let requestedStepExamTFValue: Double = (Double(String((requestedStepExamTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
         
-        if (requestedThanawiyahTFValue + requestedQuodratTFValue + requestedTahsilyTFValue + requestedStepExamTFValue) > 1 {
+        let totalPercentage = requestedThanawiyahTFValue + requestedQuodratTFValue + requestedTahsilyTFValue + requestedStepExamTFValue
+        if totalPercentage.rounded(toPlaces: 1) > 1 {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "لا يمكن لمجموع النسب المطلوبة من الجامعة أن تتجاوز ١٠٠٪", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (requestedThanawiyahTFValue + requestedQuodratTFValue + requestedTahsilyTFValue + requestedStepExamTFValue) != 1 {
+        } else if totalPercentage.rounded(toPlaces: 1) != 1 {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "مجموع النسب المطلوبة من الجامعة يجب أن يساوي ١٠٠٪", buttonTitle: "حسناً")
             throw ValidationError("")
         }
@@ -265,7 +271,7 @@ class CalculatorVC: BaseViewController {
         let StepExamPart: Double = (Double(accomplishedStepExamTFText) ?? 0.0) * requestedStepExamTFValue
         
         let calcultedPercetage: Double = ThanawiyahPart + QuodratPart + TahsilyPart + StepExamPart
-        return (calcultedPercetage * 100).rounded() / 100
+        return calcultedPercetage.rounded(toPlaces: 2)
         
     }
     
@@ -303,6 +309,13 @@ class CalculatorVC: BaseViewController {
             return
         }
         
+        var calcultedPercetage: Double
+        do {
+            calcultedPercetage = try calulatePercentage()
+        } catch {
+            return
+        }
+        
         do {
             try validateForAccomplishedAndRequestedTFs()
         } catch {
@@ -313,12 +326,7 @@ class CalculatorVC: BaseViewController {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: errorMessage, buttonTitle: "حسناً")
             return
         }
-        var calcultedPercetage: Double
-        do {
-            calcultedPercetage = try calulatePercentage()
-        } catch {
-            return
-        }
+        // let arabicPercentage = String(calcultedPercetage).toArabicNumbers.replacingOccurrences(of: ".", with: "٫")
         // FIXME: Convert the number to arabic one.
         scrollView.scrollToBottom()
         calculatedPercentageLabel.fadeTransition(0.4)

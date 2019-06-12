@@ -10,6 +10,7 @@
 		130ED21222960E4E00080BAB /* CalculatorVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ED21122960E4E00080BAB /* CalculatorVC+Extension.swift */; };
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
+		1342740122B1265600952BC6 /* BinaryFloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342740022B1265600952BC6 /* BinaryFloatingPoint+Extension.swift */; };
 		1356CB002299C5370010A3CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CAFF2299C5370010A3CE /* Validator.swift */; };
 		1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB032299D19A0010A3CE /* UITextField+Extension.swift */; };
 		1356CB062299FA440010A3CE /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */; };
@@ -75,6 +76,7 @@
 		130ED21122960E4E00080BAB /* CalculatorVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorVC+Extension.swift"; sourceTree = "<group>"; };
 		132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTF.swift; sourceTree = "<group>"; };
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
+		1342740022B1265600952BC6 /* BinaryFloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BinaryFloatingPoint+Extension.swift"; sourceTree = "<group>"; };
 		1356CAFF2299C5370010A3CE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1356CB032299D19A0010A3CE /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				1356CAFF2299C5370010A3CE /* Validator.swift */,
 				1356CB032299D19A0010A3CE /* UITextField+Extension.swift */,
 				1356CB072299FD930010A3CE /* UIView+Extension.swift */,
+				1342740022B1265600952BC6 /* BinaryFloatingPoint+Extension.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,
 				DD3B1A68228F5F8700E89B88 /* BaseViewProtocol.swift in Sources */,
+				1342740122B1265600952BC6 /* BinaryFloatingPoint+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
