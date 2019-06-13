@@ -62,22 +62,6 @@ class CalculatorVC: BaseViewController {
         navigationItem.rightBarButtonItem = button
     }
     
-    @objc private func deleteTextfieldsValues() {
-        
-        AlertHelper.showTwoActionsAlert(vc: self, title: "حذف القيم", message: "سيتم حذف جميع القيم المدخلة", btn1Title: "حذف", btn2Title: "إلغاء") {
-            self.changeTextField(self.getTextFields(.all), text: "")
-            
-            // Delete saved values in UserDefaults
-            UserDefaults.standard.set(nil, forKey: K.UserDefaults.savedTextfields)
-            self.numOfEnteredTFs = 0
-            self.errorMessage = ""
-            UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-                self.calculatedPercangedStackViewYPosition.constant = 500
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
     private func setupExamsLabels() {
         
         ThanwiyahLabel.font = Identity.font(.custom(weight: .bold, size: 20))
@@ -119,6 +103,22 @@ class CalculatorVC: BaseViewController {
             UserDefaults.standard.set(dic, forKey: K.UserDefaults.savedTextfields)
         }
         
+    }
+    
+    @objc private func deleteTextfieldsValues() {
+        
+        AlertHelper.showTwoActionsAlert(vc: self, title: "حذف القيم", message: "سيتم حذف جميع القيم المدخلة", btn1Title: "حذف", btn2Title: "إلغاء") {
+            self.changeTextField(self.getTextFields(.all), text: "")
+            
+            // Delete saved values in UserDefaults
+            UserDefaults.standard.set(nil, forKey: K.UserDefaults.savedTextfields)
+            self.numOfEnteredTFs = 0
+            self.errorMessage = ""
+            UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.calculatedPercangedStackViewYPosition.constant = 500
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     private func retrieveTextfieldsData() {
