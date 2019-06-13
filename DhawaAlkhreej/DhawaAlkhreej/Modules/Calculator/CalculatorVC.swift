@@ -234,10 +234,10 @@ class CalculatorVC: BaseViewController {
     
     private func calulatePercentage() throws -> Double {
         
-        let accoplishedThanawiyahTFText = String((accoplishedThanawiyahTF.text) ?? "0").toEnglishNumbers
-        let accomplishedQuodratTFText = String((accomplishedQuodratTF.text) ?? "0").toEnglishNumbers
-        let accomplishedTahsilyTFText = String((accomplishedTahsilyTF.text) ?? "0").toEnglishNumbers
-        let accomplishedStepExamTFText = String((accomplishedStepExamTF.text) ?? "0").toEnglishNumbers
+        let accoplishedThanawiyahTFText = String((accoplishedThanawiyahTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedQuodratTFText = String((accomplishedQuodratTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedTahsilyTFText = String((accomplishedTahsilyTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedStepExamTFText = String((accomplishedStepExamTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
         
         let requestedThanawiyahTFValue: Double = (Double(String((requestedThanawiyahTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
         let requestedQuodratTFValue: Double = (Double(String((requestedQuodratTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
