@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorVC: BaseViewController {
+class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     
     @IBOutlet var calculatedPercangedStackViewYPosition: NSLayoutConstraint!
     @IBOutlet var scrollView: UIScrollView!
@@ -43,6 +43,7 @@ class CalculatorVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createPercentagePicker()
+        scrollView.delegate = self
     }
     
     override func setupUI() {
@@ -56,6 +57,47 @@ class CalculatorVC: BaseViewController {
         setupNavbarButtons()
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        DispatchQueue.main.async {
+            
+        }
+    }
+    
+//    func imageWithGradient(colors: [CGColor], size: CGSize, horizontally: Bool = true) -> UIImage? {
+//
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//        gradientLayer.colors = colors
+//        if horizontally {
+//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+//            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+//        } else {
+//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+//            gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+//        }
+//
+//        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+//        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+//
+//    func updateImageWithGradient() {
+//
+//        let navBarHeight = self.navigationController?.navigationBar.frame.size.height
+//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+//        let heightAdjustment: CGFloat = 2
+//
+//        let gradientHeight = navBarHeight! + statusBarHeight + heightAdjustment
+//        var frame = self.navigationController!.navigationBar.bounds
+//        frame.size.height += UIApplication.shared.statusBarFrame.size.height
+//        frame.origin.y -= UIApplication.shared.statusBarFrame.size.height
+//        // let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: frame, horizontally: false)
+//         let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight), horizontally: false)
+//        navigationController?.navigationBar.barTintColor = UIColor(patternImage: bgimage!)
+//    }
+
     private func setupNavbarButtons() {
         
         let button = UIBarButtonItem(image: #imageLiteral(resourceName: "trash"), style: .plain, target: self, action: #selector(deleteTextfieldsValues))

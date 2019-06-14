@@ -15,6 +15,7 @@
 		1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB032299D19A0010A3CE /* UITextField+Extension.swift */; };
 		1356CB062299FA440010A3CE /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */; };
 		1356CB082299FD930010A3CE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB072299FD930010A3CE /* UIView+Extension.swift */; };
+		138B464A22B41ABC001A96CE /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B464922B41ABC001A96CE /* BaseNavigationController.swift */; };
 		79B147F90F891E4D84BBA2D3 /* Pods_DhawaAlkhreej.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */; };
 		DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */; };
 		DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2505FC229712FB0032A30B /* SavedMajorsTableViewCell.xib */; };
@@ -81,6 +82,7 @@
 		1356CB032299D19A0010A3CE /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		1356CB072299FD930010A3CE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		138B464922B41ABC001A96CE /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2ABD1AB1032FD9BEBA4F091A /* Pods-DhawaAlkhreej.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhawaAlkhreej.release.xcconfig"; path = "Target Support Files/Pods-DhawaAlkhreej/Pods-DhawaAlkhreej.release.xcconfig"; sourceTree = "<group>"; };
 		746F4F9B8FBD208D4FF3DB02 /* Pods_DhawaAlkhreej.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhawaAlkhreej.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2505FB229712FB0032A30B /* SavedMajorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMajorsTableViewCell.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3B1A6A228F5FBB00E89B88 /* BaseViewController.swift */,
+				138B464922B41ABC001A96CE /* BaseNavigationController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				DD3B1A6E228F600600E89B88 /* String+Extension.swift in Sources */,
 				DD8C50602298C4BB00B067AD /* SearchVC.swift in Sources */,
 				DD3B1A4E228F5B3300E89B88 /* Keys.swift in Sources */,
+				138B464A22B41ABC001A96CE /* BaseNavigationController.swift in Sources */,
 				DD3B1A65228F5EE900E89B88 /* AlertHelper.swift in Sources */,
 				DDB3778E2299F1A100D1ADCA /* CalculateButton.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,

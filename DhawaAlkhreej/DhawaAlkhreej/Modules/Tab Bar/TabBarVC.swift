@@ -33,25 +33,25 @@ class TabBarVC: UITabBarController {
     
     func rootViewControllers() {
         
-        let tabVC1 = createViewController(nv: UINavigationController(),
+        let tabVC1 = createViewController(nv: BaseNavigationController(),
                                           vc: UIStoryboard.search.instantiateViewController(withClass: SearchVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar1"),
                                           title: "")
         
-        let tabVC2 = createViewController(nv: UINavigationController(),
+        let tabVC2 = createViewController(nv: BaseNavigationController(),
                                           vc: UIStoryboard.calculator.instantiateViewController(withClass: CalculatorVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar2"),
                                           title: "")
         
-        let tabVC3 = createViewController(nv: UINavigationController(),
+        let tabVC3 = createViewController(nv: BaseNavigationController(),
                                           vc: UIStoryboard.majors.instantiateViewController(withClass: SectionsVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar3"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar3"),
                                           title: "")
         
-        let tabVC4 = createViewController(nv: UINavigationController(),
+        let tabVC4 = createViewController(nv: BaseNavigationController(),
                                           vc: UIStoryboard.majors.instantiateViewController(withClass: SavedMajorsVC.self),
                                           selectedImage: #imageLiteral(resourceName: "tabBar4"),
                                           unselectedImage: #imageLiteral(resourceName: "tabBar4"),
