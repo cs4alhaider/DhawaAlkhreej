@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorVC: BaseViewController {
+class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     
     @IBOutlet var calculatedPercangedStackViewYPosition: NSLayoutConstraint!
     @IBOutlet var scrollView: UIScrollView!
@@ -37,10 +37,13 @@ class CalculatorVC: BaseViewController {
     
     // MARK: Class Variables
     var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٢٥", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
+    var errorMessage: String = ""
+    var numOfEnteredTFs: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createPercentagePicker()
+        scrollView.delegate = self
     }
     
     override func setupUI() {
@@ -52,26 +55,53 @@ class CalculatorVC: BaseViewController {
         setupTextfeilds()
         retrieveTextfieldsData()
         setupNavbarButtons()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.calculateButton.changeStatus(to: .disabled)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        DispatchQueue.main.async {
+            
         }
     }
     
+//    func imageWithGradient(colors: [CGColor], size: CGSize, horizontally: Bool = true) -> UIImage? {
+//
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//        gradientLayer.colors = colors
+//        if horizontally {
+//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+//            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+//        } else {
+//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+//            gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+//        }
+//
+//        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+//        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+//
+//    func updateImageWithGradient() {
+//
+//        let navBarHeight = self.navigationController?.navigationBar.frame.size.height
+//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+//        let heightAdjustment: CGFloat = 2
+//
+//        let gradientHeight = navBarHeight! + statusBarHeight + heightAdjustment
+//        var frame = self.navigationController!.navigationBar.bounds
+//        frame.size.height += UIApplication.shared.statusBarFrame.size.height
+//        frame.origin.y -= UIApplication.shared.statusBarFrame.size.height
+//        // let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: frame, horizontally: false)
+//         let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight), horizontally: false)
+//        navigationController?.navigationBar.barTintColor = UIColor(patternImage: bgimage!)
+//    }
+
     private func setupNavbarButtons() {
         
         let button = UIBarButtonItem(image: #imageLiteral(resourceName: "trash"), style: .plain, target: self, action: #selector(deleteTextfieldsValues))
         navigationItem.rightBarButtonItem = button
-        
-    }
-    
-    @objc private func deleteTextfieldsValues() {
-        
-        AlertHelper.showTwoActionsAlert(vc: self, title: "حذف القيم", message: "سيتم حذف جميع القيم المدخلة", btn1Title: "حذف", btn2Title: "إلغاء") {
-            self.changeTextField(self.getTextFields(.all), text: "")
-            
-            // Delete saved values in UserDefaults
-            UserDefaults.standard.set(nil, forKey: K.UserDefaults.savedTextfields)
-        }
     }
     
     private func setupExamsLabels() {
@@ -117,12 +147,19 @@ class CalculatorVC: BaseViewController {
         
     }
     
-    private func validstesAccoplishedTFsInputs() {
-        DispatchQueue.main.async {
-            self.validateTextfieldInput(self.accoplishedThanawiyahTF)
-            self.validateTextfieldInput(self.accomplishedQuodratTF)
-            self.validateTextfieldInput(self.accomplishedTahsilyTF)
-            self.validateTextfieldInput(self.accomplishedStepExamTF)
+    @objc private func deleteTextfieldsValues() {
+        
+        AlertHelper.showTwoActionsAlert(vc: self, title: "حذف القيم", message: "سيتم حذف جميع القيم المدخلة", btn1Title: "حذف", btn2Title: "إلغاء") {
+            self.changeTextField(self.getTextFields(.all), text: "")
+            
+            // Delete saved values in UserDefaults
+            UserDefaults.standard.set(nil, forKey: K.UserDefaults.savedTextfields)
+            self.numOfEnteredTFs = 0
+            self.errorMessage = ""
+            UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.calculatedPercangedStackViewYPosition.constant = 500
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
@@ -147,24 +184,124 @@ class CalculatorVC: BaseViewController {
         
         let percentagePicker = UIPickerView()
         percentagePicker.delegate = self
-        
-        requestedThanawiyahTF.inputView = percentagePicker
-        requestedQuodratTF.inputView = percentagePicker
-        requestedTahsilyTF.inputView = percentagePicker
-        requestedStepExamTF.inputView = percentagePicker
-        
+        changeTextField(getTextFields(.requested), pickerView: percentagePicker)
         percentagePicker.backgroundColor = UIColor.whiteBackground
     }
     
     // Validates for: empty value, value > 100, value has incorret Double format
     private func validateTextfieldInput(_ textField: DesignableTF) {
-        
+        errorMessage = ""
         textField.hasCorretInputValue = true
         do {
             _ = try textField.validatedText(validationType: .percentage)
-        } catch {
+        } catch let error {
             textField.hasCorretInputValue = false
+            errorMessage = (error as? ValidationError)?.message ?? ""
         }
+    }
+    
+    private func checkForNumberOfEnteredTFs() throws {
+        numOfEnteredTFs = 0
+        if !accoplishedThanawiyahTF.text!.isEmpty {
+            numOfEnteredTFs += 1
+        }
+        if !accomplishedQuodratTF.text!.isEmpty {
+            numOfEnteredTFs += 1
+        }
+        if !accomplishedTahsilyTF.text!.isEmpty {
+            numOfEnteredTFs += 1
+        }
+        if !accomplishedStepExamTF.text!.isEmpty {
+            numOfEnteredTFs += 1
+        }
+        
+        if numOfEnteredTFs < 2 {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتين على الأقل لحساب النسبة المئوية!", buttonTitle: "حسناً")
+            throw ValidationError("")
+        }
+    }
+    
+    private func validstesAccoplishedTFsInputs() {
+        DispatchQueue.main.async {
+            if !self.accoplishedThanawiyahTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accoplishedThanawiyahTF)
+            }
+            if !self.accomplishedQuodratTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedQuodratTF)
+            }
+            if !self.accomplishedTahsilyTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedTahsilyTF)
+            }
+            if !self.accomplishedStepExamTF.text!.isEmpty {
+                self.validateTextfieldInput(self.accomplishedStepExamTF)
+            }
+        }
+    }
+    
+    private func validateForAccomplishedAndRequestedTFs() throws {
+        
+        let requestedThanawiyahTFValue: Double = (Double(String((requestedThanawiyahTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedQuodratTFValue: Double = (Double(String((requestedQuodratTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedTahsilyTFValue: Double = (Double(String((requestedTahsilyTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedStepExamTFValue: Double = (Double(String((requestedStepExamTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        
+        if (accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isNotEmpty && requestedThanawiyahTFValue != 0) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في الثانوية", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isNotEmpty && requestedQuodratTFValue != 0) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في القدرات", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isNotEmpty && requestedTahsilyTFValue != 0) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في التحصيلي", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isNotEmpty && requestedStepExamTFValue != 0) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في اختبار STEP", buttonTitle: "حسناً")
+            throw ValidationError("")
+        }
+        
+        if (!accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة الثانوية", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة القدرات", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة التحصيلي", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if (!accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isEmpty) {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة اختبار STEP", buttonTitle: "حسناً")
+            throw ValidationError("")
+        }
+    }
+    
+    private func calulatePercentage() throws -> Double {
+        
+        let accoplishedThanawiyahTFText = String((accoplishedThanawiyahTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedQuodratTFText = String((accomplishedQuodratTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedTahsilyTFText = String((accomplishedTahsilyTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        let accomplishedStepExamTFText = String((accomplishedStepExamTF.text) ?? "0").toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
+        
+        let requestedThanawiyahTFValue: Double = (Double(String((requestedThanawiyahTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedQuodratTFValue: Double = (Double(String((requestedQuodratTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedTahsilyTFValue: Double = (Double(String((requestedTahsilyTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        let requestedStepExamTFValue: Double = (Double(String((requestedStepExamTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
+        
+        let totalPercentage = requestedThanawiyahTFValue + requestedQuodratTFValue + requestedTahsilyTFValue + requestedStepExamTFValue
+        if totalPercentage.rounded(toPlaces: 1) > 1 {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "لا يمكن لمجموع النسب المطلوبة من الجامعة أن تتجاوز ١٠٠٪", buttonTitle: "حسناً")
+            throw ValidationError("")
+        } else if totalPercentage.rounded(toPlaces: 1) != 1 {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "مجموع النسب المطلوبة من الجامعة يجب أن يساوي ١٠٠٪", buttonTitle: "حسناً")
+            throw ValidationError("")
+        }
+        
+        let ThanawiyahPart: Double = (Double(accoplishedThanawiyahTFText) ?? 0.0) * requestedThanawiyahTFValue
+        let QuodratPart: Double = (Double(accomplishedQuodratTFText) ?? 0.0) * requestedQuodratTFValue
+        let TahsilyPart: Double = (Double(accomplishedTahsilyTFText) ?? 0.0) * requestedTahsilyTFValue
+        let StepExamPart: Double = (Double(accomplishedStepExamTFText) ?? 0.0) * requestedStepExamTFValue
+        
+        let calcultedPercetage: Double = ThanawiyahPart + QuodratPart + TahsilyPart + StepExamPart
+        return calcultedPercetage.rounded(toPlaces: 2)
     }
     
     @IBAction func accomplishedThanawiyahTfEditingChanged(_ sender: DesignableTF) {
@@ -187,18 +324,50 @@ class CalculatorVC: BaseViewController {
         saveTextfieldData(.accomplishedStepExamTF, data: sender.text ?? "")
     }
     @IBAction func calculateButtonPressed(_ sender: Any) {
+
+        UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.calculatedPercangedStackViewYPosition.constant = 500
+            self.view.layoutIfNeeded()
+        })
+        
+        do {
+            try checkForNumberOfEnteredTFs()
+        } catch {
+            Helper.feedbackGenerator(type: .error)
+            return
+        }
+        
+        var calcultedPercetage: Double
+        do {
+            calcultedPercetage = try calulatePercentage()
+        } catch {
+            Helper.feedbackGenerator(type: .error)
+            return
+        }
+        
+        do {
+            try validateForAccomplishedAndRequestedTFs()
+        } catch {
+            Helper.feedbackGenerator(type: .error)
+            return
+        }
+        
+        if errorMessage != "" {
+            AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: errorMessage, buttonTitle: "حسناً")
+            Helper.feedbackGenerator(type: .error)
+            return
+        }
+        
+        let arabicPercentage = String(calcultedPercetage).toArabicNumbers.replacingOccurrences(of: ".", with: "٫")
         
         scrollView.scrollToBottom()
         calculatedPercentageLabel.fadeTransition(0.4)
-        calculatedPercentageLabel.text = "نسبتك الموزونة: \(self.accoplishedThanawiyahTF.text ?? "")٪"
+        calculatedPercentageLabel.text = "نسبتك الموزونة: \(arabicPercentage)٪"
+        Helper.feedbackGenerator(type: .success)
         UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-            
             self.calculatedPercangedStackViewYPosition.constant = 220
             self.view.layoutIfNeeded()
-            
-        }) { (_) in
-            
-        }
+        })
     }
 }
 
@@ -221,7 +390,6 @@ extension CalculatorVC {
         case all
         case requested
         case accomplished
-        
     }
     
     private func getTextFields(_ type: TextFieldType) -> [UITextField] {

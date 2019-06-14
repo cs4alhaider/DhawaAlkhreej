@@ -24,7 +24,8 @@ protocol ValidatorConvertible {
 
 enum ValidatorType {
     
-    case percentage    
+    case percentage
+    case requiredField(field: String)
 }
 
 enum VaildatorFactory {
@@ -32,6 +33,7 @@ enum VaildatorFactory {
     static func validatorFor(type: ValidatorType) -> ValidatorConvertible {
         switch type {
         case .percentage: return  PercentageValidator()
+        case .requiredField(let fieldName): return RequiredFieldValidator(fieldName)
         }
     }
 }
@@ -40,14 +42,29 @@ struct PercentageValidator: ValidatorConvertible {
     
     func validated(_ value: String) throws -> String {
         
-        guard value != "" else { throw ValidationError("Percentage is Required") }
+        // guard value != "" else { throw ValidationError("Percentage is Required") }
         let englishNumber = value.toEnglishNumbers.replacingOccurrences(of: "٫", with: ".")
-        guard let number = Double(englishNumber) else { throw ValidationError("Couldn't convert String into Double") }
+        guard let number = Double(englishNumber) else { throw ValidationError("هناك خطأ في صيغة النسبة المئوية") }
         
         if number > 100.0 {
-            throw ValidationError("Percentage cann't be greater than 100.0")
+            throw ValidationError("لا يمكن لأحد درجاتك أن تكون أكبر من ١٠٠٪")
         }
         
+        return value
+    }
+}
+
+struct RequiredFieldValidator: ValidatorConvertible {
+    private let fieldName: String
+    
+    init(_ field: String) {
+        fieldName = field
+    }
+    
+    func validated(_ value: String) throws -> String {
+        guard !value.isEmpty else {
+            throw ValidationError(fieldName + "مطلوب")
+        }
         return value
     }
 }

@@ -10,7 +10,9 @@ import UIKit
 
 extension UIViewController {
     
-    func changeTextField(_ textFeild: [UITextField], tintColor: UIColor? = nil, font: UIFont? = nil, placeholderColor: UIColor? = nil, text: String? = nil) {
+    func changeTextField(_ textFeild: [UITextField], tintColor: UIColor? = nil, font: UIFont? = nil, placeholderColor: UIColor? = nil, text: String? = nil,
+                         pickerView: UIPickerView? = nil) {
+        
         if let color = tintColor {
             textFeild.forEach({ $0.tintColor = color })
         }
@@ -22,6 +24,10 @@ extension UIViewController {
         }
         if let text = text {
             textFeild.forEach({ $0.text = text })
+        }
+        
+        if let pickerView = pickerView {
+            textFeild.forEach({ $0.inputView = pickerView })
         }
     }
 }
