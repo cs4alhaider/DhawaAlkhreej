@@ -73,3 +73,10 @@ extension SectionsVC: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension SectionsVC {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let tabBar = UIApplication.topViewController() else { return }
+        ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
+    }
+}

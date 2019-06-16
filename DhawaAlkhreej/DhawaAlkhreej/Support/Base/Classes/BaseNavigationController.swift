@@ -10,10 +10,13 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
     
+    /** **NOTE:** It's very important to call this property on any ViewController that has any kind of scrolling, EX: TableView, CollectionView, ScrollView etc...,
+    to apply the correct gradient for the small NavigationBar.
+     You can call it like that in any scrollViewDidScroll method:
+     guard let tabBar = UIApplication.topViewController() else { return }
+     ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient */
     var updateNavBarGradient: Void {
-        get {
-            return updateImageWithGradient()
-        }
+        return updateImageWithGradient()
     }
     
     override func viewDidLoad() {
@@ -21,52 +24,38 @@ class BaseNavigationController: UINavigationController {
         style()
     }
     
-    static func updateNavBarGradient1() {
-        
-    }
-    
     func style() {
         
         navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.brownTextColor]
         navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: Identity.font(.custom(weight: .bold, size: 30)),
                                                   NSAttributedString.Key.foregroundColor: UIColor.brownTextColor]
-        
         navigationBar.prefersLargeTitles = true
         navigationBar.isTranslucent = true
-        
-        self.updateImageWithGradient()
-        
+        updateImageWithGradient()
     }
     
     private func updateImageWithGradient() {
         
         let navBarHeight = navigationBar.frame.size.height
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let heightAdjustment: CGFloat = 1
-        
+        let heightAdjustment: CGFloat = 2
         let gradientHeight = navBarHeight + statusBarHeight + heightAdjustment
-        var frame = navigationBar.bounds
-        frame.size.height += UIApplication.shared.statusBarFrame.size.height
-        frame.origin.y -= UIApplication.shared.statusBarFrame.size.height
-        let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight), horizontally: false)
-        navigationBar.barTintColor = UIColor(patternImage: bgimage!)
+        let bgImage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight))
+        guard let image = bgImage else { return }
+        navigationBar.barTintColor = UIColor(patternImage: image)
     }
     
-    private func imageWithGradient(colors: [CGColor], size: CGSize, horizontally: Bool = true) -> UIImage? {
+    private func imageWithGradient(colors: [CGColor], size: CGSize) -> UIImage? {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         gradientLayer.colors = colors
-        if horizontally {
-            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
-        } else {
-            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-        }
-        
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
         UIGraphicsBeginImageContext(gradientLayer.bounds.size)
-        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        if let context = UIGraphicsGetCurrentContext() {
+            gradientLayer.render(in: context)
+        }
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image

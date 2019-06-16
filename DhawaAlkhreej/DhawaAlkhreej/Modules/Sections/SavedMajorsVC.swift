@@ -47,3 +47,10 @@ extension SavedMajorsVC: UITableViewDataSource {
         return cell
     }
 }
+
+extension SavedMajorsVC {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let tabBar = UIApplication.topViewController() else { return }
+        ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
+    }
+}

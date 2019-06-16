@@ -58,46 +58,11 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        DispatchQueue.main.async {
-            
-        }
+        
+        guard let tabBar = UIApplication.topViewController() else { return }
+        ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
     }
     
-//    func imageWithGradient(colors: [CGColor], size: CGSize, horizontally: Bool = true) -> UIImage? {
-//
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-//        gradientLayer.colors = colors
-//        if horizontally {
-//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-//            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
-//        } else {
-//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-//            gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-//        }
-//
-//        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
-//        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        return image
-//    }
-//
-//    func updateImageWithGradient() {
-//
-//        let navBarHeight = self.navigationController?.navigationBar.frame.size.height
-//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-//        let heightAdjustment: CGFloat = 2
-//
-//        let gradientHeight = navBarHeight! + statusBarHeight + heightAdjustment
-//        var frame = self.navigationController!.navigationBar.bounds
-//        frame.size.height += UIApplication.shared.statusBarFrame.size.height
-//        frame.origin.y -= UIApplication.shared.statusBarFrame.size.height
-//        // let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: frame, horizontally: false)
-//         let bgimage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight), horizontally: false)
-//        navigationController?.navigationBar.barTintColor = UIColor(patternImage: bgimage!)
-//    }
-
     private func setupNavbarButtons() {
         
         let button = UIBarButtonItem(image: #imageLiteral(resourceName: "trash"), style: .plain, target: self, action: #selector(deleteTextfieldsValues))
@@ -324,7 +289,7 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
         saveTextfieldData(.accomplishedStepExamTF, data: sender.text ?? "")
     }
     @IBAction func calculateButtonPressed(_ sender: Any) {
-
+        
         UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.calculatedPercangedStackViewYPosition.constant = 500
             self.view.layoutIfNeeded()
