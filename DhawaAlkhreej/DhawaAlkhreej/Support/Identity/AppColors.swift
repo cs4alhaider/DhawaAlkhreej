@@ -40,7 +40,7 @@ extension UIColor {
         let color1 = UIColor(red: 250.0 / 255.0, green: 240.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0).cgColor
         let color2 = UIColor(red: 254.0 / 255.0, green: 247.0 / 255.0, blue: 232.0 / 255.0, alpha: 1.0).cgColor
         let color3 = UIColor(red: 250.0 / 255.0, green: 253.0 / 255.0, blue: 1.0, alpha: 1.0).cgColor
-        let color4 = UIColor(white: 252.0 / 255.0, alpha: 1.0).cgColor
-        return [color4, color3, color2, color1]
+        // let color4 = UIColor(white: 252.0 / 255.0, alpha: 1.0).cgColor
+        return [color3, color2, color1]
     }
 }

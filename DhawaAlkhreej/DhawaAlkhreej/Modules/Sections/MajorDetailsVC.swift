@@ -76,3 +76,10 @@ extension MajorDetailsVC: UITableViewDataSource {
         return 65
     }
 }
+
+extension MajorDetailsVC {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let tabBar = UIApplication.topViewController() else { return }
+        ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
+    }
+}
