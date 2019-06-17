@@ -10,11 +10,13 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
     
-    /** **NOTE:** It's very important to call this property on any ViewController that has any kind of scrolling, EX: TableView, CollectionView, ScrollView etc...,
-    to apply the correct gradient for the small NavigationBar.
-     You can call it like that in any scrollViewDidScroll method:
-     guard let tabBar = UIApplication.topViewController() else { return }
-     ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient */
+    /// **NOTE:** It's very important to call this property on any ViewController that has any kind of scrolling,
+    /// EX: TableView, CollectionView, ScrollView etc... to apply the correct gradient for the small NavigationBar.
+    /// You can call it like that in any scrollViewDidScroll method:
+    /// ```
+    /// guard let tabBar = UIApplication.topViewController() else { return }
+    /// ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
+    /// ```
     var updateNavBarGradient: Void {
         return updateImageWithGradient()
     }

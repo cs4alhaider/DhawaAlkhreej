@@ -59,8 +59,8 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        guard let tabBar = UIApplication.topViewController() else { return }
-        ((tabBar.navigationController) as? BaseNavigationController)?.updateNavBarGradient
+        guard let navBar = tabBarController?.navigationController as? BaseNavigationController else { return }
+        navBar.updateNavBarGradient
     }
     
     private func setupNavbarButtons() {
