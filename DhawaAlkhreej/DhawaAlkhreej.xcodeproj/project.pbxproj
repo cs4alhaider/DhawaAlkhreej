@@ -51,6 +51,9 @@
 		DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A6A228F5FBB00E89B88 /* BaseViewController.swift */; };
 		DD3B1A6E228F600600E89B88 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A6D228F600600E89B88 /* String+Extension.swift */; };
 		DD3B1A72228F602E00E89B88 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B1A71228F602E00E89B88 /* UIStoryboard+Extension.swift */; };
+		DD44261522B82F9E0077EFA8 /* DataModel+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */; };
+		DD44261722B82FE60077EFA8 /* Country+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261622B82FE60077EFA8 /* Country+Model.swift */; };
+		DD44261922B830250077EFA8 /* University+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261822B830250077EFA8 /* University+Model.swift */; };
 		DD8C505E2298C48200B067AD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8C505D2298C48200B067AD /* Search.storyboard */; };
 		DD8C50602298C4BB00B067AD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C505F2298C4BB00B067AD /* SearchVC.swift */; };
 		DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EA5A322908A270050F199 /* TabBarVC.swift */; };
@@ -121,6 +124,9 @@
 		DD3B1A6A228F5FBB00E89B88 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DD3B1A6D228F600600E89B88 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DD3B1A71228F602E00E89B88 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel+Model.swift"; sourceTree = "<group>"; };
+		DD44261622B82FE60077EFA8 /* Country+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+Model.swift"; sourceTree = "<group>"; };
+		DD44261822B830250077EFA8 /* University+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "University+Model.swift"; sourceTree = "<group>"; };
 		DD8C505D2298C48200B067AD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		DD8C505F2298C4BB00B067AD /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		DD9EA5A322908A270050F199 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -477,6 +483,9 @@
 			isa = PBXGroup;
 			children = (
 				DDD047CC229B1EB000DC78D5 /* TestData+Model.swift */,
+				DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */,
+				DD44261622B82FE60077EFA8 /* Country+Model.swift */,
+				DD44261822B830250077EFA8 /* University+Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -684,11 +693,13 @@
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
 				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
 				1356CB002299C5370010A3CE /* Validator.swift in Sources */,
+				DD44261922B830250077EFA8 /* University+Model.swift in Sources */,
 				DDBD18302299BFAE00E0CFD5 /* SearchTextField.swift in Sources */,
 				DD3B1A5A228F5CFF00E89B88 /* ColorType.swift in Sources */,
 				DD3B1A58228F5CC800E89B88 /* AppColors.swift in Sources */,
 				DDC7E9F3229DABEE005598E3 /* Extensions.swift in Sources */,
 				DDF6708A2292210F008A5128 /* Router.swift in Sources */,
+				DD44261722B82FE60077EFA8 /* Country+Model.swift in Sources */,
 				DD3B1A44228F5A4600E89B88 /* DataRequester.swift in Sources */,
 				DD250601229713770032A30B /* SavedMajorsVC.swift in Sources */,
 				DD3B1A5E228F5DB200E89B88 /* FontType.swift in Sources */,
@@ -707,6 +718,7 @@
 				1356CB082299FD930010A3CE /* UIView+Extension.swift in Sources */,
 				DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */,
 				130ED21222960E4E00080BAB /* CalculatorVC+Extension.swift in Sources */,
+				DD44261522B82F9E0077EFA8 /* DataModel+Model.swift in Sources */,
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,
 				DD3B1A68228F5F8700E89B88 /* BaseViewProtocol.swift in Sources */,
