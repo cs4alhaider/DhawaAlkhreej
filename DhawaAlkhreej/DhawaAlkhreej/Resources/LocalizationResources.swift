@@ -18,12 +18,15 @@ struct LocalizationResources {
     enum General {
         
         case ok
+        case error
         case custom(String)
         
         var localizedText: String {
             switch self {
             case .ok:
                 return "OK".localized
+            case .error:
+                return "Error".localized
             case .custom(let customText):
                 return customText.localized
             }
