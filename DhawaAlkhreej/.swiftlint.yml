@@ -50,6 +50,10 @@ cyclomatic_complexity:
   - 10
   - 10
 
+type_body_length:
+  - 350 # warning
+  - 500 # error
+
 
 ## overriding
 vertical_whitespace:
