@@ -35,11 +35,31 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     @IBOutlet var accomplishedTahsilyTF: DesignableTF!
     @IBOutlet var accomplishedStepExamTF: DesignableTF!
     
+    // MARK: Textfeilds Text Values
+    // Used mainly to calculate the percentage
+    var accoplishedThanawiyahTFText: String {
+        guard let text = accoplishedThanawiyahTF.text else { return "" }; return text }
+    var accomplishedQuodratTFText: String {
+        guard let text = accomplishedQuodratTF.text else { return ""}; return text }
+    var accomplishedTahsilyTFText: String {
+        guard let text = accomplishedTahsilyTF.text else { return "" }; return text }
+    var accomplishedStepExamTFText: String {
+        guard let text = accomplishedStepExamTF.text else { return "" }; return text }
+
+    var requestedThanawiyahTFText: String {
+        guard let text = requestedThanawiyahTF.text else { return "" }; return text }
+    var requestedQuodratTFText: String {
+        guard let text = requestedTahsilyTF.text else { return "" }; return text }
+    var requestedTahsilyTFText: String {
+        guard let text = requestedTahsilyTF.text else { return "" }; return text }
+    var requestedStepExamTFText: String {
+        guard let text = requestedStepExamTF.text else { return "" }; return text }
+    
     // MARK: Class Variables
     var percantages = ["٪٠", "٪١٠", "٪٢٠", "٪٢٥", "٪٣٠", "٪٤٠", "٪٥٠", "٪٦٠"]
     var errorMessage: String = ""
     var numOfEnteredTFs: Int = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         createPercentagePicker()
@@ -166,17 +186,21 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     }
     
     private func checkForNumberOfEnteredTFs() throws {
+        guard let accoplishedThanawiyahTF = accoplishedThanawiyahTF.text else { return }
+        guard let accomplishedQuodratTF = accomplishedQuodratTF.text else { return }
+        guard let accomplishedTahsilyTF = accomplishedTahsilyTF.text else { return }
+        guard let accomplishedStepExamTF = accomplishedStepExamTF.text else { return }
         numOfEnteredTFs = 0
-        if !accoplishedThanawiyahTF.text!.isEmpty {
+        if !accoplishedThanawiyahTF.isEmpty {
             numOfEnteredTFs += 1
         }
-        if !accomplishedQuodratTF.text!.isEmpty {
+        if !accomplishedQuodratTF.isEmpty {
             numOfEnteredTFs += 1
         }
-        if !accomplishedTahsilyTF.text!.isEmpty {
+        if !accomplishedTahsilyTF.isEmpty {
             numOfEnteredTFs += 1
         }
-        if !accomplishedStepExamTF.text!.isEmpty {
+        if !accomplishedStepExamTF.isEmpty {
             numOfEnteredTFs += 1
         }
         
@@ -187,17 +211,18 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
     }
     
     private func validstesAccoplishedTFsInputs() {
+        
         DispatchQueue.main.async {
-            if !self.accoplishedThanawiyahTF.text!.isEmpty {
+            if !self.accoplishedThanawiyahTFText.isEmpty {
                 self.validateTextfieldInput(self.accoplishedThanawiyahTF)
             }
-            if !self.accomplishedQuodratTF.text!.isEmpty {
+            if !self.accomplishedQuodratTFText.isEmpty {
                 self.validateTextfieldInput(self.accomplishedQuodratTF)
             }
-            if !self.accomplishedTahsilyTF.text!.isEmpty {
+            if !self.accomplishedTahsilyTFText.isEmpty {
                 self.validateTextfieldInput(self.accomplishedTahsilyTF)
             }
-            if !self.accomplishedStepExamTF.text!.isEmpty {
+            if !self.accomplishedStepExamTFText.isEmpty {
                 self.validateTextfieldInput(self.accomplishedStepExamTF)
             }
         }
@@ -210,30 +235,30 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
         let requestedTahsilyTFValue: Double = (Double(String((requestedTahsilyTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
         let requestedStepExamTFValue: Double = (Double(String((requestedStepExamTF.text?.dropFirst()) ?? "0").toEnglishNumbers) ?? 0.0) / 100
         
-        if (accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isNotEmpty && requestedThanawiyahTFValue != 0) {
+        if (accoplishedThanawiyahTFText.isEmpty) && (requestedThanawiyahTFText.isNotEmpty && requestedThanawiyahTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في الثانوية", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isNotEmpty && requestedQuodratTFValue != 0) {
+        } else if (accomplishedQuodratTFText.isEmpty) && (requestedQuodratTFText.isNotEmpty && requestedQuodratTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في القدرات", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isNotEmpty && requestedTahsilyTFValue != 0) {
+        } else if (accomplishedTahsilyTFText.isEmpty) && (requestedTahsilyTFText.isNotEmpty && requestedTahsilyTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في التحصيلي", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isNotEmpty && requestedStepExamTFValue != 0) {
+        } else if (accomplishedStepExamTFText.isEmpty) && (requestedStepExamTFText.isNotEmpty && requestedStepExamTFValue != 0) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال درجتك في اختبار STEP", buttonTitle: "حسناً")
             throw ValidationError("")
         }
         
-        if (!accoplishedThanawiyahTF.text!.isEmpty) && (requestedThanawiyahTF.text!.isEmpty) {
+        if (!accoplishedThanawiyahTFText.isEmpty) && (requestedThanawiyahTFText.isEmpty) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة الثانوية", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (!accomplishedQuodratTF.text!.isEmpty) && (requestedQuodratTF.text!.isEmpty) {
+        } else if (!accomplishedQuodratTFText.isEmpty) && (requestedQuodratTFText.isEmpty) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة القدرات", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (!accomplishedTahsilyTF.text!.isEmpty) && (requestedTahsilyTF.text!.isEmpty) {
+        } else if (!accomplishedTahsilyTFText.isEmpty) && (requestedTahsilyTFText.isEmpty) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة التحصيلي", buttonTitle: "حسناً")
             throw ValidationError("")
-        } else if (!accomplishedStepExamTF.text!.isEmpty) && (requestedStepExamTF.text!.isEmpty) {
+        } else if (!accomplishedStepExamTFText.isEmpty) && (requestedStepExamTFText.isEmpty) {
             AlertHelper.showOneActionAlert(vc: self, title: "خطأ", message: "يجب إدخال النسبة المطلوبة في الجامعة لدرجة اختبار STEP", buttonTitle: "حسناً")
             throw ValidationError("")
         }
