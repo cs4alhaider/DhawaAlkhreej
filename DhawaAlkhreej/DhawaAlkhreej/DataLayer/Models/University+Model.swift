@@ -10,13 +10,13 @@ import Foundation
 
 struct UniversityModel: Codable {
     
-    // let colleges: [<#College#>]?
+    let colleges: [CollegeModel]?
     let id: Int?
     let isPrivate: Bool?
     let name: String?
     
     enum CodingKeys: String, CodingKey {
-        // case colleges = "colleges"
+        case colleges
         case id
         case isPrivate
         case name
