@@ -18,8 +18,18 @@ class SplashVC: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let tabBar = TabBarVC()
-        present(tabBar, animated: true)
+        getData()
     }
 
+    func getData() {
+        DataModel.getUniversitys { (result) in
+            switch result {
+            case .success:
+                let tabBar = TabBarVC()
+                self.present(tabBar, animated: true)
+            case .failure(let error):
+                AlertHelper.showBasicAlert(vc: self, title: L.G.error.localizedText, message: error.localizedDescription, buttonTitle: L.G.ok.localizedText)
+            }
+        }
+    }
 }
