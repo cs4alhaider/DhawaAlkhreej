@@ -26,7 +26,7 @@ class SearchVC: BaseViewController {
             case .success(let data):
                 AlertHelper.showAlert(vc: self, .normal, title: "Data", body: "\(data.map({$0.title}))", buttonTitle: "Ok", completion: nil)
             case .failure(let error):
-                AlertHelper.showAlert(vc: self, .normal, title: "Error", body: error.localizedDescription, buttonTitle: "Ok", completion: nil)
+                AlertHelper.showAlert(vc: self, .normal, title: "Error", body: error.localizedDescription, buttonTitle: L.G.ok.localizedText, completion: nil)
             }
         }
     }
