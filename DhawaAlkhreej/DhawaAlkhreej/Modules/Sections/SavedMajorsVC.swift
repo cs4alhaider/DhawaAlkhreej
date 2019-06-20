@@ -38,12 +38,12 @@ extension SavedMajorsVC: UITableViewDelegate {
 
 extension SavedMajorsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return DataModel.universitys?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: SavedMajorsTableViewCell.self, for: indexPath)
-        cell.titleLabel.text = "علوم الحاسب"
+        cell.titleLabel.text = DataModel.universitys?[indexPath.row].name
         return cell
     }
 }

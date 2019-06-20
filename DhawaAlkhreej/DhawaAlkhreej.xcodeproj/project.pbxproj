@@ -54,8 +54,16 @@
 		DD44261522B82F9E0077EFA8 /* DataModel+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */; };
 		DD44261722B82FE60077EFA8 /* Country+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261622B82FE60077EFA8 /* Country+Model.swift */; };
 		DD44261922B830250077EFA8 /* University+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261822B830250077EFA8 /* University+Model.swift */; };
+		DD44261B22B8CB8F0077EFA8 /* LocalizationResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44261A22B8CB8F0077EFA8 /* LocalizationResources.swift */; };
 		DD8C505E2298C48200B067AD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8C505D2298C48200B067AD /* Search.storyboard */; };
 		DD8C50602298C4BB00B067AD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C505F2298C4BB00B067AD /* SearchVC.swift */; };
+		DD9A15B222BC0DDF000B9222 /* College+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15B122BC0DDF000B9222 /* College+Model.swift */; };
+		DD9A15B422BC0E21000B9222 /* Specialization+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15B322BC0E21000B9222 /* Specialization+Model.swift */; };
+		DD9A15B622BC0F6E000B9222 /* WeightedAverage+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15B522BC0F6E000B9222 /* WeightedAverage+Model.swift */; };
+		DD9A15B822BC0F9B000B9222 /* LocationByGender+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15B722BC0F9B000B9222 /* LocationByGender+Model.swift */; };
+		DD9A15BA22BC1039000B9222 /* Certificate+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15B922BC1039000B9222 /* Certificate+Model.swift */; };
+		DD9A15BD22BC1105000B9222 /* Universitys-Data.json in Resources */ = {isa = PBXBuildFile; fileRef = DD9A15BC22BC1105000B9222 /* Universitys-Data.json */; };
+		DD9A15BF22BC116B000B9222 /* University+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A15BE22BC116B000B9222 /* University+Router.swift */; };
 		DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EA5A322908A270050F199 /* TabBarVC.swift */; };
 		DD9EA5AA229099570050F199 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5A9229099570050F199 /* AboutUs.storyboard */; };
 		DD9EA5AD22909B8E0050F199 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */; };
@@ -127,8 +135,16 @@
 		DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel+Model.swift"; sourceTree = "<group>"; };
 		DD44261622B82FE60077EFA8 /* Country+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+Model.swift"; sourceTree = "<group>"; };
 		DD44261822B830250077EFA8 /* University+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "University+Model.swift"; sourceTree = "<group>"; };
+		DD44261A22B8CB8F0077EFA8 /* LocalizationResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationResources.swift; sourceTree = "<group>"; };
 		DD8C505D2298C48200B067AD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		DD8C505F2298C4BB00B067AD /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		DD9A15B122BC0DDF000B9222 /* College+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "College+Model.swift"; sourceTree = "<group>"; };
+		DD9A15B322BC0E21000B9222 /* Specialization+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Specialization+Model.swift"; sourceTree = "<group>"; };
+		DD9A15B522BC0F6E000B9222 /* WeightedAverage+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightedAverage+Model.swift"; sourceTree = "<group>"; };
+		DD9A15B722BC0F9B000B9222 /* LocationByGender+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationByGender+Model.swift"; sourceTree = "<group>"; };
+		DD9A15B922BC1039000B9222 /* Certificate+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Certificate+Model.swift"; sourceTree = "<group>"; };
+		DD9A15BC22BC1105000B9222 /* Universitys-Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Universitys-Data.json"; sourceTree = "<group>"; };
+		DD9A15BE22BC116B000B9222 /* University+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "University+Router.swift"; sourceTree = "<group>"; };
 		DD9EA5A322908A270050F199 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DD9EA5A9229099570050F199 /* AboutUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
 		DD9EA5AC22909B8E0050F199 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
@@ -249,11 +265,12 @@
 		DD3B1A3E228F50F100E89B88 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD9A15BB22BC10BD000B9222 /* JsonFiles */,
 				DD3B1A41228F59D400E89B88 /* Resources.swift */,
 				DD3B1A35228F50AC00E89B88 /* LaunchScreen.storyboard */,
 				DD3B1A38228F50AC00E89B88 /* Info.plist */,
 				DD3B1A33228F50AC00E89B88 /* Assets.xcassets */,
-				DDD047CA229B1E5A00DC78D5 /* Test-data.json */,
+				DD44261A22B8CB8F0077EFA8 /* LocalizationResources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -409,6 +426,15 @@
 			path = "Search and filter";
 			sourceTree = "<group>";
 		};
+		DD9A15BB22BC10BD000B9222 /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DDD047CA229B1E5A00DC78D5 /* Test-data.json */,
+				DD9A15BC22BC1105000B9222 /* Universitys-Data.json */,
+			);
+			path = JsonFiles;
+			sourceTree = "<group>";
+		};
 		DD9EA59E229089BC0050F199 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +512,11 @@
 				DD44261422B82F9E0077EFA8 /* DataModel+Model.swift */,
 				DD44261622B82FE60077EFA8 /* Country+Model.swift */,
 				DD44261822B830250077EFA8 /* University+Model.swift */,
+				DD9A15B122BC0DDF000B9222 /* College+Model.swift */,
+				DD9A15B322BC0E21000B9222 /* Specialization+Model.swift */,
+				DD9A15B522BC0F6E000B9222 /* WeightedAverage+Model.swift */,
+				DD9A15B722BC0F9B000B9222 /* LocationByGender+Model.swift */,
+				DD9A15B922BC1039000B9222 /* Certificate+Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -507,6 +538,7 @@
 			children = (
 				DDF670892292210F008A5128 /* Router.swift */,
 				DDD047CF229B1EEE00DC78D5 /* TestData+Router.swift */,
+				DD9A15BE22BC116B000B9222 /* University+Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -591,6 +623,7 @@
 				DD25060322971AA10032A30B /* MajorsSectionView.xib in Resources */,
 				DD9EA5B022909BD40050F199 /* Majors.storyboard in Resources */,
 				DDD047CB229B1E5A00DC78D5 /* Test-data.json in Resources */,
+				DD9A15BD22BC1105000B9222 /* Universitys-Data.json in Resources */,
 				DD3B1A32228F50AC00E89B88 /* Main.storyboard in Resources */,
 				DD9EA5B722909E6D0050F199 /* OnBoarding.storyboard in Resources */,
 				DD2505FE229712FB0032A30B /* SavedMajorsTableViewCell.xib in Resources */,
@@ -679,18 +712,24 @@
 				DD3B1A42228F59D400E89B88 /* Resources.swift in Sources */,
 				DD3B1A6E228F600600E89B88 /* String+Extension.swift in Sources */,
 				DD8C50602298C4BB00B067AD /* SearchVC.swift in Sources */,
+				DD9A15B622BC0F6E000B9222 /* WeightedAverage+Model.swift in Sources */,
 				DD3B1A4E228F5B3300E89B88 /* Keys.swift in Sources */,
 				138B464A22B41ABC001A96CE /* BaseNavigationController.swift in Sources */,
+				DD9A15BF22BC116B000B9222 /* University+Router.swift in Sources */,
+				DD9A15BA22BC1039000B9222 /* Certificate+Model.swift in Sources */,
 				DD3B1A65228F5EE900E89B88 /* AlertHelper.swift in Sources */,
 				DDB3778E2299F1A100D1ADCA /* CalculateButton.swift in Sources */,
+				DD9A15B822BC0F9B000B9222 /* LocationByGender+Model.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,
 				DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */,
 				DD25060B22971F9B0032A30B /* MajorDetailsTableViewCell.swift in Sources */,
 				DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */,
 				DD25060822971CD40032A30B /* MajorDetailsVC.swift in Sources */,
 				DDF670872291EE0A008A5128 /* DhawaAlkhreej+Endpoint.swift in Sources */,
+				DD9A15B222BC0DDF000B9222 /* College+Model.swift in Sources */,
 				DD25060622971ABF0032A30B /* MajorsSectionView.swift in Sources */,
 				DD9EA5A422908A270050F199 /* TabBarVC.swift in Sources */,
+				DD9A15B422BC0E21000B9222 /* Specialization+Model.swift in Sources */,
 				DDF670852291ED51008A5128 /* DataLocation.swift in Sources */,
 				1356CB002299C5370010A3CE /* Validator.swift in Sources */,
 				DD44261922B830250077EFA8 /* University+Model.swift in Sources */,
@@ -718,6 +757,7 @@
 				1356CB082299FD930010A3CE /* UIView+Extension.swift in Sources */,
 				DD2505FD229712FB0032A30B /* SavedMajorsTableViewCell.swift in Sources */,
 				130ED21222960E4E00080BAB /* CalculatorVC+Extension.swift in Sources */,
+				DD44261B22B8CB8F0077EFA8 /* LocalizationResources.swift in Sources */,
 				DD44261522B82F9E0077EFA8 /* DataModel+Model.swift in Sources */,
 				DDF670812291EBDE008A5128 /* Endpoint.swift in Sources */,
 				1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */,

@@ -1,24 +1,22 @@
 //
-//  University+Model.swift
+//  College+Model.swift
 //  DhawaAlkhreej
 //
-//  Created by Abdullah Alhaider on 17/06/2019.
+//  Created by Abdullah Alhaider on 20/06/2019.
 //  Copyright © 2019 DhawaAlkhreej. All rights reserved.
 //
 
 import Foundation
 
-struct UniversityModel: Codable {
+struct CollegeModel: Codable {
     
-    let colleges: [CollegeModel]?
+    let specializations: [SpecializationModel]?
     let id: Int?
-    let isPrivate: Bool?
     let name: String?
     
     enum CodingKeys: String, CodingKey {
-        case colleges
+        case specializations
         case id
-        case isPrivate
         case name
     }
 }

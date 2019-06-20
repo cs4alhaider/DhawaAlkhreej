@@ -25,10 +25,18 @@
                                     <constraint firstAttribute="height" constant="55" id="Tah-Ym-95a"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJu-1q-FY2">
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C12-do-ApH" firstAttribute="trailing" secondItem="kw8-xu-IdT" secondAttribute="trailing" id="24Z-ND-55d"/>
+                            <constraint firstItem="uJu-1q-FY2" firstAttribute="top" secondItem="kw8-xu-IdT" secondAttribute="bottom" id="5Ej-Ct-ze1"/>
+                            <constraint firstItem="uJu-1q-FY2" firstAttribute="leading" secondItem="C12-do-ApH" secondAttribute="leading" id="5He-Z8-xxg"/>
+                            <constraint firstItem="C12-do-ApH" firstAttribute="bottom" secondItem="uJu-1q-FY2" secondAttribute="bottom" id="6Uw-Cm-92o"/>
+                            <constraint firstItem="C12-do-ApH" firstAttribute="trailing" secondItem="uJu-1q-FY2" secondAttribute="trailing" id="WFK-t3-It6"/>
                             <constraint firstItem="kw8-xu-IdT" firstAttribute="top" secondItem="C12-do-ApH" secondAttribute="top" id="amS-Ln-J3S"/>
                             <constraint firstItem="kw8-xu-IdT" firstAttribute="leading" secondItem="C12-do-ApH" secondAttribute="leading" id="xto-lX-Fte"/>
                         </constraints>
@@ -36,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="kw8-xu-IdT" id="2Cv-bT-rdG"/>
+                        <outlet property="tableView" destination="uJu-1q-FY2" id="rgr-LE-hCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-2F-83B" userLabel="First Responder" sceneMemberID="firstResponder"/>

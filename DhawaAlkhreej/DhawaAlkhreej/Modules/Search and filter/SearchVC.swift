@@ -10,6 +10,7 @@ import Helper4Swift
 
 class SearchVC: BaseViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: SearchTextField!
     
     override func viewDidLoad() {
@@ -17,18 +18,13 @@ class SearchVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func setupTableView() {
+        // tableView.delegate = self
+        // tableView.dataSource = self
+    }
     override func setupUI() {
         searchTextField.delegate = self
         searchTextField.placeholder = "ابحث بالتخصصات"
-        
-        TestData.getData { (result) in
-            switch result {
-            case .success(let data):
-                AlertHelper.showAlert(vc: self, .normal, title: "Data", body: "\(data.map({$0.title}))", buttonTitle: "Ok", completion: nil)
-            case .failure(let error):
-                AlertHelper.showAlert(vc: self, .normal, title: "Error", body: error.localizedDescription, buttonTitle: "Ok", completion: nil)
-            }
-        }
     }
 }
 
