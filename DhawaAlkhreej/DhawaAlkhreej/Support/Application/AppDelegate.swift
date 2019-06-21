@@ -17,12 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupDependencies()
-        window?.tintColor = UIColor.primary
-        
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let vc = UIStoryboard.OnBoarding.instantiateViewController(withClass: WalkthroughVC.self)
-//        self.window?.rootViewController = vc
-//        self.window?.makeKeyAndVisible()
+        window?.tintColor = UIColor.primary        
         return true
     }
     

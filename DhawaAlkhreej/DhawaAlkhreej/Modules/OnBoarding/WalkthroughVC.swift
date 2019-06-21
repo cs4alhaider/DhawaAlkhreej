@@ -25,7 +25,7 @@ class WalkthroughVC: BaseViewController {
         pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
     }
     @IBAction func skipButtonPressed(_ sender: Any) {
-        // UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
+        UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
         dismiss(animated: true, completion: nil)
     }
     

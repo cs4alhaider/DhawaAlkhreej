@@ -54,7 +54,7 @@ class PageController: BaseViewController {
     }
     
     @IBAction func getStartedButtonPressed(_ sender: Any) {
-        // UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
+        UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
         dismiss(animated: true, completion: nil)
     }
     
