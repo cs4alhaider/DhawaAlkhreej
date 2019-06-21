@@ -33,6 +33,7 @@ class PageController: BaseViewController {
             })
         }
         Helper.feedbackGenerator(type: .light)
+        animateImageView()
     }
 
     override func viewDidLoad() {
@@ -44,6 +45,18 @@ class PageController: BaseViewController {
         textLabel.text = text
         imageView.image = UIImage(named: imageName)
         getStartedButton.alpha = 0
+    }
+    
+    private func animateImageView() {
+        let transform = CGAffineTransform(scaleX: 0, y: 0)
+        self.imageView?.transform = transform
+        let transform1 = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        UIView.animate(withDuration: 0.4, delay: 0.15, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.imageView?.transform = transform1
+            UIView.animate(withDuration: 0.1, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                self.imageView?.transform = .identity
+            })
+        })
     }
     
     private func setupGetStartedButton() {
