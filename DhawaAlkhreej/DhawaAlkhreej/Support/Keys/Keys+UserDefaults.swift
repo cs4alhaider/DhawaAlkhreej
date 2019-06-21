@@ -28,5 +28,7 @@ extension Keys {
         /// Stores last user input in Requested and Accoplished Textfields to restore it upon app launch
         static let savedTextfields = "DhawaAlkhreej.UserDefaults.savedTextfields"
         
+        static let onBoardingViewed = "DhawaAlkhreej.UserDefaults.onBoardingViewed"
+        
     }
 }

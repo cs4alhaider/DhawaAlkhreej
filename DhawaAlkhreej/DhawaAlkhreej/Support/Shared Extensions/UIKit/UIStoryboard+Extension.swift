@@ -34,4 +34,9 @@ extension UIStoryboard {
     static var search: UIStoryboard {
         return "Search".asStoryboard
     }
+    
+    /// "OnBoarding"
+    static var OnBoarding: UIStoryboard {
+        return "OnBoarding".asStoryboard
+    }
 }
