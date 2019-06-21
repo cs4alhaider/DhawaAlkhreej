@@ -96,11 +96,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-A1-EgR">
-                                <rect key="frame" x="162" y="717" width="90" height="45"/>
+                                <rect key="frame" x="132" y="712" width="150" height="50"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="bdX-Wm-7hE"/>
-                                    <constraint firstAttribute="width" constant="90" id="tar-tW-bWf"/>
+                                    <constraint firstAttribute="height" constant="50" id="bdX-Wm-7hE"/>
+                                    <constraint firstAttribute="width" constant="150" id="tar-tW-bWf"/>
                                 </constraints>
                                 <state key="normal" title="البدء">
                                     <color key="titleColor" name="whiteTextColor"/>

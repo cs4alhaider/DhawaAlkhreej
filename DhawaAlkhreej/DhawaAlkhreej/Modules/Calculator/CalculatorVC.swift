@@ -103,6 +103,40 @@ class CalculatorVC: BaseViewController, UIScrollViewDelegate {
         calculateButton.layer.shadowOffset = CGSize.zero
         calculateButton.layer.shadowOpacity = 0.2
         calculateButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
+        
+        // Add shadow movment with the device movment
+        let horizontalEffect = UIInterpolatingMotionEffect(
+            keyPath: "layer.shadowOffset.width",
+            type: .tiltAlongHorizontalAxis)
+        horizontalEffect.minimumRelativeValue = 16
+        horizontalEffect.maximumRelativeValue = -16
+        
+        let verticalEffect = UIInterpolatingMotionEffect(
+            keyPath: "layer.shadowOffset.height",
+            type: .tiltAlongVerticalAxis)
+        verticalEffect.minimumRelativeValue = 16
+        verticalEffect.maximumRelativeValue = -16
+        
+        let effectGroup = UIMotionEffectGroup()
+        effectGroup.motionEffects = [horizontalEffect, verticalEffect]
+        calculateButton.addMotionEffect(effectGroup)
+        
+        // Add button movment with the device movment
+        let horizontalEffect1 = UIInterpolatingMotionEffect(
+            keyPath: "center.x",
+            type: .tiltAlongHorizontalAxis)
+        horizontalEffect1.minimumRelativeValue = -16
+        horizontalEffect1.maximumRelativeValue = 16
+        
+        let verticalEffect1 = UIInterpolatingMotionEffect(
+            keyPath: "center.y",
+            type: .tiltAlongVerticalAxis)
+        verticalEffect1.minimumRelativeValue = -16
+        verticalEffect1.maximumRelativeValue = 16
+        
+        let effectGroup1 = UIMotionEffectGroup()
+        effectGroup1.motionEffects = [horizontalEffect1, verticalEffect1]
+        calculateButton.addMotionEffect(effectGroup1)
     }
     
     private func setupCalculatedPercentageLabel() {

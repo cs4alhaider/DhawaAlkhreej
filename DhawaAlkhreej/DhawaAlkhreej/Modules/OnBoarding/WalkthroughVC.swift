@@ -11,7 +11,6 @@ import UIKit
 class WalkthroughVC: BaseViewController {
 
     @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var getStartedButton: UIButton!
     
     var PageViewVC: PageViewVC?
     let backgroundImageView = UIImageView()
@@ -38,13 +37,16 @@ class WalkthroughVC: BaseViewController {
     }
     
     private func setBackground() {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
         
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = UIScreen.main.bounds
+        gradientLayer.colors = UIColor.gradientColors
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.locations = [0.5, 0.75, 1]
+        gradientLayer.shouldRasterize = true
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
-
 }
 
 extension WalkthroughVC: PageViewVCDelegate {
