@@ -11,6 +11,9 @@
 		132B3B2B2295D8C200DC2B1F /* DesignableTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */; };
 		1330E03822936427001BC1EF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330E03722936427001BC1EF /* CalculatorVC.swift */; };
 		1342740122B1265600952BC6 /* BinaryFloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342740022B1265600952BC6 /* BinaryFloatingPoint+Extension.swift */; };
+		1345D33422BCB9820072C674 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345D33322BCB9820072C674 /* PageController.swift */; };
+		1345D33622BCBBD00072C674 /* PageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345D33522BCBBD00072C674 /* PageViewVC.swift */; };
+		1345D33822BCC3380072C674 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345D33722BCC3380072C674 /* WalkthroughVC.swift */; };
 		1356CB002299C5370010A3CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CAFF2299C5370010A3CE /* Validator.swift */; };
 		1356CB042299D19A0010A3CE /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB032299D19A0010A3CE /* UITextField+Extension.swift */; };
 		1356CB062299FA440010A3CE /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */; };
@@ -89,6 +92,9 @@
 		132B3B2A2295D8C200DC2B1F /* DesignableTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTF.swift; sourceTree = "<group>"; };
 		1330E03722936427001BC1EF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		1342740022B1265600952BC6 /* BinaryFloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BinaryFloatingPoint+Extension.swift"; sourceTree = "<group>"; };
+		1345D33322BCB9820072C674 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		1345D33522BCBBD00072C674 /* PageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewVC.swift; sourceTree = "<group>"; };
+		1345D33722BCC3380072C674 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughVC.swift; sourceTree = "<group>"; };
 		1356CAFF2299C5370010A3CE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1356CB032299D19A0010A3CE /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		1356CB052299FA440010A3CE /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
@@ -492,6 +498,9 @@
 			isa = PBXGroup;
 			children = (
 				DD9EA5B622909E6D0050F199 /* OnBoarding.storyboard */,
+				1345D33722BCC3380072C674 /* WalkthroughVC.swift */,
+				1345D33322BCB9820072C674 /* PageController.swift */,
+				1345D33522BCBBD00072C674 /* PageViewVC.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -721,6 +730,7 @@
 				DDB3778E2299F1A100D1ADCA /* CalculateButton.swift in Sources */,
 				DD9A15B822BC0F9B000B9222 /* LocationByGender+Model.swift in Sources */,
 				DD3B1A6B228F5FBB00E89B88 /* BaseViewController.swift in Sources */,
+				1345D33622BCBBD00072C674 /* PageViewVC.swift in Sources */,
 				DD34D8A32293648C00C2C423 /* SectionsVC.swift in Sources */,
 				DD25060B22971F9B0032A30B /* MajorDetailsTableViewCell.swift in Sources */,
 				DD34D8A62293682200C2C423 /* SectionsCollectionViewCell.swift in Sources */,
@@ -744,7 +754,9 @@
 				DD3B1A5E228F5DB200E89B88 /* FontType.swift in Sources */,
 				DD3B1A56228F5C2E00E89B88 /* Environment.swift in Sources */,
 				DD3B1A51228F5B4D00E89B88 /* Keys+NotificationCenter.swift in Sources */,
+				1345D33422BCB9820072C674 /* PageController.swift in Sources */,
 				1356CB062299FA440010A3CE /* UIScrollView+Extension.swift in Sources */,
+				1345D33822BCC3380072C674 /* WalkthroughVC.swift in Sources */,
 				DD3B1A63228F5E4C00E89B88 /* PrintHelper.swift in Sources */,
 				DD3B1A5C228F5D5800E89B88 /* Font.swift in Sources */,
 				DD3B1A4A228F5B0D00E89B88 /* Identity.swift in Sources */,

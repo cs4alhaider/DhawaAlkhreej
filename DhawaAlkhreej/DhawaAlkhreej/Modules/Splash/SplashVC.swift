@@ -26,7 +26,12 @@ class SplashVC: BaseViewController {
             switch result {
             case .success:
                 let tabBar = TabBarVC()
+                let onBoarding = UIStoryboard.OnBoarding.instantiateViewController(withClass: WalkthroughVC.self)
                 self.present(tabBar, animated: true)
+                if !UserDefaults.standard.bool(forKey: K.UserDefaults.onBoardingViewed) {
+                    tabBar.presentVC(onBoarding)
+                }
+                
             case .failure(let error):
                 AlertHelper.showBasicAlert(vc: self, title: L.G.error.localizedText, message: error.localizedDescription, buttonTitle: L.G.ok.localizedText)
             }
