@@ -32,6 +32,7 @@ class PageController: BaseViewController {
                 self.getStartedButton.alpha = 1
             })
         }
+        Helper.feedbackGenerator(type: .light)
     }
 
     override func viewDidLoad() {
