@@ -59,13 +59,15 @@ class PageController: BaseViewController {
     private func setupImageView() {
         
         imageView.image = UIImage(named: imageName)
-        addMotionEffects(to: imageView, movement: true)
+        imageView.layer.shadowOffset = CGSize.zero
+        imageView.layer.shadowOpacity = 0.2
+        addMotionEffects(to: imageView, shadow: true, movement: true)
     }
     
     @IBAction func getStartedButtonPressed(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
-        dismiss(animated: true, completion: nil)
         Helper.feedbackGenerator(type: .medium)
+        dismiss(animated: true, completion: nil)
     }
 }
 

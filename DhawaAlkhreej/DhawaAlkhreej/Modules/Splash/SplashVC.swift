@@ -21,15 +21,6 @@ class SplashVC: BaseViewController {
         getData()
     }
     
-    private func loadApp() {
-        let tabBar = TabBarVC()
-        let onBoarding = UIStoryboard.OnBoarding.instantiateViewController(withClass: WalkthroughVC.self)
-        self.present(tabBar, animated: true)
-        if !UserDefaults.standard.bool(forKey: K.UserDefaults.onBoardingViewed) {
-            tabBar.presentVC(onBoarding)
-        }
-    }
-    
     func getData() {
         DataModel.getUniversitys { (result) in
             switch result {
@@ -39,5 +30,10 @@ class SplashVC: BaseViewController {
                 AlertHelper.showBasicAlert(vc: self, title: L.G.error.localizedText, message: error.localizedDescription, buttonTitle: L.G.ok.localizedText)
             }
         }
+    }
+    
+    private func loadApp() {
+        let tabBar = TabBarVC()
+        self.present(tabBar, animated: true)
     }
 }

@@ -31,6 +31,14 @@ class TabBarVC: UITabBarController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if !UserDefaults.standard.bool(forKey: K.UserDefaults.onBoardingViewed) {
+            let onBoarding = UIStoryboard.OnBoarding.instantiateViewController(withClass: WalkthroughVC.self)
+            present(onBoarding, animated: true)
+        }
+    }
+    
     func rootViewControllers() {
         
         let tabVC1 = createViewController(nv: BaseNavigationController(),
