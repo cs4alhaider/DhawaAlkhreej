@@ -35,17 +35,42 @@ class PageController: BaseViewController {
         Helper.feedbackGenerator(type: .light)
         animateImageView()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     override func setupUI() {
         setupGetStartedButton()
+        setupImageView()
         textLabel.text = text
-        imageView.image = UIImage(named: imageName)
-        getStartedButton.alpha = 0
     }
+    
+    private func setupGetStartedButton() {
+        getStartedButton.alpha = 0
+        getStartedButton.layer.cornerRadius = 10
+        getStartedButton.layer.shadowOffset = CGSize.zero
+        getStartedButton.layer.shadowOpacity = 0.2
+        getStartedButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
+        
+        addMotionEffects(to: getStartedButton, shadow: true, movment: true)
+    }
+    
+    private func setupImageView() {
+        
+        imageView.image = UIImage(named: imageName)
+        addMotionEffects(to: imageView, movment: true)
+    }
+    
+    @IBAction func getStartedButtonPressed(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
+        dismiss(animated: true, completion: nil)
+        Helper.feedbackGenerator(type: .medium)
+    }
+}
+
+// Some Helper Methods
+extension PageController {
     
     private func animateImageView() {
         let transform = CGAffineTransform(scaleX: 0, y: 0)
@@ -59,52 +84,44 @@ class PageController: BaseViewController {
         })
     }
     
-    private func setupGetStartedButton() {
-        
-        getStartedButton.layer.cornerRadius = 10
-        getStartedButton.layer.shadowOffset = CGSize.zero
-        getStartedButton.layer.shadowOpacity = 0.2
-        getStartedButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
+    private func addMotionEffects(to view: UIView, shadow: Bool = false, movment: Bool = false) {
         
         // Add shadow movment with the device movment
-        let horizontalEffect = UIInterpolatingMotionEffect(
-            keyPath: "layer.shadowOffset.width",
-            type: .tiltAlongHorizontalAxis)
-        horizontalEffect.minimumRelativeValue = 16
-        horizontalEffect.maximumRelativeValue = -16
-
-        let verticalEffect = UIInterpolatingMotionEffect(
-            keyPath: "layer.shadowOffset.height",
-            type: .tiltAlongVerticalAxis)
-        verticalEffect.minimumRelativeValue = 16
-        verticalEffect.maximumRelativeValue = -16
-
-        let effectGroup = UIMotionEffectGroup()
-        effectGroup.motionEffects = [horizontalEffect, verticalEffect]
-        getStartedButton.addMotionEffect(effectGroup)
+        if shadow {
+            let horizontalEffect = UIInterpolatingMotionEffect(
+                keyPath: "layer.shadowOffset.width",
+                type: .tiltAlongHorizontalAxis)
+            horizontalEffect.minimumRelativeValue = 16
+            horizontalEffect.maximumRelativeValue = -16
+            
+            let verticalEffect = UIInterpolatingMotionEffect(
+                keyPath: "layer.shadowOffset.height",
+                type: .tiltAlongVerticalAxis)
+            verticalEffect.minimumRelativeValue = 16
+            verticalEffect.maximumRelativeValue = -16
+            
+            let effectGroup = UIMotionEffectGroup()
+            effectGroup.motionEffects = [horizontalEffect, verticalEffect]
+            view.addMotionEffect(effectGroup)
+        }
         
-        // Add button movment with the device movment
-        let horizontalEffect1 = UIInterpolatingMotionEffect(
-            keyPath: "center.x",
-            type: .tiltAlongHorizontalAxis)
-        horizontalEffect1.minimumRelativeValue = -16
-        horizontalEffect1.maximumRelativeValue = 16
-        
-        let verticalEffect1 = UIInterpolatingMotionEffect(
-            keyPath: "center.y",
-            type: .tiltAlongVerticalAxis)
-        verticalEffect1.minimumRelativeValue = -16
-        verticalEffect1.maximumRelativeValue = 16
-        
-        let effectGroup1 = UIMotionEffectGroup()
-        effectGroup1.motionEffects = [horizontalEffect1, verticalEffect1]
-        getStartedButton.addMotionEffect(effectGroup1)
+        // Add object movment with the device movment
+        if movment {
+            let horizontalEffect1 = UIInterpolatingMotionEffect(
+                keyPath: "center.x",
+                type: .tiltAlongHorizontalAxis)
+            horizontalEffect1.minimumRelativeValue = -16
+            horizontalEffect1.maximumRelativeValue = 16
+            
+            let verticalEffect1 = UIInterpolatingMotionEffect(
+                keyPath: "center.y",
+                type: .tiltAlongVerticalAxis)
+            verticalEffect1.minimumRelativeValue = -16
+            verticalEffect1.maximumRelativeValue = 16
+            
+            let effectGroup1 = UIMotionEffectGroup()
+            effectGroup1.motionEffects = [horizontalEffect1, verticalEffect1]
+            view.addMotionEffect(effectGroup1)
+        }
     }
-    
-    @IBAction func getStartedButtonPressed(_ sender: Any) {
-        UserDefaults.standard.set(true, forKey: K.UserDefaults.onBoardingViewed)
-        dismiss(animated: true, completion: nil)
-        Helper.feedbackGenerator(type: .medium)
-    }
-    
 }
