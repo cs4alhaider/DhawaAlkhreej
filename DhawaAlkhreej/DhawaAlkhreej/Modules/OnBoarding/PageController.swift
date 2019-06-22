@@ -53,13 +53,13 @@ class PageController: BaseViewController {
         getStartedButton.layer.shadowOpacity = 0.2
         getStartedButton.titleLabel?.font = Identity.font(.custom(weight: .bold, size: 20))
         
-        addMotionEffects(to: getStartedButton, shadow: true, movment: true)
+        addMotionEffects(to: getStartedButton, shadow: true, movement: true)
     }
     
     private func setupImageView() {
         
         imageView.image = UIImage(named: imageName)
-        addMotionEffects(to: imageView, movment: true)
+        addMotionEffects(to: imageView, movement: true)
     }
     
     @IBAction func getStartedButtonPressed(_ sender: Any) {
@@ -84,7 +84,7 @@ extension PageController {
         })
     }
     
-    private func addMotionEffects(to view: UIView, shadow: Bool = false, movment: Bool = false) {
+    private func addMotionEffects(to view: UIView, shadow: Bool = false, movement: Bool = false) {
         
         // Add shadow movment with the device movment
         if shadow {
@@ -105,8 +105,8 @@ extension PageController {
             view.addMotionEffect(effectGroup)
         }
         
-        // Add object movment with the device movment
-        if movment {
+        // Add object movement with the device movment
+        if movement {
             let horizontalEffect1 = UIInterpolatingMotionEffect(
                 keyPath: "center.x",
                 type: .tiltAlongHorizontalAxis)
