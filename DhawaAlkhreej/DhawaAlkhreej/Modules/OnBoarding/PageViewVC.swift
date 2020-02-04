@@ -52,6 +52,7 @@ class PageViewVC: UIPageViewController {
 extension PageViewVC: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
         guard var index = (viewController as? PageController)?.index else { return nil }
         index -= 1
         return contentViewController(at: index)

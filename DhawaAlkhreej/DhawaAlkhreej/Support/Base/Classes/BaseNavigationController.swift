@@ -42,7 +42,7 @@ class BaseNavigationController: UINavigationController {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let heightAdjustment: CGFloat = 2
         let gradientHeight = navBarHeight + statusBarHeight + heightAdjustment
-        let bgImage = imageWithGradient(colors: UIColor.navBarGradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight))
+        let bgImage = imageWithGradient(colors: UIColor.gradientColors, size: CGSize(width: UIScreen.main.bounds.size.width, height: gradientHeight))
         guard let image = bgImage else { return }
         navigationBar.barTintColor = UIColor(patternImage: image)
     }
@@ -54,6 +54,7 @@ class BaseNavigationController: UINavigationController {
         gradientLayer.colors = colors
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.shouldRasterize = true
         UIGraphicsBeginImageContext(gradientLayer.bounds.size)
         if let context = UIGraphicsGetCurrentContext() {
             gradientLayer.render(in: context)
